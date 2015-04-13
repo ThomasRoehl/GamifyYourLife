@@ -23,3 +23,10 @@ Spieler koennen Kontakte (Freunde) haben
 Freunde koennen Rewards empfehlen
 Freunde koennen dir Aufgaben mit Punkten verschicken (die angenommen werden koennen)
 Eigene Aufgaben koennen getauscht oder abgegeben werden (beidseitige Annahme)
+
+Webseite:
+Startseite mit "Held" und Liste mit Erinnerungen an kommende Termine, Aufgaben und Rewards
+Kalenderseite mit Spalte fuer Termine und Aufgaben
+Kontaktseite(Freunde)
+Profilseite mit Achievements und Rewards
+Aufgaben/Terminerstellungsseite
