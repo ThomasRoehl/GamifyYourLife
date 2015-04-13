@@ -1,32 +1,25 @@
-﻿Funktionen
+﻿Idee:
 
-Jeder Spieler hat einen Helden
+Kalender- und Aufgabenfunktionen spielerisch lösen mit Belohnungen.
+Nutzer koennen sich registrieren und bekommen ein Profil mit einem "Helden".
+Wenn Aufgaben erledigt werden und Termine eingehalten werden, entwickelt sich der "Held".
+Bei verpassten Terminen oder nicht erledigten Aufgaben entwickelt sich der "Held" zurueck.
+Nutzer koennen Kontakte (Freunde) haben und Aufgaben mit ihnen teilen und bereitstellen.
+
+Funktionen
+
+Jeder Spieler hat einen "Helden"
+Jeder Spieler hat einen Kalender mit Terminen
 Jeder Spieler hat Aufgaben
 Fuer jede abgeschlossene Aufgabe bekommt man Punkte
+Fuer eingehaltene Termine bekommt man Punkte
 Fuer bestimmte Anzahl an Punkten bekommt man Achievements
-Fuer bestandene Aufgaben bekommt man zufaellige Items entsprechend der Punkte
-Helden koennen mit Items aufgeruestet werden
-Items veraendern das Aussehen und Werte (?)
+Fuer Achievements entwickelt sich der "Held" weiter
 Spieler koennen Rewards festlegen
-Rewards sind Belohnungen (Richtlinien) die fuer ein Achievement erhalten werden
+Rewards stellen Belohnungen im realen Leben fuer erreichte Achievements dar 
 Fuer bestandene Achievements bekommt man Rewards
-Fuer Fehler verliert man Punkte (oder bekommt negative Werte?)
-Spieler koennen Freunde haben
+Fuer verpasste Termine oder nichterfuellte Aufgaben bekommt man Minuspunkte und der "Held" kann sich zurueckentwickeln
+Spieler koennen Kontakte (Freunde) haben
 Freunde koennen Rewards empfehlen
 Freunde koennen dir Aufgaben mit Punkten verschicken (die angenommen werden koennen)
 Eigene Aufgaben koennen getauscht oder abgegeben werden (beidseitige Annahme)
-
-
-
-Datenbank
-
-User
-Profil
-Tasks
-Items
-Heroes
-Achievements
-Missteps
-Rewards
-
-
