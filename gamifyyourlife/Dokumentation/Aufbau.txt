@@ -1,0 +1,32 @@
+﻿Funktionen
+
+Jeder Spieler hat einen Helden
+Jeder Spieler hat Aufgaben
+Fuer jede abgeschlossene Aufgabe bekommt man Punkte
+Fuer bestimmte Anzahl an Punkten bekommt man Achievements
+Fuer bestandene Aufgaben bekommt man zufaellige Items entsprechend der Punkte
+Helden koennen mit Items aufgeruestet werden
+Items veraendern das Aussehen und Werte (?)
+Spieler koennen Rewards festlegen
+Rewards sind Belohnungen (Richtlinien) die fuer ein Achievement erhalten werden
+Fuer bestandene Achievements bekommt man Rewards
+Fuer Fehler verliert man Punkte (oder bekommt negative Werte?)
+Spieler koennen Freunde haben
+Freunde koennen Rewards empfehlen
+Freunde koennen dir Aufgaben mit Punkten verschicken (die angenommen werden koennen)
+Eigene Aufgaben koennen getauscht oder abgegeben werden (beidseitige Annahme)
+
+
+
+Datenbank
+
+User
+Profil
+Tasks
+Items
+Heroes
+Achievements
+Missteps
+Rewards
+
+
