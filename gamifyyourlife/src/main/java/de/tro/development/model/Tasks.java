@@ -11,6 +11,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 @Entity
 public class Tasks implements Serializable{
@@ -38,6 +40,7 @@ public class Tasks implements Serializable{
 	private Long points;
 	
 	@Column(name = "settlement_date", updatable = true)
+	@Temporal(TemporalType.DATE)
 	private java.util.Date settlement_date;
 	
 	public Tasks() {

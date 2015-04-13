@@ -11,6 +11,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 @Entity
 public class Dates implements Serializable{
@@ -38,9 +40,11 @@ public class Dates implements Serializable{
 	private Long points;
 	
 	@Column(name = "begin_time", nullable = false)
+	@Temporal(TemporalType.DATE)
 	private Date begin_time;
 	
 	@Column(name = "end_time", nullable = false)
+	@Temporal(TemporalType.DATE)
 	private Date end_time;
 	
 	@Column(name = "day_event")
