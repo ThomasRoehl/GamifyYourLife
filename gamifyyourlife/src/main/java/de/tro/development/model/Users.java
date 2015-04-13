@@ -1,5 +1,6 @@
 package de.tro.development.model;
 
+import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -15,12 +16,17 @@ import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
 @Entity
-public class Users {
+public class Users implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	@Id@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name = "id", updatable = false, nullable = false)
 	private int id;
 	
-	@Column(name = "username", updatable = true, nullable = false)
+	@Column(name = "username", nullable = false)
 	private String username;
 	
 	@OneToOne(cascade = CascadeType.PERSIST)
@@ -42,19 +48,23 @@ public class Users {
 	@OneToMany(cascade = CascadeType.PERSIST)
 	@JoinColumn(name = "missteps_fk")
 	private Set<Missteps> missteps = new HashSet<Missteps>();
+	
+	@Column(name = "points", nullable = false)
+	private Long points;
 
 	public Users() {
 		super();
 	}
 
 	public Users(String username, Profile profile, Todo_list todo_list,
-			User_Achievement user_achievement, Hero hero) {
+			User_Achievement user_achievement, Hero hero, Long points) {
 		super();
 		this.username = username;
 		this.profile = profile;
 		this.todo_list = todo_list;
 		this.user_achievement = user_achievement;
 		this.hero = hero;
+		this.points = points;
 	}
 
 	public String getUsername() {
@@ -97,6 +107,18 @@ public class Users {
 		this.hero = hero;
 	}
 
+	public Long getPoints() {
+		return points;
+	}
+
+	public void setPoints(Long points) {
+		this.points = points;
+	}
+
+	public int getId() {
+		return id;
+	}
+
 	public Set<Missteps> getMissteps() {
 		return missteps;
 	}
@@ -107,10 +129,10 @@ public class Users {
 
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", username=" + username + ", profile="
+		return "Users [id=" + id + ", username=" + username + ", profile="
 				+ profile + ", todo_list=" + todo_list + ", user_achievement="
 				+ user_achievement + ", hero=" + hero + ", missteps="
-				+ missteps + "]";
+				+ missteps + ", points=" + points + "]";
 	}
 
 }

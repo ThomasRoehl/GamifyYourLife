@@ -1,5 +1,6 @@
 package de.tro.development.model;
 
+import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.CascadeType;
@@ -12,7 +13,13 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
 @Entity
-public class Dates {
+public class Dates implements Serializable{
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	@Id@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name = "id", updatable = false, nullable = false)
 	private int id;
@@ -38,4 +45,88 @@ public class Dates {
 	
 	@Column(name = "day_event")
 	private boolean day_event;
+
+	public Dates() {
+		super();
+	}
+
+	public Dates(String name, String description, Category category,
+			Long points, Date begin_time, Date end_time, boolean day_event) {
+		super();
+		this.name = name;
+		this.description = description;
+		this.category = category;
+		this.points = points;
+		this.begin_time = begin_time;
+		this.end_time = end_time;
+		this.day_event = day_event;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public Category getCategory() {
+		return category;
+	}
+
+	public void setCategory(Category category) {
+		this.category = category;
+	}
+
+	public Long getPoints() {
+		return points;
+	}
+
+	public void setPoints(Long points) {
+		this.points = points;
+	}
+
+	public Date getBegin_time() {
+		return begin_time;
+	}
+
+	public void setBegin_time(Date begin_time) {
+		this.begin_time = begin_time;
+	}
+
+	public Date getEnd_time() {
+		return end_time;
+	}
+
+	public void setEnd_time(Date end_time) {
+		this.end_time = end_time;
+	}
+
+	public boolean isDay_event() {
+		return day_event;
+	}
+
+	public void setDay_event(boolean day_event) {
+		this.day_event = day_event;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	@Override
+	public String toString() {
+		return "Dates [id=" + id + ", name=" + name + ", description="
+				+ description + ", category=" + category + ", points=" + points
+				+ ", begin_time=" + begin_time + ", end_time=" + end_time
+				+ ", day_event=" + day_event + "]";
+	}
 }
