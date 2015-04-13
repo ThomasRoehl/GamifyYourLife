@@ -5,6 +5,19 @@
 	<persistence-unit name="gamifyyourlife"
 		transaction-type="JTA">
 		<jta-data-source>gamifyJNDI</jta-data-source>
+		<class>de.tro.development.model.Achievement</class>
+		<class>de.tro.development.model.Category</class>
+		<class>de.tro.development.model.City</class>
+		<class>de.tro.development.model.Country</class>
+		<class>de.tro.development.model.Dates</class>
+		<class>de.tro.development.model.Hero</class>
+		<class>de.tro.development.model.Missteps</class>
+		<class>de.tro.development.model.Profile</class>
+		<class>de.tro.development.model.Rewards</class>
+		<class>de.tro.development.model.Tasks</class>
+		<class>de.tro.development.model.Todo_list</class>
+		<class>de.tro.development.model.Users</class>
+		<class>de.tro.development.model.User_Achievement</class>
 		<properties>
 			<property name="javax.persistence.schema-generation.database.action"
 				value="drop-and-create" />
