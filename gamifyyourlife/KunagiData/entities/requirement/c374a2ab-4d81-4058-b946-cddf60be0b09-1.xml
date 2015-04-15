@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><requirement>
   <id>c374a2ab-4d81-4058-b946-cddf60be0b09-1</id>
-  <lastModified>2015-04-14 15:00:55</lastModified>
+  <lastModified>2015-04-15 11:52:28</lastModified>
   <projectId>fc43cae0-0113-401c-9794-ae1dd9c1798c-1</projectId>
   <number>12</number>
   <qualitysIds/>
@@ -15,9 +15,10 @@ Akzeptanzkriterien:
 
 * automatische Benachrichtigung des Nutzers, falls Achievement erreicht wurde (eine bestimmte Anzahl an Punkten erreicht wurde)
 </description>
+  <estimatedWork>3.0</estimatedWork>
   <closed>false</closed>
   <deleted>false</deleted>
-  <dirty>true</dirty>
+  <dirty>false</dirty>
   <workEstimationVotingActive>false</workEstimationVotingActive>
   <workEstimationVotingShowoff>false</workEstimationVotingShowoff>
   <tasksOrderIds/>

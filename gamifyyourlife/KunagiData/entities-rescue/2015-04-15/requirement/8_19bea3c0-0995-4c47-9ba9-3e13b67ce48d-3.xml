@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><requirement>
+  <id>19bea3c0-0995-4c47-9ba9-3e13b67ce48d-3</id>
+  <lastModified>2015-04-15 11:42:11</lastModified>
+  <projectId>fc43cae0-0113-401c-9794-ae1dd9c1798c-1</projectId>
+  <number>5</number>
+  <qualitysIds/>
+  <label>Aufgabe erstellen</label>
+  <description>
+* Als Nutzer moechte ich eine neue Aufgabe erstellen koennen
+
+Damit ich meine Aufgaben 
+
+Benoetigt wird dafuer:
+
+* Ein Fenster zum erstellen einer Aufgabe
+</description>
+  <closed>false</closed>
+  <deleted>false</deleted>
+  <dirty>true</dirty>
+  <workEstimationVotingActive>false</workEstimationVotingActive>
+  <workEstimationVotingShowoff>false</workEstimationVotingShowoff>
+  <tasksOrderIds/>
+  <themes/>
+</requirement>

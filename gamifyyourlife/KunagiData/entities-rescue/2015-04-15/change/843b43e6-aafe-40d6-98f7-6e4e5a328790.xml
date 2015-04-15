@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><change>
+  <id>843b43e6-aafe-40d6-98f7-6e4e5a328790</id>
+  <lastModified>2015-04-15 11:40:16</lastModified>
+  <parentId>19bea3c0-0995-4c47-9ba9-3e13b67ce48d-2</parentId>
+  <userId>a3a6bfc9-f4f3-4283-b9d1-c61481b05f30</userId>
+  <dateAndTime>2015-04-15 11:40:16</dateAndTime>
+  <key>description</key>
+  <oldValue>
+
+* Der Nutzer moechte einen Termin erstellen
+
+Damit der Nutzer in seinem Kalender einen neuen Eintrag fuer einen Termin mit Zeit und Ort bekommt.
+
+Benoetigt wird dafuer:
+
+* Fenster zum erstellen eines Termins
+</oldValue>
+  <newValue>
+* Als Nutzer moechte i
+
+Damit der Nutzer in seinem Kalender einen neuen Eintrag fuer einen Termin mit Zeit und Ort bekommt.
+
+Benoetigt wird dafuer:
+
+* Fenster zum erstellen eines Termins
+</newValue>
+</change>
