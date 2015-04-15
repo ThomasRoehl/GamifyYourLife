@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><change>
+  <id>c26c5289-8951-49af-ae0f-84a7ea284ac2</id>
+  <lastModified>2015-04-15 18:53:18</lastModified>
+  <parentId>a39921dd-ed23-4c62-aa5c-01021c504398-1</parentId>
+  <userId>a3a6bfc9-f4f3-4283-b9d1-c61481b05f30</userId>
+  <dateAndTime>2015-04-15 18:53:18</dateAndTime>
+  <key>description</key>
+  <newValue>
+* Als Nutzer moechte ich mir einen Account anlegen
+
+Damit ich alle Funktionen der Webapplikation nutzen kann.
+
+Akzeptanzkriterien:
+
+* Fenster 
+</newValue>
+</change>
