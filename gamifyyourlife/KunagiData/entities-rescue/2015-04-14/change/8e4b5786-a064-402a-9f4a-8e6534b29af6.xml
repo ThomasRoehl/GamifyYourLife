@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><change>
+  <id>8e4b5786-a064-402a-9f4a-8e6534b29af6</id>
+  <lastModified>2015-04-14 14:51:45</lastModified>
+  <parentId>cda54d00-ba64-4326-82bf-185e72f4a59c-1</parentId>
+  <userId>a3a6bfc9-f4f3-4283-b9d1-c61481b05f30</userId>
+  <dateAndTime>2015-04-14 14:51:45</dateAndTime>
+  <key>description</key>
+  <oldValue>* Nutzer soll einen Helden erstellen.
+
+Der Nutzer braucht eine Liste von verfügbaren Helden um einen Helden fuer sein Profil zu erstellen.
+
+Benoetigt wird:
+
+* Bild des Helden
+</oldValue>
+  <newValue>* Als Nutzer moechte ich einen Helden erstellen
+
+Damit ich sehen kann wie sich mein Held im lauf der Zeit durch Abschluss von Aufgaben und Terminen entwickelt und mich motiviert weiter zu arbeiten.
+
+Akzeptanzkriterien:
+
+* Bild des Helden
+</newValue>
+</change>

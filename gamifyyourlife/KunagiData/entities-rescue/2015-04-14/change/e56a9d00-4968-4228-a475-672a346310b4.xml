@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><change>
+  <id>e56a9d00-4968-4228-a475-672a346310b4</id>
+  <lastModified>2015-04-14 14:53:50</lastModified>
+  <parentId>19bea3c0-0995-4c47-9ba9-3e13b67ce48d-4</parentId>
+  <userId>a3a6bfc9-f4f3-4283-b9d1-c61481b05f30</userId>
+  <dateAndTime>2015-04-14 14:53:50</dateAndTime>
+  <key>description</key>
+  <oldValue>
+
+* Der Nutzer moechte eine Liste mit Rewards anzeigen
+
+Damit der Nutzer sieht, welche Rewards er bereits erhalten hat und einloesen kann, oder bereits eingeloest hat.
+
+Benoetigt wird dafuer:
+
+* Eine Auflistung aller Rewards des Nutzers
+</oldValue>
+  <newValue>
+* Als Nutzer moechte ich alle meine erstellten Rewards sehen
+
+Damit ich sehen kann welche Rewards mir n
+
+Benoetigt wird dafuer:
+
+* Eine Auflistung aller Rewards des Nutzers
+</newValue>
+</change>

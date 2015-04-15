@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><requirement>
+  <id>cda54d00-ba64-4326-82bf-185e72f4a59c-1</id>
+  <lastModified>2015-04-14 14:50:20</lastModified>
+  <projectId>fc43cae0-0113-401c-9794-ae1dd9c1798c-1</projectId>
+  <number>1</number>
+  <qualitysIds/>
+  <label>Helden erstellen</label>
+  <description>* Als Nutzer moechte ich einen Helde
+
+Der Nutzer braucht eine Liste von verfügbaren Helden um einen Helden fuer sein Profil zu erstellen.
+
+Benoetigt wird:
+
+* Bild des Helden
+</description>
+  <closed>false</closed>
+  <deleted>false</deleted>
+  <dirty>true</dirty>
+  <workEstimationVotingActive>false</workEstimationVotingActive>
+  <workEstimationVotingShowoff>false</workEstimationVotingShowoff>
+  <tasksOrderIds/>
+  <themes/>
+</requirement>

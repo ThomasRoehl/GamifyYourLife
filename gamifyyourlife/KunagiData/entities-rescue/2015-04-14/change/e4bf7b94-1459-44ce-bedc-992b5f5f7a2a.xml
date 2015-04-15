@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><change>
+  <id>e4bf7b94-1459-44ce-bedc-992b5f5f7a2a</id>
+  <lastModified>2015-04-14 13:47:50</lastModified>
+  <parentId>19bea3c0-0995-4c47-9ba9-3e13b67ce48d-7</parentId>
+  <userId>a3a6bfc9-f4f3-4283-b9d1-c61481b05f30</userId>
+  <dateAndTime>2015-04-14 13:47:50</dateAndTime>
+  <key>description</key>
+  <newValue>
+
+* Der Nutzer will nach anderen Nutzern suchen koennen
+
+* Der Nutzer will gefundene Nutzer zu seinen Kontakten hinzufuegen koennen
+
+Damit der Nutzer einen anderen Nutzer ueber seinen Namen etc. finden kann um diesen zu seinen Kontakten hinzuzufuegen.
+
+Benoetigt wird dafuer:
+
+
+* Ein Suchfenster
+
+
+* Auflistung gg
+</newValue>
+</change>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><change>
+  <id>d1164fda-e649-481d-9352-4f41da88e4ba</id>
+  <lastModified>2015-04-14 13:22:02</lastModified>
+  <parentId>cda54d00-ba64-4326-82bf-185e72f4a59c-2</parentId>
+  <userId>a3a6bfc9-f4f3-4283-b9d1-c61481b05f30</userId>
+  <dateAndTime>2015-04-14 13:22:02</dateAndTime>
+  <key>description</key>
+  <newValue>
+* Der Nutzer will seinen Kalender anzeigen.
+Damit er grafisch sehen kann, zu welchen Zeiten er welche Termine hat.
+</newValue>
+</change>

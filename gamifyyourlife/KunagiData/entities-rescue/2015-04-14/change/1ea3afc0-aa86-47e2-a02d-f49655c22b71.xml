@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><change>
+  <id>1ea3afc0-aa86-47e2-a02d-f49655c22b71</id>
+  <lastModified>2015-04-14 14:55:20</lastModified>
+  <parentId>19bea3c0-0995-4c47-9ba9-3e13b67ce48d-6</parentId>
+  <userId>a3a6bfc9-f4f3-4283-b9d1-c61481b05f30</userId>
+  <dateAndTime>2015-04-14 14:55:20</dateAndTime>
+  <key>description</key>
+  <oldValue>
+
+* Der Nutzer moechte sehen wie viele Punkte er bereits erhalten hat
+
+* Der Nutzer moechte informiert werden, falls er ein neues Achievement erhalten hat
+
+Damit der Nutzer sehen kann, wie viele Punkte er noch benoetigt um das naechste Achievement zu erhalten. Falls er bereits genug Punkte gesammelt hat, will der Nutzer automatisch darueber informiert werden um sofort den verknuepften Reward dafuer einloesen zu koennen.
+
+Benoetigt wird dafuer:
+
+* Anzeige der Punkte eines Nutzers
+
+* Automatisches Ueberpruefen, ob ein Achievement erlangt wurde, nachdem der Nutzer Punkte erhalten hat
+</oldValue>
+  <newValue>
+* Als Nutzer moechte ich sehen wie viele Punkte ich durch Abgeschlossene Aufgaben und Termine erreicht habe.
+
+* Ich moechte 
+
+Damit der Nutzer sehen kann, wie viele Punkte er noch benoetigt um das naechste Achievement zu erhalten. Falls er bereits genug Punkte gesammelt hat, will der Nutzer automatisch darueber informiert werden um sofort den verknuepften Reward dafuer einloesen zu koennen.
+
+Benoetigt wird dafuer:
+
+* Anzeige der Punkte eines Nutzers
+
+* Automatisches Ueberpruefen, ob ein Achievement erlangt wurde, nachdem der Nutzer Punkte erhalten hat
+</newValue>
+</change>

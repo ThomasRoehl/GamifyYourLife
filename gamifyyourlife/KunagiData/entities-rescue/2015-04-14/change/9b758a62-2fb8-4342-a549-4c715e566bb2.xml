@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><change>
+  <id>9b758a62-2fb8-4342-a549-4c715e566bb2</id>
+  <lastModified>2015-04-14 13:41:10</lastModified>
+  <parentId>19bea3c0-0995-4c47-9ba9-3e13b67ce48d-6</parentId>
+  <userId>a3a6bfc9-f4f3-4283-b9d1-c61481b05f30</userId>
+  <dateAndTime>2015-04-14 13:41:10</dateAndTime>
+  <key>description</key>
+  <oldValue>
+
+* Der Nutzer moechte sehen wie viele Punkte er bereits erhalten hat
+</oldValue>
+  <newValue>
+
+* Der Nutzer moechte sehen wie viele Punkte er bereits erhalten hat
+
+* Der Nutzer moechte informiert werden, falls er ein neues Achievement erhalten hat
+
+Damit der Nutzer sehe
+</newValue>
+</change>

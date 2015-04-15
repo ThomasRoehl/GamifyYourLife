@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><requirement>
+  <id>19bea3c0-0995-4c47-9ba9-3e13b67ce48d-7</id>
+  <lastModified>2015-04-14 13:47:20</lastModified>
+  <projectId>fc43cae0-0113-401c-9794-ae1dd9c1798c-1</projectId>
+  <number>9</number>
+  <qualitysIds/>
+  <label>Nutzer suchen</label>
+  <description>
+
+* Der Nutzer will nach anderen Nutzern suchen koennen
+
+* Der Nutzer will gefundene Nutzer zu seinen Kontakten hinzufuegen koennen
+
+Damit der Nutzer einen anderen Nutzer ueber seinen Namen etc. finden kann um diesen zu seinen Kontakten hinzuzufuegen.
+
+Benoeti
+</description>
+  <closed>false</closed>
+  <deleted>false</deleted>
+  <dirty>true</dirty>
+  <workEstimationVotingActive>false</workEstimationVotingActive>
+  <workEstimationVotingShowoff>false</workEstimationVotingShowoff>
+  <tasksOrderIds/>
+  <themes/>
+</requirement>

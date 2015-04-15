@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><change>
+  <id>4d4ec990-48ea-4342-85d8-5107c6c9ffe3</id>
+  <lastModified>2015-04-14 13:28:15</lastModified>
+  <parentId>19bea3c0-0995-4c47-9ba9-3e13b67ce48d-2</parentId>
+  <userId>a3a6bfc9-f4f3-4283-b9d1-c61481b05f30</userId>
+  <dateAndTime>2015-04-14 13:28:15</dateAndTime>
+  <key>description</key>
+  <newValue>
+
+* Der Nutzer moechte einen Termin erstellen
+
+Damit der Nutzer in seinem Kalender einen neuen Eintrag fuer einen Termin mit Zeit und Ort bekommt.
+
+B
+</newValue>
+</change>

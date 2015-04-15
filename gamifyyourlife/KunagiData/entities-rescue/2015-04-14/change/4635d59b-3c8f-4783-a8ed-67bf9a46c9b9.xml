@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><change>
+  <id>4635d59b-3c8f-4783-a8ed-67bf9a46c9b9</id>
+  <lastModified>2015-04-14 13:52:03</lastModified>
+  <parentId>a8fe24b9-52fd-4dda-8c27-0567ba644a45-1</parentId>
+  <userId>a3a6bfc9-f4f3-4283-b9d1-c61481b05f30</userId>
+  <dateAndTime>2015-04-14 13:52:03</dateAndTime>
+  <key>description</key>
+  <newValue>
+* Der Nutzer will eigene Aufgaben an einen anderen Nutzer schicken
+
+Damit der andere Nutzer diese Aufgabe annehmen, ablehnen, oder eine eigene Aufgabe zum tausch anbieten kann.
+
+Benoetigt wird dafuer:
+
+* Moeglichkeit eine Aufgabe an einen anderen Nu
+</newValue>
+</change>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><requirement>
+  <id>19bea3c0-0995-4c47-9ba9-3e13b67ce48d-4</id>
+  <lastModified>2015-04-14 13:34:50</lastModified>
+  <projectId>fc43cae0-0113-401c-9794-ae1dd9c1798c-1</projectId>
+  <number>6</number>
+  <qualitysIds/>
+  <label>Rewards anzeigen</label>
+  <description>
+
+* Der Nutzer moechte eine Liste mit Rewards anzeigen
+
+Damit der Nutzer sieht, welche Rewards er bereits erhalten hat und einloesen kann, oder bereits eingeloest hat.
+
+Benoetigt wird dafuer:
+
+* 
+</description>
+  <closed>false</closed>
+  <deleted>false</deleted>
+  <dirty>true</dirty>
+  <workEstimationVotingActive>false</workEstimationVotingActive>
+  <workEstimationVotingShowoff>false</workEstimationVotingShowoff>
+  <tasksOrderIds/>
+  <themes/>
+</requirement>

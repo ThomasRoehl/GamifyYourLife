@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><requirement>
+  <id>a8fe24b9-52fd-4dda-8c27-0567ba644a45-2</id>
+  <lastModified>2015-04-14 13:54:58</lastModified>
+  <projectId>fc43cae0-0113-401c-9794-ae1dd9c1798c-1</projectId>
+  <number>11</number>
+  <qualitysIds/>
+  <label>Kontakte Anzeigen</label>
+  <description>
+
+* Der Nutzer will eine Liste aller Kontakte anzeigen
+
+Dam
+</description>
+  <closed>false</closed>
+  <deleted>false</deleted>
+  <dirty>true</dirty>
+  <workEstimationVotingActive>false</workEstimationVotingActive>
+  <workEstimationVotingShowoff>false</workEstimationVotingShowoff>
+  <tasksOrderIds/>
+  <themes/>
+</requirement>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><requirement>
+  <id>19bea3c0-0995-4c47-9ba9-3e13b67ce48d-5</id>
+  <lastModified>2015-04-14 13:37:10</lastModified>
+  <projectId>fc43cae0-0113-401c-9794-ae1dd9c1798c-1</projectId>
+  <number>7</number>
+  <qualitysIds/>
+  <label>Rewards erstellen</label>
+  <description>
+
+* Der Nutzer moechte ein neuen Reward erstellen
+
+Damit er die Moeglichkeit hat fuer ein bestimmtes Achievement diesen Reward zu erhalten.
+Der Reward soll da
+</description>
+  <closed>false</closed>
+  <deleted>false</deleted>
+  <dirty>true</dirty>
+  <workEstimationVotingActive>false</workEstimationVotingActive>
+  <workEstimationVotingShowoff>false</workEstimationVotingShowoff>
+  <tasksOrderIds/>
+  <themes/>
+</requirement>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><change>
+  <id>20277219-593b-4633-9926-a7d50c72fd10</id>
+  <lastModified>2015-04-14 13:25:35</lastModified>
+  <parentId>19bea3c0-0995-4c47-9ba9-3e13b67ce48d-1</parentId>
+  <userId>a3a6bfc9-f4f3-4283-b9d1-c61481b05f30</userId>
+  <dateAndTime>2015-04-14 13:25:35</dateAndTime>
+  <key>description</key>
+  <newValue>
+* Der Nutzer möchte seine Aufgaben anzeigen lassen
+
+Damit der Nutzer sehen kann, welche Aufgaben bereits abgeschlossen sind, welche noch erledigt werden muessen und wie lange dafuer noch Zeit ist.
+
+Benoetigt wird dafuer:
+
+* Auflistung aller Aufgaben mit angaben zu Status und 
+</newValue>
+</change>

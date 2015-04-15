@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><change>
+  <id>6c6dd361-6d24-47dc-a7f0-a4a372702eba</id>
+  <lastModified>2015-04-14 13:40:55</lastModified>
+  <parentId>19bea3c0-0995-4c47-9ba9-3e13b67ce48d-6</parentId>
+  <userId>a3a6bfc9-f4f3-4283-b9d1-c61481b05f30</userId>
+  <dateAndTime>2015-04-14 13:40:55</dateAndTime>
+  <key>description</key>
+  <oldValue>
+
+* Der Nutzer moechte sehen wie viele Punkte er bereits erhalten hat
+</oldValue>
+  <newValue>
+
+* Der Nutzer moechte sehen wie viele Punkte er bereits erhalten hat
+
+* Der Nutzer moechte informiert 
+</newValue>
+</change>

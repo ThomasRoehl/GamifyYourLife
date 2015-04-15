@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><change>
+  <id>556c86ab-bba2-4a7e-9929-41e0bcbc91d6</id>
+  <lastModified>2015-04-14 13:56:43</lastModified>
+  <parentId>a8fe24b9-52fd-4dda-8c27-0567ba644a45-2</parentId>
+  <userId>a3a6bfc9-f4f3-4283-b9d1-c61481b05f30</userId>
+  <dateAndTime>2015-04-14 13:56:43</dateAndTime>
+  <key>description</key>
+  <newValue>
+
+* Der Nutzer will eine Liste aller Kontakte anzeigen
+
+Damit der Nutzer sehen kann, mit welchen anderen Nutzern er &quot;befreundet&quot; ist.
+Damit der Nutzer die moeglichkeit hat, einen Nutzer aus seiner Kontaktliste zu entfernen.
+
+Benoetigt wird dafuer:
+
+
+* Anzeige aller Kontakte eines Nutzers
+
+
+* Moeglichkeit einen dieser Nutzer aus der Liste 
+</newValue>
+</change>

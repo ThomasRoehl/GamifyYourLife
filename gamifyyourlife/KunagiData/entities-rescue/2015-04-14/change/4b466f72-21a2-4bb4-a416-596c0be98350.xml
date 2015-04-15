@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><change>
+  <id>4b466f72-21a2-4bb4-a416-596c0be98350</id>
+  <lastModified>2015-04-14 13:39</lastModified>
+  <parentId>19bea3c0-0995-4c47-9ba9-3e13b67ce48d-5</parentId>
+  <userId>a3a6bfc9-f4f3-4283-b9d1-c61481b05f30</userId>
+  <dateAndTime>2015-04-14 13:39</dateAndTime>
+  <key>description</key>
+  <oldValue>D
+</oldValue>
+  <newValue>
+
+* Der Nutzer moechte ein neuen Reward erstellen
+
+* Der Nutzer moechte den Reward mit einem Achievement verknuepfen
+
+Damit er die Moeglichkeit hat fuer ein bestimmtes Achievement diesen Reward zu erhalten.
+
+Benoetigt wird dafuer:
+
+* Ein Fenster zum Erstellen eines Rewards
+
+* Eine Anzeige aller nicht erlangten Achievements
+
+* Die Moeglichkeit den Reward mit einem Achie
+</newValue>
+</change>
