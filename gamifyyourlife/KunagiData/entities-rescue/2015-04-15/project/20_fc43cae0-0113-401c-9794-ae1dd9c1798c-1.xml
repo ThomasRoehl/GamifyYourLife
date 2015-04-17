@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><project>
   <id>fc43cae0-0113-401c-9794-ae1dd9c1798c-1</id>
-  <lastModified>2015-04-15 18:53:34</lastModified>
+  <lastModified>2015-04-15 18:50:12</lastModified>
   <label>GamifyYourLife</label>
   <participantsIds>
     <string>a3a6bfc9-f4f3-4283-b9d1-c61481b05f30</string>
@@ -35,13 +35,11 @@
     <string>c374a2ab-4d81-4058-b946-cddf60be0b09-1</string>
     <string>a8fe24b9-52fd-4dda-8c27-0567ba644a45-1</string>
     <string>28136aec-eb10-471a-b549-dd462e7e845a-3</string>
-    <string>a39921dd-ed23-4c62-aa5c-01021c504398-1</string>
-    <string>a39921dd-ed23-4c62-aa5c-01021c504398-2</string>
   </requirementsOrderIds>
   <urgentIssuesOrderIds/>
   <lastSprintNumber>2</lastSprintNumber>
   <lastTaskNumber>0</lastTaskNumber>
-  <lastRequirementNumber>17</lastRequirementNumber>
+  <lastRequirementNumber>15</lastRequirementNumber>
   <lastQualityNumber>0</lastQualityNumber>
   <lastRiskNumber>0</lastRiskNumber>
   <lastIssueNumber>0</lastIssueNumber>
@@ -75,7 +73,7 @@ Unsubscribe from ${entity.reference}: ${unsubscribe.url}
 
 Unsubscribe from all entities: ${unsubscribeall.url}
 </subscriberNotificationTemplate>
-  <lastOpenedDateAndTime>2015-04-15 18:51:02</lastOpenedDateAndTime>
+  <lastOpenedDateAndTime>2015-04-15 18:50:12</lastOpenedDateAndTime>
   <freeDays>0</freeDays>
   <autoCreateTasksFromQualities>false</autoCreateTasksFromQualities>
 </project>
