@@ -430,3 +430,25 @@ Fr, 17. April 2015, 10:56 -> Fri Apr 17 10:56:50 CEST 2015
 Fr, 17. April 2015, 13:53 -> Fri Apr 17 13:53:01 CEST 2015 
     WARN BurndownChart        GraphicsEnvironment is not headless                                                                 | app:scrum > session:TRO
 
+--------------------------------------------------------------------------------
+Fr, 17. April 2015, 15:16 -> Fri Apr 17 15:16:41 CEST 2015 
+    FATAL [/]                  Error loading WebappClassLoader
+  delegate: false
+  repositories:
+    /WEB-INF/classes/
+----------> Parent Classloader:
+sun.misc.Launcher$AppClassLoader@4e25154f
+ org.apache.jasper.servlet.JspServlet | app:scrum
+
+--------------------------------------------------------------------------------
+Fr, 17. April 2015, 15:16 -> Fri Apr 17 15:16:41 CEST 2015 
+    FATAL [/]                  Servlet / threw load() exception                                                                    | app:scrum
+
+--------------------------------------------------------------------------------
+Fr, 17. April 2015, 15:16 -> Fri Apr 17 15:16:41 CEST 2015 
+    FATAL Registry             Null component localEngine:type=JspMonitor,name=jsp,WebModule=//localhost/,J2EEApplication=none,J2EEServer=none | app:scrum
+
+--------------------------------------------------------------------------------
+Fr, 17. April 2015, 15:16 -> Fri Apr 17 15:16:58 CEST 2015 
+    WARN BurndownChart        GraphicsEnvironment is not headless                                                                 | app:scrum > session:TRO
+
