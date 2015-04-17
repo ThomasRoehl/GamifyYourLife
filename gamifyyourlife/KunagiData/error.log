@@ -188,3 +188,245 @@ Mi, 15. April 2015, 11:39 -> Wed Apr 15 11:39:03 CEST 2015
 Mi, 15. April 2015, 11:39 -> Wed Apr 15 11:39:41 CEST 2015 
     WARN BurndownChart        GraphicsEnvironment is not headless                                                                 | app:scrum > session:TRO
 
+--------------------------------------------------------------------------------
+Fr, 17. April 2015, 10:04 -> Fri Apr 17 10:04:21 CEST 2015 
+    FATAL [/]                  Error loading WebappClassLoader
+  delegate: false
+  repositories:
+    /WEB-INF/classes/
+----------> Parent Classloader:
+sun.misc.Launcher$AppClassLoader@4e25154f
+ org.apache.jasper.servlet.JspServlet | app:scrum
+
+--------------------------------------------------------------------------------
+Fr, 17. April 2015, 10:04 -> Fri Apr 17 10:04:21 CEST 2015 
+    FATAL [/]                  Servlet / threw load() exception                                                                    | app:scrum
+
+--------------------------------------------------------------------------------
+Fr, 17. April 2015, 10:04 -> Fri Apr 17 10:04:21 CEST 2015 
+    FATAL Registry             Null component localEngine:type=JspMonitor,name=jsp,WebModule=//localhost/,J2EEApplication=none,J2EEServer=none | app:scrum
+
+--------------------------------------------------------------------------------
+Fr, 17. April 2015, 10:05 -> Fri Apr 17 10:05:22 CEST 2015 
+    ERROR LoginServlet         OpenID authentication failed. Discovering OpenID failed: https://www.google.com/accounts/o8/id <- YadisException: 0x704: I/O transport error: www.google.com <- www.google.com
+java.lang.RuntimeException: Discovering OpenID failed: https://www.google.com/accounts/o8/id
+    at ilarkesto.auth.OpenId.createAuthenticationRequest(OpenId.java:157)
+    at ilarkesto.auth.OpenId.createAuthenticationRequestUrl(OpenId.java:89)
+    at scrum.server.admin.LoginServlet.redirectOpenId(LoginServlet.java:293)
+    at scrum.server.admin.LoginServlet.onRequest(LoginServlet.java:76)
+    at scrum.server.common.AKunagiServlet.onGet(AKunagiServlet.java:60)
+    at ilarkesto.webapp.AServlet.doGet(AServlet.java:50)
+    at javax.servlet.http.HttpServlet.service(HttpServlet.java:690)
+    at javax.servlet.http.HttpServlet.service(HttpServlet.java:803)
+    at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+    at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+    at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+    at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:175)
+    at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:128)
+    at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+    at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+    at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:263)
+    at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:844)
+    at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:584)
+    at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:447)
+    at java.lang.Thread.run(Unknown Source)
+Caused by: org.openid4java.discovery.yadis.YadisException: 0x704: I/O transport error: www.google.com
+    at org.openid4java.discovery.yadis.YadisResolver.retrieveXrdsLocation(YadisResolver.java:478)
+    at org.openid4java.discovery.yadis.YadisResolver.discover(YadisResolver.java:248)
+    at org.openid4java.discovery.yadis.YadisResolver.discover(YadisResolver.java:232)
+    at org.openid4java.discovery.yadis.YadisResolver.discover(YadisResolver.java:166)
+    at org.openid4java.discovery.Discovery.discover(Discovery.java:147)
+    at org.openid4java.discovery.Discovery.discover(Discovery.java:129)
+    at org.openid4java.consumer.ConsumerManager.discover(ConsumerManager.java:538)
+    at ilarkesto.auth.OpenId.createAuthenticationRequest(OpenId.java:155)
+    at ilarkesto.auth.OpenId.createAuthenticationRequestUrl(OpenId.java:89)
+    at scrum.server.admin.LoginServlet.redirectOpenId(LoginServlet.java:293)
+    at scrum.server.admin.LoginServlet.onRequest(LoginServlet.java:76)
+    at scrum.server.common.AKunagiServlet.onGet(AKunagiServlet.java:60)
+    at ilarkesto.webapp.AServlet.doGet(AServlet.java:50)
+    at javax.servlet.http.HttpServlet.service(HttpServlet.java:690)
+    at javax.servlet.http.HttpServlet.service(HttpServlet.java:803)
+    at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+    at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+    at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+    at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:175)
+    at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:128)
+    at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+    at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+    at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:263)
+    at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:844)
+    at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:584)
+    at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:447)
+    at java.lang.Thread.run(Unknown Source)
+Caused by: java.net.UnknownHostException: www.google.com
+    at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+    at java.net.InetAddress$2.lookupAllHostAddr(Unknown Source)
+    at java.net.InetAddress.getAddressesFromNameService(Unknown Source)
+    at java.net.InetAddress.getAllByName0(Unknown Source)
+    at java.net.InetAddress.getAllByName(Unknown Source)
+    at java.net.InetAddress.getAllByName(Unknown Source)
+    at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+    at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:278)
+    at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:162)
+    at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:151)
+    at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:125)
+    at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:640)
+    at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:479)
+    at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:906)
+    at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:805)
+    at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:784)
+    at org.openid4java.util.HttpCache.head(HttpCache.java:335)
+    at org.openid4java.discovery.yadis.YadisResolver.retrieveXrdsLocation(YadisResolver.java:400)
+    at org.openid4java.discovery.yadis.YadisResolver.discover(YadisResolver.java:248)
+    at org.openid4java.discovery.yadis.YadisResolver.discover(YadisResolver.java:232)
+    at org.openid4java.discovery.yadis.YadisResolver.discover(YadisResolver.java:166)
+    at org.openid4java.discovery.Discovery.discover(Discovery.java:147)
+    at org.openid4java.discovery.Discovery.discover(Discovery.java:129)
+    at org.openid4java.consumer.ConsumerManager.discover(ConsumerManager.java:538)
+    at ilarkesto.auth.OpenId.createAuthenticationRequest(OpenId.java:155)
+    at ilarkesto.auth.OpenId.createAuthenticationRequestUrl(OpenId.java:89)
+    at scrum.server.admin.LoginServlet.redirectOpenId(LoginServlet.java:293)
+    at scrum.server.admin.LoginServlet.onRequest(LoginServlet.java:76)
+    at scrum.server.common.AKunagiServlet.onGet(AKunagiServlet.java:60)
+    at ilarkesto.webapp.AServlet.doGet(AServlet.java:50)
+    at javax.servlet.http.HttpServlet.service(HttpServlet.java:690)
+    at javax.servlet.http.HttpServlet.service(HttpServlet.java:803)
+    at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+    at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+    at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+    at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:175)
+    at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:128)
+    at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+    at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+    at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:263)
+    at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:844)
+    at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:584)
+    at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:447)
+    at java.lang.Thread.run(Unknown Source)
+ | app:scrum > session:0:0:0:0:0:0:0:1
+
+--------------------------------------------------------------------------------
+Fr, 17. April 2015, 10:06 -> Fri Apr 17 10:06:10 CEST 2015 
+    ERROR LoginServlet         OpenID authentication failed. Discovering OpenID failed: https://www.google.com/accounts/o8/id <- YadisException: 0x704: I/O transport error: www.google.com <- www.google.com
+java.lang.RuntimeException: Discovering OpenID failed: https://www.google.com/accounts/o8/id
+    at ilarkesto.auth.OpenId.createAuthenticationRequest(OpenId.java:157)
+    at ilarkesto.auth.OpenId.createAuthenticationRequestUrl(OpenId.java:89)
+    at scrum.server.admin.LoginServlet.redirectOpenId(LoginServlet.java:293)
+    at scrum.server.admin.LoginServlet.onRequest(LoginServlet.java:76)
+    at scrum.server.common.AKunagiServlet.onPost(AKunagiServlet.java:70)
+    at ilarkesto.webapp.AServlet.doPost(AServlet.java:62)
+    at javax.servlet.http.HttpServlet.service(HttpServlet.java:710)
+    at javax.servlet.http.HttpServlet.service(HttpServlet.java:803)
+    at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+    at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+    at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+    at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:175)
+    at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:128)
+    at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+    at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+    at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:263)
+    at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:844)
+    at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:584)
+    at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:447)
+    at java.lang.Thread.run(Unknown Source)
+Caused by: org.openid4java.discovery.yadis.YadisException: 0x704: I/O transport error: www.google.com
+    at org.openid4java.discovery.yadis.YadisResolver.retrieveXrdsLocation(YadisResolver.java:478)
+    at org.openid4java.discovery.yadis.YadisResolver.discover(YadisResolver.java:248)
+    at org.openid4java.discovery.yadis.YadisResolver.discover(YadisResolver.java:232)
+    at org.openid4java.discovery.yadis.YadisResolver.discover(YadisResolver.java:166)
+    at org.openid4java.discovery.Discovery.discover(Discovery.java:147)
+    at org.openid4java.discovery.Discovery.discover(Discovery.java:129)
+    at org.openid4java.consumer.ConsumerManager.discover(ConsumerManager.java:538)
+    at ilarkesto.auth.OpenId.createAuthenticationRequest(OpenId.java:155)
+    at ilarkesto.auth.OpenId.createAuthenticationRequestUrl(OpenId.java:89)
+    at scrum.server.admin.LoginServlet.redirectOpenId(LoginServlet.java:293)
+    at scrum.server.admin.LoginServlet.onRequest(LoginServlet.java:76)
+    at scrum.server.common.AKunagiServlet.onPost(AKunagiServlet.java:70)
+    at ilarkesto.webapp.AServlet.doPost(AServlet.java:62)
+    at javax.servlet.http.HttpServlet.service(HttpServlet.java:710)
+    at javax.servlet.http.HttpServlet.service(HttpServlet.java:803)
+    at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+    at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+    at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+    at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:175)
+    at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:128)
+    at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+    at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+    at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:263)
+    at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:844)
+    at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:584)
+    at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:447)
+    at java.lang.Thread.run(Unknown Source)
+Caused by: java.net.UnknownHostException: www.google.com
+    at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+    at java.net.InetAddress$2.lookupAllHostAddr(Unknown Source)
+    at java.net.InetAddress.getAddressesFromNameService(Unknown Source)
+    at java.net.InetAddress.getAllByName0(Unknown Source)
+    at java.net.InetAddress.getAllByName(Unknown Source)
+    at java.net.InetAddress.getAllByName(Unknown Source)
+    at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+    at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:278)
+    at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:162)
+    at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:151)
+    at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:125)
+    at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:640)
+    at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:479)
+    at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:906)
+    at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:805)
+    at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:784)
+    at org.openid4java.util.HttpCache.head(HttpCache.java:335)
+    at org.openid4java.discovery.yadis.YadisResolver.retrieveXrdsLocation(YadisResolver.java:400)
+    at org.openid4java.discovery.yadis.YadisResolver.discover(YadisResolver.java:248)
+    at org.openid4java.discovery.yadis.YadisResolver.discover(YadisResolver.java:232)
+    at org.openid4java.discovery.yadis.YadisResolver.discover(YadisResolver.java:166)
+    at org.openid4java.discovery.Discovery.discover(Discovery.java:147)
+    at org.openid4java.discovery.Discovery.discover(Discovery.java:129)
+    at org.openid4java.consumer.ConsumerManager.discover(ConsumerManager.java:538)
+    at ilarkesto.auth.OpenId.createAuthenticationRequest(OpenId.java:155)
+    at ilarkesto.auth.OpenId.createAuthenticationRequestUrl(OpenId.java:89)
+    at scrum.server.admin.LoginServlet.redirectOpenId(LoginServlet.java:293)
+    at scrum.server.admin.LoginServlet.onRequest(LoginServlet.java:76)
+    at scrum.server.common.AKunagiServlet.onPost(AKunagiServlet.java:70)
+    at ilarkesto.webapp.AServlet.doPost(AServlet.java:62)
+    at javax.servlet.http.HttpServlet.service(HttpServlet.java:710)
+    at javax.servlet.http.HttpServlet.service(HttpServlet.java:803)
+    at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+    at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+    at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+    at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:175)
+    at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:128)
+    at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+    at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+    at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:263)
+    at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:844)
+    at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:584)
+    at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:447)
+    at java.lang.Thread.run(Unknown Source)
+ | app:scrum > session:0:0:0:0:0:0:0:1
+
+--------------------------------------------------------------------------------
+Fr, 17. April 2015, 10:56 -> Fri Apr 17 10:56:23 CEST 2015 
+    FATAL [/]                  Error loading WebappClassLoader
+  delegate: false
+  repositories:
+    /WEB-INF/classes/
+----------> Parent Classloader:
+sun.misc.Launcher$AppClassLoader@4e25154f
+ org.apache.jasper.servlet.JspServlet | app:scrum
+
+--------------------------------------------------------------------------------
+Fr, 17. April 2015, 10:56 -> Fri Apr 17 10:56:23 CEST 2015 
+    FATAL [/]                  Servlet / threw load() exception                                                                    | app:scrum
+
+--------------------------------------------------------------------------------
+Fr, 17. April 2015, 10:56 -> Fri Apr 17 10:56:23 CEST 2015 
+    FATAL Registry             Null component localEngine:type=JspMonitor,name=jsp,WebModule=//localhost/,J2EEApplication=none,J2EEServer=none | app:scrum
+
+--------------------------------------------------------------------------------
+Fr, 17. April 2015, 10:56 -> Fri Apr 17 10:56:50 CEST 2015 
+    WARN BurndownChart        GraphicsEnvironment is not headless                                                                 | app:scrum > session:TRO
+
+--------------------------------------------------------------------------------
+Fr, 17. April 2015, 13:53 -> Fri Apr 17 13:53:01 CEST 2015 
+    WARN BurndownChart        GraphicsEnvironment is not headless                                                                 | app:scrum > session:TRO
+

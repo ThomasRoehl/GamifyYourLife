@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><project>
   <id>fc43cae0-0113-401c-9794-ae1dd9c1798c-1</id>
-  <lastModified>2015-04-17 13:53:01</lastModified>
+  <lastModified>2015-04-17 11:03:12</lastModified>
   <label>GamifyYourLife</label>
   <participantsIds>
     <string>a3a6bfc9-f4f3-4283-b9d1-c61481b05f30</string>
@@ -75,7 +75,7 @@ Unsubscribe from ${entity.reference}: ${unsubscribe.url}
 
 Unsubscribe from all entities: ${unsubscribeall.url}
 </subscriberNotificationTemplate>
-  <lastOpenedDateAndTime>2015-04-17 13:53:01</lastOpenedDateAndTime>
+  <lastOpenedDateAndTime>2015-04-17 10:56:50</lastOpenedDateAndTime>
   <freeDays>0</freeDays>
   <autoCreateTasksFromQualities>false</autoCreateTasksFromQualities>
 </project>

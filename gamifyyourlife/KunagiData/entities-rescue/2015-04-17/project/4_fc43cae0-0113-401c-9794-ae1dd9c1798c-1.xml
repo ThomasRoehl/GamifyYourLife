@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><project>
   <id>fc43cae0-0113-401c-9794-ae1dd9c1798c-1</id>
-  <lastModified>2015-04-17 13:53:01</lastModified>
+  <lastModified>2015-04-17 10:59:40</lastModified>
   <label>GamifyYourLife</label>
   <participantsIds>
     <string>a3a6bfc9-f4f3-4283-b9d1-c61481b05f30</string>
@@ -22,7 +22,6 @@
   <requirementsOrderIds>
     <string>28136aec-eb10-471a-b549-dd462e7e845a-2</string>
     <string>f6d1c10c-657c-4004-b4a0-5aafa80f9ff7-1</string>
-    <string>f6d1c10c-657c-4004-b4a0-5aafa80f9ff7-2</string>
     <string>19bea3c0-0995-4c47-9ba9-3e13b67ce48d-3</string>
     <string>19bea3c0-0995-4c47-9ba9-3e13b67ce48d-1</string>
     <string>19bea3c0-0995-4c47-9ba9-3e13b67ce48d-2</string>
@@ -41,7 +40,7 @@
   <urgentIssuesOrderIds/>
   <lastSprintNumber>2</lastSprintNumber>
   <lastTaskNumber>0</lastTaskNumber>
-  <lastRequirementNumber>17</lastRequirementNumber>
+  <lastRequirementNumber>16</lastRequirementNumber>
   <lastQualityNumber>0</lastQualityNumber>
   <lastRiskNumber>0</lastRiskNumber>
   <lastIssueNumber>0</lastIssueNumber>
@@ -75,7 +74,7 @@ Unsubscribe from ${entity.reference}: ${unsubscribe.url}
 
 Unsubscribe from all entities: ${unsubscribeall.url}
 </subscriberNotificationTemplate>
-  <lastOpenedDateAndTime>2015-04-17 13:53:01</lastOpenedDateAndTime>
+  <lastOpenedDateAndTime>2015-04-17 10:56:50</lastOpenedDateAndTime>
   <freeDays>0</freeDays>
   <autoCreateTasksFromQualities>false</autoCreateTasksFromQualities>
 </project>

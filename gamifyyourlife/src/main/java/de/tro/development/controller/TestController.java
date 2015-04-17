@@ -24,11 +24,14 @@ public class TestController {
 	}
 	
 	public String getUser(){
+		System.out.println("getUser" + this.user);
 		return this.user;
 	}
 	
 	public void setUser(){
-		this.user = "Test";
+		System.out.println("setUser " + this.user);
+		if (this.user.equals("ERROR")) this.user = "Test";
+		else this.user = "ERROR";
 	}
 
 }

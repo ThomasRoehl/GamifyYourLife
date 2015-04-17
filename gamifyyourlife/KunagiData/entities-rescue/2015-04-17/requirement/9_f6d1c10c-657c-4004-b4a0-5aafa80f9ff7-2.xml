@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><requirement>
+  <id>f6d1c10c-657c-4004-b4a0-5aafa80f9ff7-2</id>
+  <lastModified>2015-04-17 11:01:06</lastModified>
+  <projectId>fc43cae0-0113-401c-9794-ae1dd9c1798c-1</projectId>
+  <number>17</number>
+  <qualitysIds/>
+  <label>Nutzer Ein- und Ausloggen</label>
+  <description>
+
+* Als Nutzer moechte ich mich auf der Startseite einloggen koennen
+
+* Als Nutzer moechte ich mich auf der Profilseite ausloggen
+</description>
+  <closed>false</closed>
+  <deleted>false</deleted>
+  <dirty>true</dirty>
+  <workEstimationVotingActive>false</workEstimationVotingActive>
+  <workEstimationVotingShowoff>false</workEstimationVotingShowoff>
+  <tasksOrderIds/>
+  <themes/>
+</requirement>
