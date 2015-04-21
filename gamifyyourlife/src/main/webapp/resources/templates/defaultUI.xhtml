@@ -10,15 +10,23 @@
 </h:head>
 <f:view locale="en">
 	<h:body>
+		<div class="topbar">
+			<ui:insert name="topbar">
+			</ui:insert>
+		</div>
+	
 		<div class="header">
 			<ui:insert name="header"></ui:insert>
 		</div>
+		
 		<div class="menu">
 			<ui:insert name="menu"></ui:insert>
 		</div>
+		
 		<div class="content">
 			<ui:insert name="content"></ui:insert>
 		</div>
+		
 		<div class="footer">
 			<ui:insert name="footer"></ui:insert>
 		</div>

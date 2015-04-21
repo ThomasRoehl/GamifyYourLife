@@ -1,0 +1,4 @@
+@CHARSET "ISO-8859-1";
+.logoutButton{
+	background: url("#{resource['images/blue_less_full_50.png']}") no-repeat center left;
+}

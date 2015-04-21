@@ -8,31 +8,39 @@
 	xmlns:c="http://java.sun.com/jsp/jstl/core"
 	template="resources/templates/defaultUI.xhtml">
 
+	<ui:define name="topbar">
+		<h:outputStylesheet library="css" name="buttons.css" />
+		<h:form>
+			<div class="logoutButton" align="right">
+				<h:commandButton id="logout" value="logout" action="index" />
+			</div>
+		</h:form>
+	</ui:define>
+
 	<ui:define name="header">
-	Home
 	</ui:define>
 
 	<ui:define name="menu">
-	<ul>
-		<li><a href="index.xhtml">index</a></li>
-	</ul>
+		<ul>
+			<li><a href="index.xhtml">index</a></li>
+			<li><a href="register.xhtml">register</a></li>
+		</ul>
 	</ui:define>
 
 	<ui:define name="content">
-	Home<br />
-	<br />
-	<br />
-	<br />
-	<br />
-	<br />
-	<br />
-	<br />
-	<br />
-	<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
 	</ui:define>
 
 	<ui:define name="footer">
-	test
 	</ui:define>
 
 </ui:composition>

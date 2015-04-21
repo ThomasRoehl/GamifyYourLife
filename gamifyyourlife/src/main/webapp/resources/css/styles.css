@@ -1,49 +1,68 @@
 .wrapper {
 	margin-left: auto;
 	margin-right: auto;
-	background-color: #00F;
+	background-color:#86B4CC;
 	width: 100%;
+}
+
+.topbar {
+	margin-left: auto;
+	margin-right: auto;
+	background: url("#{resource['images/blue_less_full_50.png']}") no-repeat
+		center left;
+	width: 100%;
+	height: 23px;
 }
 
 .header {
 	margin-left: auto;
 	margin-right: auto;
-	background-color: #0F0;
+	background: url("#{resource['images/titel.png']}") no-repeat
+		center left;
+	background-color: #FFF;
 	width: 100%;
-	height: 100px;
+	height: 150px;
 }
 
 .menu {
 	margin-left: auto;
 	margin-right: auto;
-	background-color: #000;
+	background: url("#{resource['images/blue_less_full_50.png']}") no-repeat
+		center left;
+	background-color: #FFF;
 	text-transform: uppercase;
 	font-weight: bold;
 	text-align: center;
 	width: 100%;
 	height: 30px;
+	padding-top: 5px;
+	padding-bottom: 20px;
 }
 
-.menu ul li a{
+.menu ul li{
 	color: #FFF;
+	width: 100px;
 	list-style-type: none;
 	text-decoration: none;
-	height: 30px;
-	width: 100px;
 	display: block;
 	float: left;
-	padding-top:6px;
 }
 
 .content {
-	background-color: #F0F;
+	background-color:#86B4CC;
 	width: 100%;
-} 
+	position: relative;
+	text-align: center;
+}
 
 .footer {
 	margin-left: auto;
 	margin-right: auto;
+	background: url("#{resource['images/grey_full_50.png']}") no-repeat
+		center left;
 	background-color: #0FF;
 	width: 100%;
 	height: 30px;
 }
+
+

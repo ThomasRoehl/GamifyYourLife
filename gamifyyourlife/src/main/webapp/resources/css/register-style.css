@@ -1,0 +1,28 @@
+@CHARSET "ISO-8859-1";
+
+.backToLogin{
+	text-align: right;
+}
+
+.outerRegisterForm{
+	margin: auto;
+    width: auto;
+    height: 2000px;
+	background-color:#86B4CC;
+}
+
+.registerForm{
+	position: absolute;
+	text-align: center;
+	top: 50%;
+	left: 50%;
+	width: 200px;
+	height: 175px;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	background: #FFF;
+	border-radius: 0.5em;
+	-webkit-border-radius: 0.5em;
+	-o-border-radius: 0.5em;
+	-moz-border-radius: 0.5em;
+}
