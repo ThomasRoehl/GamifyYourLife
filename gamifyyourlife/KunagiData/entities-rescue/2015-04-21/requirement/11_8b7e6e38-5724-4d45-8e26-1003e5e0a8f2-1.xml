@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><requirement>
+  <id>8b7e6e38-5724-4d45-8e26-1003e5e0a8f2-1</id>
+  <lastModified>2015-04-21 11:14:36</lastModified>
+  <projectId>fc43cae0-0113-401c-9794-ae1dd9c1798c-1</projectId>
+  <number>18</number>
+  <qualitysIds/>
+  <label>Definition of Done</label>
+  <description>
+
+* Ich als Entwickler moechte eine Definition of Done
+
+Damit ich sehen kann, ob meine Arbeit vollstaendig abg
+</description>
+  <closed>false</closed>
+  <deleted>false</deleted>
+  <dirty>true</dirty>
+  <workEstimationVotingActive>false</workEstimationVotingActive>
+  <workEstimationVotingShowoff>false</workEstimationVotingShowoff>
+  <tasksOrderIds/>
+  <themes/>
+</requirement>

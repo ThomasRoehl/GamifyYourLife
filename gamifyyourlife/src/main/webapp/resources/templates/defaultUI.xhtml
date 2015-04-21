@@ -11,22 +11,33 @@
 <f:view locale="en">
 	<h:body>
 		<div class="topbar">
+			<h:outputStylesheet library="css" name="buttons.css" />
+			<h:form>
+				<div class="logoutButton" align="right">
+					<h:commandButton id="logout" value="logout" action="#{navigationController.logout}" />
+				</div>
+			</h:form>
 			<ui:insert name="topbar">
+
 			</ui:insert>
 		</div>
-	
+
 		<div class="header">
 			<ui:insert name="header"></ui:insert>
 		</div>
-		
+
 		<div class="menu">
+			<ul>
+				<li><a class="homePage" href="home.xhtml">home</a></li>
+				<li><a class="indexPage" href="calendar.xhtml">calendar</a></li>
+			</ul>
 			<ui:insert name="menu"></ui:insert>
 		</div>
-		
+
 		<div class="content">
 			<ui:insert name="content"></ui:insert>
 		</div>
-		
+
 		<div class="footer">
 			<ui:insert name="footer"></ui:insert>
 		</div>

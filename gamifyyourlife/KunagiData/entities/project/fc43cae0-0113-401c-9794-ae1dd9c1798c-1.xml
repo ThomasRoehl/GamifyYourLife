@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><project>
   <id>fc43cae0-0113-401c-9794-ae1dd9c1798c-1</id>
-  <lastModified>2015-04-17 15:17:39</lastModified>
+  <lastModified>2015-04-21 14:13:27</lastModified>
   <label>GamifyYourLife</label>
   <participantsIds>
     <string>a3a6bfc9-f4f3-4283-b9d1-c61481b05f30</string>
@@ -20,12 +20,6 @@
   <currentSprintId>a72c4029-4462-4800-85f4-aef523a460e5</currentSprintId>
   <nextSprintId>9ae6c957-b894-4c47-b734-439e98bc033c</nextSprintId>
   <requirementsOrderIds>
-    <string>28136aec-eb10-471a-b549-dd462e7e845a-2</string>
-    <string>f6d1c10c-657c-4004-b4a0-5aafa80f9ff7-2</string>
-    <string>f6d1c10c-657c-4004-b4a0-5aafa80f9ff7-1</string>
-    <string>19bea3c0-0995-4c47-9ba9-3e13b67ce48d-3</string>
-    <string>19bea3c0-0995-4c47-9ba9-3e13b67ce48d-1</string>
-    <string>19bea3c0-0995-4c47-9ba9-3e13b67ce48d-2</string>
     <string>cda54d00-ba64-4326-82bf-185e72f4a59c-2</string>
     <string>19bea3c0-0995-4c47-9ba9-3e13b67ce48d-6</string>
     <string>19bea3c0-0995-4c47-9ba9-3e13b67ce48d-7</string>
@@ -40,8 +34,8 @@
   </requirementsOrderIds>
   <urgentIssuesOrderIds/>
   <lastSprintNumber>2</lastSprintNumber>
-  <lastTaskNumber>0</lastTaskNumber>
-  <lastRequirementNumber>17</lastRequirementNumber>
+  <lastTaskNumber>27</lastTaskNumber>
+  <lastRequirementNumber>18</lastRequirementNumber>
   <lastQualityNumber>0</lastQualityNumber>
   <lastRiskNumber>0</lastRiskNumber>
   <lastIssueNumber>0</lastIssueNumber>
@@ -75,7 +69,7 @@ Unsubscribe from ${entity.reference}: ${unsubscribe.url}
 
 Unsubscribe from all entities: ${unsubscribeall.url}
 </subscriberNotificationTemplate>
-  <lastOpenedDateAndTime>2015-04-17 15:16:58</lastOpenedDateAndTime>
+  <lastOpenedDateAndTime>2015-04-21 14:13:27</lastOpenedDateAndTime>
   <freeDays>0</freeDays>
   <autoCreateTasksFromQualities>false</autoCreateTasksFromQualities>
 </project>

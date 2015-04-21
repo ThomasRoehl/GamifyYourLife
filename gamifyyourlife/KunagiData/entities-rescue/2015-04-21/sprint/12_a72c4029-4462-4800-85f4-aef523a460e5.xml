@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><sprint>
+  <id>a72c4029-4462-4800-85f4-aef523a460e5</id>
+  <lastModified>2015-04-21 11:27:06</lastModified>
+  <number>2</number>
+  <projectId>fc43cae0-0113-401c-9794-ae1dd9c1798c-1</projectId>
+  <label>Sprint 01</label>
+  <goal>Aufbau einer initialen Anwendung
+</goal>
+  <begin>2015-04-21</begin>
+  <end>2015-04-27</end>
+  <originallyEnd reference="../end"/>
+  <requirementsOrderIds>
+    <string>28136aec-eb10-471a-b549-dd462e7e845a-2</string>
+    <string>f6d1c10c-657c-4004-b4a0-5aafa80f9ff7-2</string>
+    <string>f6d1c10c-657c-4004-b4a0-5aafa80f9ff7-1</string>
+    <string>19bea3c0-0995-4c47-9ba9-3e13b67ce48d-3</string>
+  </requirementsOrderIds>
+  <productOwnersIds/>
+  <scrumMastersIds/>
+  <teamMembersIds/>
+</sprint>
