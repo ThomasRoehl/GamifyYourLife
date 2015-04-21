@@ -108,6 +108,8 @@ public class NavigationController {
 	
 	public boolean checkUser(){
 		Query query = em.createNamedQuery("Users.checkUserLogin");
+		query.setParameter("username", this.username);
+		query.setParameter("password", this.password);
 		if (!(query.getResultList().get(0).equals(new Long(0)))) return true;
 		return false;
 	}
