@@ -1,21 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?><project>
   <id>fc43cae0-0113-401c-9794-ae1dd9c1798c-1</id>
-  <lastModified>2015-04-21 21:11:07</lastModified>
+  <lastModified>2015-04-23 12:12:35</lastModified>
   <label>GamifyYourLife</label>
   <participantsIds>
     <string>a3a6bfc9-f4f3-4283-b9d1-c61481b05f30</string>
+    <string>a01eede1-e7e9-41e9-8122-6f7c606bfd0a</string>
   </participantsIds>
   <adminsIds>
     <string>a3a6bfc9-f4f3-4283-b9d1-c61481b05f30</string>
+    <string>a01eede1-e7e9-41e9-8122-6f7c606bfd0a</string>
   </adminsIds>
   <productOwnersIds>
     <string>a3a6bfc9-f4f3-4283-b9d1-c61481b05f30</string>
+    <string>a01eede1-e7e9-41e9-8122-6f7c606bfd0a</string>
   </productOwnersIds>
   <scrumMastersIds>
     <string>a3a6bfc9-f4f3-4283-b9d1-c61481b05f30</string>
+    <string>a01eede1-e7e9-41e9-8122-6f7c606bfd0a</string>
   </scrumMastersIds>
   <teamMembersIds>
     <string>a3a6bfc9-f4f3-4283-b9d1-c61481b05f30</string>
+    <string>a01eede1-e7e9-41e9-8122-6f7c606bfd0a</string>
   </teamMembersIds>
   <currentSprintId>a72c4029-4462-4800-85f4-aef523a460e5</currentSprintId>
   <nextSprintId>9ae6c957-b894-4c47-b734-439e98bc033c</nextSprintId>
@@ -69,7 +74,7 @@ Unsubscribe from ${entity.reference}: ${unsubscribe.url}
 
 Unsubscribe from all entities: ${unsubscribeall.url}
 </subscriberNotificationTemplate>
-  <lastOpenedDateAndTime>2015-04-21 21:11:07</lastOpenedDateAndTime>
+  <lastOpenedDateAndTime>2015-04-23 12:12:35</lastOpenedDateAndTime>
   <freeDays>0</freeDays>
   <autoCreateTasksFromQualities>false</autoCreateTasksFromQualities>
 </project>

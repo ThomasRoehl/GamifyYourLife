@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><user>
+  <id>fcc2feaf-01ed-4556-b217-263c707a91d9</id>
+  <lastModified>2015-04-23 11:47:46</lastModified>
+  <name>admin</name>
+  <publicName>admin</publicName>
+  <admin>true</admin>
+  <emailVerified>false</emailVerified>
+  <color>darkorchid</color>
+  <lastLoginDateAndTime>2015-04-23 11:47:46</lastLoginDateAndTime>
+  <registrationDateAndTime>2015-04-14 11:20:35</registrationDateAndTime>
+  <disabled>false</disabled>
+  <hideUserGuideBlog>false</hideUserGuideBlog>
+  <hideUserGuideCalendar>false</hideUserGuideCalendar>
+  <hideUserGuideFiles>false</hideUserGuideFiles>
+  <hideUserGuideForum>false</hideUserGuideForum>
+  <hideUserGuideImpediments>false</hideUserGuideImpediments>
+  <hideUserGuideIssues>false</hideUserGuideIssues>
+  <hideUserGuideJournal>false</hideUserGuideJournal>
+  <hideUserGuideNextSprint>false</hideUserGuideNextSprint>
+  <hideUserGuideProductBacklog>false</hideUserGuideProductBacklog>
+  <hideUserGuideCourtroom>false</hideUserGuideCourtroom>
+  <hideUserGuideQualityBacklog>false</hideUserGuideQualityBacklog>
+  <hideUserGuideReleases>false</hideUserGuideReleases>
+  <hideUserGuideRisks>false</hideUserGuideRisks>
+  <hideUserGuideSprintBacklog>false</hideUserGuideSprintBacklog>
+  <hideUserGuideWhiteboard>false</hideUserGuideWhiteboard>
+  <loginToken>5223045d-f9c0-4f41-b675-9f3d0f787e82</loginToken>
+  <passwordSalt>Haequ Ypou Vuwep Ro Zat Leedu ]5</passwordSalt>
+  <password>SHA-256:8d755799d36c646ae08213bb8f60b7d8990ef7faa8ee428045e63e2c31cbd9d9</password>
+</user>

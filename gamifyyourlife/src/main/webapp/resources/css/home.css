@@ -1,0 +1,42 @@
+@CHARSET "ISO-8859-1";
+
+.welcome{
+	margin-top: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+	height: 500px;
+	float:left;
+}
+
+.task{
+	margin-top: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 20%;
+	height: 500px;
+	float:right;
+}
+
+.tasksTable{
+	border-collapse:collapse;
+	border:1px solid #000000;
+	text-align: right;
+}
+
+.taskTableHeader{
+   text-align:center;
+   background:none repeat scroll 0 0 #B5B5B5;
+   border-bottom:1px solid #000000;  
+   padding:2px;
+}
+
+.taskTableOddRow{
+   text-align:center;
+   background:none repeat scroll 0 0 #FFFFFF;	
+}
+
+.taskTableEvenRow{
+   text-align:center;
+   background:none repeat scroll 0 0 #D3D3D3;
+}

@@ -23,21 +23,18 @@ public class Hero implements Serializable{
 	@Column(name = "name", updatable = false, nullable = false)
 	private String name;
 	
-	@Column(name = "description", updatable = false, nullable = false)
+	@Column(name = "description", updatable = false)
 	private String description;
 	
-	@Column(name = "level", nullable = false)
-	private Long level;
 
 	public Hero() {
 		super();
 	}
 
-	public Hero(String name, String description, Long level) {
+	public Hero(String name, String description) {
 		super();
 		this.name = name;
 		this.description = description;
-		this.level = level;
 	}
 
 	public String getName() {
@@ -56,14 +53,6 @@ public class Hero implements Serializable{
 		this.description = description;
 	}
 
-	public Long getLevel() {
-		return level;
-	}
-
-	public void setLevel(Long level) {
-		this.level = level;
-	}
-
 	public int getId() {
 		return id;
 	}
@@ -71,6 +60,6 @@ public class Hero implements Serializable{
 	@Override
 	public String toString() {
 		return "Hero [id=" + id + ", name=" + name + ", description="
-				+ description + ", level=" + level + "]";
+				+ description +"]";
 	}
 }

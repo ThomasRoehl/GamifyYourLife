@@ -11,8 +11,11 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 
+//@NamedQuery(name = "Todo_list.findAllTasksByUser", query = "SELECT t.tasks FROM Todo_list t WHERE t.tasks.todo_list_fk = :user_id")})
 @Entity
 public class Todo_list implements Serializable{
 	
@@ -26,42 +29,45 @@ public class Todo_list implements Serializable{
 	private int id;
 	
 	@OneToMany(cascade = CascadeType.PERSIST)
-	@JoinColumn(name = "task_fk")
-	private Set<Tasks> tasks = new HashSet<Tasks>();
+	@JoinColumn(name = "todo_list_fk")
+	private Set<Task> tasks = new HashSet<Task>();
 	
 	@OneToMany(cascade = CascadeType.PERSIST)
 	@JoinColumn(name = "date_fk")
-	private Set<Dates> dates = new HashSet<Dates>();
+	private Set<UserDate> dates = new HashSet<UserDate>();
 	
 	@OneToMany(cascade = CascadeType.PERSIST)
 	@JoinColumn(name = "rewards_fk")
-	private Set<Rewards> rewards = new HashSet<Rewards>();
+	private Set<Reward> rewards = new HashSet<Reward>();
+	
+	@OneToOne(optional=false, mappedBy="todo_list")
+	private UserProfile user;
 
 	public int getId() {
 		return id;
 	}
 
-	public Set<Tasks> getTasks() {
+	public Set<Task> getTasks() {
 		return tasks;
 	}
 	
-	public void addTasks(Tasks tasks){
+	public void addTasks(Task tasks){
 		this.tasks.add(tasks);
 	}
 
-	public Set<Dates> getDates() {
+	public Set<UserDate> getDates() {
 		return dates;
 	}
 	
-	public void addDates(Dates dates){
+	public void addDates(UserDate dates){
 		this.dates.add(dates);
 	}
 
-	public Set<Rewards> getRewards() {
+	public Set<Reward> getRewards() {
 		return rewards;
 	}
 	
-	public void addRewards(Rewards rewards){
+	public void addRewards(Reward rewards){
 		this.rewards.add(rewards);
 	}
 

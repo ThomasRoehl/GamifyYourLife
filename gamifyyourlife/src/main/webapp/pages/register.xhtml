@@ -16,34 +16,34 @@
 		<div class="registerForm">
 			<h:outputText value="Username" />
 			<br />
-			<h:inputText id="username" value="#{navigationController.username}"/>
+			<h:inputText id="username" value="#{userController.username}"/>
 			<br />
 			<h:outputText value="Password" />
 			<br />
-			<h:inputText id="password" value="#{navigationController.password}"/>
+			<h:inputText id="password" value="#{userController.password}"/>
 			<br />
 			<h:outputText value="Firstname" />
 			<br />
-			<h:inputText id="firstname" value="#{navigationController.firstname}"/>
+			<h:inputText id="firstname" value="#{userController.firstname}"/>
 			<br />
 			<h:outputText value="Lastname" />
 			<br />
-			<h:inputText id="lastname" value="#{navigationController.lastname}"/>
+			<h:inputText id="lastname" value="#{userController.lastname}"/>
 			<br />
 			<h:outputText value="E-Mail" />
 			<br />
-			<h:inputText id="mail" value="#{navigationController.mail}"/>
+			<h:inputText id="mail" value="#{userController.mail}"/>
 			<br />
 			<h:outputText value="Street" />
 			<br />
-			<h:inputText id="street1" value="#{navigationController.street}"/>
+			<h:inputText id="street1" value="#{userController.street}"/>
 			<br />
 			<h:outputText value="Street" />
 			<br />
-			<h:inputText id="street2" />
+			<h:inputText id="street2" value="#{userController.street}"/>
 			<br />
 			<div class="sendRegister">
-				<h:commandButton id="login" value="login" action="#{navigationController.registerUser}" />
+				<h:commandButton id="login" value="login" action="#{userController.registerUser}" />
 			</div>
 		</div>
 	</h:form>

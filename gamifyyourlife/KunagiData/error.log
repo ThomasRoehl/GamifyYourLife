@@ -512,3 +512,45 @@ Di, 21. April 2015, 21:14 -> Tue Apr 21 21:14:40 CEST 2015
 Di, 21. April 2015, 21:15 -> Tue Apr 21 21:15:33 CEST 2015 
     WARN LoginServlet         Registration failed. User email already exists: tro.development@gmail.com                           | app:scrum > session:0:0:0:0:0:0:0:1
 
+--------------------------------------------------------------------------------
+Do, 23. April 2015, 11:45 -> Thu Apr 23 11:45:35 CEST 2015 
+    FATAL [/]                  Error loading WebappClassLoader
+  delegate: false
+  repositories:
+    /WEB-INF/classes/
+----------> Parent Classloader:
+sun.misc.Launcher$AppClassLoader@25154f
+ org.apache.jasper.servlet.JspServlet | app:scrum
+
+--------------------------------------------------------------------------------
+Do, 23. April 2015, 11:45 -> Thu Apr 23 11:45:35 CEST 2015 
+    FATAL [/]                  Servlet / threw load() exception                                                                    | app:scrum
+
+--------------------------------------------------------------------------------
+Do, 23. April 2015, 11:45 -> Thu Apr 23 11:45:35 CEST 2015 
+    FATAL Registry             Null component localEngine:type=JspMonitor,name=jsp,WebModule=//localhost/,J2EEApplication=none,J2EEServer=none | app:scrum
+
+--------------------------------------------------------------------------------
+Do, 23. April 2015, 11:49 -> Thu Apr 23 11:49:01 CEST 2015 
+    WARN LoginServlet         Registration failed. User email already exists: tro.development@gmail.com                           | app:scrum > session:0:0:0:0:0:0:0:1
+
+--------------------------------------------------------------------------------
+Do, 23. April 2015, 11:49 -> Thu Apr 23 11:49:13 CEST 2015 
+    ERROR Log                  Missing configuration: smtpServer                                                                   | app:scrum > session:0:0:0:0:0:0:0:1
+
+--------------------------------------------------------------------------------
+Do, 23. April 2015, 11:50 -> Thu Apr 23 11:50:09 CEST 2015 
+    WARN BurndownChart        GraphicsEnvironment is not headless                                                                 | app:scrum > session:admin
+
+--------------------------------------------------------------------------------
+Do, 23. April 2015, 11:51 -> Thu Apr 23 11:51:53 CEST 2015 
+    WARN BurndownChart        GraphicsEnvironment is not headless                                                                 | app:scrum > session:TROHome
+
+--------------------------------------------------------------------------------
+Do, 23. April 2015, 12:06 -> Thu Apr 23 12:06:31 CEST 2015 
+    WARN BurndownChart        GraphicsEnvironment is not headless                                                                 | app:scrum > session:TROHome
+
+--------------------------------------------------------------------------------
+Do, 23. April 2015, 12:12 -> Thu Apr 23 12:12:36 CEST 2015 
+    WARN BurndownChart        GraphicsEnvironment is not headless                                                                 | app:scrum > session:TROHome
+

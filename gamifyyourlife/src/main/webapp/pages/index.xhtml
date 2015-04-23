@@ -19,26 +19,28 @@
 	</ui:define>
 
 	<ui:define name="content">
+		<h:outputStylesheet library="css" name="loginForm.css" />
 		<h:form>
 			<div class="loginform">
 				<div class="innerlogin">
-					<h:outputStylesheet library="css" name="loginForm.css" />
+
 					<br />
 					<h:outputText value="Username" />
 					<br />
-					<h:inputText id="username" value="#{navigationController.username}"/>
+					<h:inputText id="username" value="#{userController.username}" />
 					<br />
 					<h:outputText value="Password" />
 					<br />
-					<h:inputText id="password" value="#{navigationController.password}" />
+					<h:inputText id="password" value="#{userController.password}" />
 					<br />
 					<div class="sign">
-						<h:commandButton id="login" value="login" action="#{navigationController.login}">
+						<h:commandButton id="login" value="login"
+							action="#{userController.login}">
 						</h:commandButton>
 					</div>
 					<div class="registerform">
 						<ul>
-							<li><a href="pages/register.xhtml">register</a></li>
+							<li><h:commandLink id="register" action="#{navigationController.moveToRegister}">register</h:commandLink></li>
 						</ul>
 					</div>
 				</div>

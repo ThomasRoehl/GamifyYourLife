@@ -6,9 +6,10 @@
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:p="http://primefaces.org/ui"
 	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:o="http://omnifaces.org/ui"
 	template="../resources/templates/defaultUI.xhtml">
 
-	<ui:define name="topbar">	
+	<ui:define name="topbar">
 	</ui:define>
 
 	<ui:define name="header">
@@ -18,16 +19,33 @@
 	</ui:define>
 
 	<ui:define name="content">
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
+		<h:outputStylesheet library="css" name="home.css" />
+		<div class="welcome">
+			<h3>Welcome</h3>
+			<h3>
+				<h:outputText value="#{userController.username}" />
+			</h3>
+		</div>
+		<div class="task">
+			<h:form>
+				<h:dataTable value="#{taskController.tasks}" var="task"
+					styleClass="taskTable" headerClass="taskTableHeader"
+					rowClasses="taskTableOddRow, taskTableEvenRow">
+					<h:column>
+						<f:facet name="header">Name</f:facet>    				
+      					#{tasks.name}
+   					</h:column>
+					<h:column>
+						<f:facet name="header">Points</f:facet>    				
+     					#{tasks.points}
+   					</h:column>
+					<h:column>
+						<f:facet name="header">Settlement Date</f:facet>    				
+      					#{tasks.settlement_date}
+   					</h:column>
+				</h:dataTable>
+			</h:form>
+		</div>
 	</ui:define>
 
 	<ui:define name="footer">

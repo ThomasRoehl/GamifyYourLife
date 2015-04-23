@@ -14,7 +14,7 @@
 			<h:outputStylesheet library="css" name="buttons.css" />
 			<h:form>
 				<div class="logoutButton" align="right">
-					<h:commandButton id="logout" value="logout" action="#{navigationController.logout}" />
+					<h:commandButton id="logout" value="logout" action="#{userController.logout}" />
 				</div>
 			</h:form>
 			<ui:insert name="topbar">
@@ -25,14 +25,15 @@
 		<div class="header">
 			<ui:insert name="header"></ui:insert>
 		</div>
-
+		<h:form>
 		<div class="menu">
 			<ul>
-				<li><a class="homePage" href="home.xhtml">home</a></li>
-				<li><a class="indexPage" href="calendar.xhtml">calendar</a></li>
+				<li><h:commandLink id="homePage" action="#{navigationController.moveToHome}">home</h:commandLink></li>
+				<li><h:commandLink id="indexPage" action="#{navigationController.moveToCalendar}">calendar</h:commandLink></li>
 			</ul>
 			<ui:insert name="menu"></ui:insert>
 		</div>
+		</h:form>
 
 		<div class="content">
 			<ui:insert name="content"></ui:insert>

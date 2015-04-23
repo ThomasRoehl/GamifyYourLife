@@ -1,1 +1,5 @@
-select * from USERS
+select * from USERPROFILE;
+select * FROM COUNTRY;
+select * FROM TASK;
+SELECT * FROM CITY;
+SELECT * FROM TODO_LIST;
