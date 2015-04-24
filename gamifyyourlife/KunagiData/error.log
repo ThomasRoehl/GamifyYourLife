@@ -598,3 +598,45 @@ Fr, 24. April 2015, 13:26 -> Fri Apr 24 13:26:30 CEST 2015
 Fr, 24. April 2015, 13:26 -> Fri Apr 24 13:26:38 CEST 2015 
     WARN BurndownChart        GraphicsEnvironment is not headless                                                                 | app:scrum > session:TROHome
 
+--------------------------------------------------------------------------------
+Fr, 24. April 2015, 14:10 -> Fri Apr 24 14:10:51 CEST 2015 
+    FATAL [/]                  Error loading WebappClassLoader
+  delegate: false
+  repositories:
+    /WEB-INF/classes/
+----------> Parent Classloader:
+sun.misc.Launcher$AppClassLoader@25154f
+ org.apache.jasper.servlet.JspServlet | app:scrum
+
+--------------------------------------------------------------------------------
+Fr, 24. April 2015, 14:10 -> Fri Apr 24 14:10:51 CEST 2015 
+    FATAL [/]                  Servlet / threw load() exception                                                                    | app:scrum
+
+--------------------------------------------------------------------------------
+Fr, 24. April 2015, 14:10 -> Fri Apr 24 14:10:51 CEST 2015 
+    FATAL Registry             Null component localEngine:type=JspMonitor,name=jsp,WebModule=//localhost/,J2EEApplication=none,J2EEServer=none | app:scrum
+
+--------------------------------------------------------------------------------
+Fr, 24. April 2015, 14:11 -> Fri Apr 24 14:11:17 CEST 2015 
+    WARN BurndownChart        GraphicsEnvironment is not headless                                                                 | app:scrum > session:TROHome
+
+--------------------------------------------------------------------------------
+Fr, 24. April 2015, 14:14 -> Fri Apr 24 14:14:10 CEST 2015 
+    WARN BurndownChart        GraphicsEnvironment is not headless                                                                 | app:scrum > session:TROHome
+
+--------------------------------------------------------------------------------
+Fr, 24. April 2015, 14:14 -> Fri Apr 24 14:14:30 CEST 2015 
+    WARN BurndownChart        GraphicsEnvironment is not headless                                                                 | app:scrum > session:TROHome
+
+--------------------------------------------------------------------------------
+Fr, 24. April 2015, 14:27 -> Fri Apr 24 14:27:04 CEST 2015 
+    WARN BurndownChart        GraphicsEnvironment is not headless                                                                 | app:scrum > session:TROHome
+
+--------------------------------------------------------------------------------
+Fr, 24. April 2015, 14:28 -> Fri Apr 24 14:28:33 CEST 2015 
+    WARN BurndownChart        GraphicsEnvironment is not headless                                                                 | app:scrum > session:TROHome
+
+--------------------------------------------------------------------------------
+Fr, 24. April 2015, 14:37 -> Fri Apr 24 14:37:58 CEST 2015 
+    WARN BurndownChart        GraphicsEnvironment is not headless                                                                 | app:scrum > session:TROHome
+

@@ -19,9 +19,9 @@ import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
 @NamedQueries({
-		@NamedQuery(name = "Users.findAllUser", query = "Select u FROM UserProfile u"),
-		@NamedQuery(name = "Users.findUserByName", query = "Select u.id FROM UserProfile u WHERE u.username = :username"),
-		@NamedQuery(name = "Users.checkUserLogin", query = "Select COUNT(u) FROM UserProfile u WHERE u.username = :username AND u.password = :password"), })
+		@NamedQuery(name = "UserProfile.findAllUser", query = "Select u FROM UserProfile u"),
+		@NamedQuery(name = "UserProfile.findUserByName", query = "Select u.id FROM UserProfile u WHERE u.username = :username"),
+		@NamedQuery(name = "UserProfile.checkUserLogin", query = "Select COUNT(u) FROM UserProfile u WHERE u.username = :username AND u.password = :password"), })
 @Entity
 public class UserProfile implements Serializable {
 	/**

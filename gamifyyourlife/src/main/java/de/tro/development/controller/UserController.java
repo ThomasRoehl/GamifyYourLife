@@ -1,8 +1,10 @@
 package de.tro.development.controller;
 
 import javax.annotation.Resource;
-import javax.faces.bean.ApplicationScoped;
 import javax.faces.bean.ManagedBean;
+import javax.faces.bean.ManagedProperty;
+import javax.faces.bean.SessionScoped;
+import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
@@ -11,8 +13,8 @@ import javax.transaction.UserTransaction;
 import de.tro.development.model.UserProfile;
 import de.tro.development.service.UserSession;
 
-@ManagedBean(name="userController")
-@ApplicationScoped
+@ManagedBean(name ="userController")
+@SessionScoped
 public class UserController {
 	
 	private Integer user_id;
@@ -28,6 +30,9 @@ public class UserController {
 	private String mail;
 	
 	private String street;
+	
+	@ManagedProperty(value = "#{userSession}")
+	private UserSession userSession;
 	
 	@PersistenceContext( unitName="gamifyyourlife")
 	protected  EntityManager em;
@@ -91,11 +96,17 @@ public class UserController {
 		this.user_id = user_id;
 	}
 
+	public UserSession getUserSession() {
+		return userSession;
+	}
+
+	public void setUserSession(UserSession userSession) {
+		this.userSession = userSession;
+	}
+
 	public String logout(){
-		setPassword("");
-		setUsername("");
-		setUser_id(-1);
-		UserSession.user_id = -1;
+		clearData();
+		clearLogin();
 		return "index";
 	}
 	
@@ -124,29 +135,52 @@ public class UserController {
 	
 	public String registerUser(){
 		if (createUser()){
-			return "home";
+			clearData();
+			return "index?faces-redirect=true";
 		}
-		return "register";
+		return "register?faces-redirect=true";
 	}
 	
 	public boolean checkUser(String username, String password){
-		Query query = em.createNamedQuery("Users.checkUserLogin");
-		query.setParameter("username", username);
-		query.setParameter("password", password);
-		if (!(query.getResultList().get(0).equals(new Long(0)))) return true;
+		try {
+			Query query = em.createNamedQuery("UserProfile.checkUserLogin");
+			query.setParameter("username", username);
+			query.setParameter("password", password);
+			if (!(query.getResultList().get(0).equals(new Long(0)))) return true;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		return false;
 	}
 
 	public String login(){
 		
-		System.out.println("---------- " + password + "  --  " + username + " ------------ ");
 		if (checkUser(this.username, this.password)){
-			Query query = em.createNamedQuery("Users.findUserByName");
-			query.setParameter("username", username);
-			setUser_id((Integer) query.getResultList().get(0));
-			UserSession.user_id = this.user_id;
+			try {
+				Query query = em.createNamedQuery("UserProfile.findUserByName");
+				query.setParameter("username", username);
+				setUser_id((Integer) query.getResultList().get(0));
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			userSession.setUser_id(this.user_id);
+			userSession.setUsername(this.username);
 			return "home"; 
 		}
 		return "index";
+	}
+	
+	public void clearData(){
+		this.firstname = "";
+		this.lastname = "";
+		this.mail = "";
+		this.street = "";
+	}
+	
+	public void clearLogin(){
+		this.username = "";
+		this.password = "";
+		userSession.setUser_id(-1);
+		userSession.setUsername("");
 	}
 }
