@@ -24,7 +24,7 @@ public class Todo_list implements Serializable{
 	 */
 	private static final long serialVersionUID = 1L;
 
-	@Id@GeneratedValue(strategy=GenerationType.AUTO)
+	@Id
 	@Column(name = "id", updatable = false, nullable = false)
 	private int id;
 	
@@ -45,6 +45,10 @@ public class Todo_list implements Serializable{
 
 	public int getId() {
 		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public Set<Task> getTasks() {

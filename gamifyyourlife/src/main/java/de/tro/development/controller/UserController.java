@@ -1,47 +1,54 @@
 package de.tro.development.controller;
 
-import javax.annotation.Resource;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
-import javax.faces.bean.SessionScoped;
-import javax.inject.Inject;
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-import javax.persistence.Query;
-import javax.transaction.UserTransaction;
+import javax.faces.bean.RequestScoped;
 
+import de.tro.development.dao.impl.UserDAO;
+import de.tro.development.model.Todo_list;
 import de.tro.development.model.UserProfile;
 import de.tro.development.service.UserSession;
 
+/**
+ * @author TRO
+ * Manage all user requests
+ */
 @ManagedBean(name ="userController")
-@SessionScoped
+@RequestScoped
 public class UserController {
 	
 	private Integer user_id;
-	
 	private String username;
-	
 	private String password;
-	
 	private String firstname;
-	
 	private String lastname;
-	
 	private String mail;
-	
 	private String street;
 	
 	@ManagedProperty(value = "#{userSession}")
 	private UserSession userSession;
 	
-	@PersistenceContext( unitName="gamifyyourlife")
-	protected  EntityManager em;
+	@ManagedProperty(value = "#{navigationController}")
+	private NavigationController navi;
 	
-	@Resource
-	private UserTransaction utx;
+	@ManagedProperty(value = "#{userDAO}")
+	private UserDAO userDAO;
+	
+	@ManagedProperty(value = "#{taskController}")
+	private TaskController taskController;
+	
+	// GETTER SETTER
 	
 	public String getUsername() {
 		return username;
+	}
+
+	public TaskController getTaskController() {
+		return taskController;
+	}
+
+	public void setTaskController(TaskController taskController) {
+		this.taskController = taskController;
 	}
 
 	public void setUsername(String username) {
@@ -103,16 +110,41 @@ public class UserController {
 	public void setUserSession(UserSession userSession) {
 		this.userSession = userSession;
 	}
+	
+	public NavigationController getNavi(){
+		return navi;
+	}
+	
+	public void setNavi(NavigationController navi){
+		this.navi = navi;
+	}
 
+	public UserDAO getUserDAO() {
+		return userDAO;
+	}
+
+	public void setUserDAO(UserDAO userDAO) {
+		this.userDAO = userDAO;
+	}
+
+	// FUNCTIONS
+	
+	/**
+	 * Logout user and clear all data
+	 * @return target page
+	 */
 	public String logout(){
 		clearData();
 		clearLogin();
-		return "index";
+		return navi.moveToIndex();
 	}
 	
+	/**
+	 * create new user
+	 * @return true if new user added to DB else false
+	 */
 	public boolean createUser(){
 		try {
-			System.out.println("-------createUser----------");
 			UserProfile user = new UserProfile();
 			user.setFirstname(firstname);
 			user.setLastname(lastname);
@@ -121,10 +153,10 @@ public class UserController {
 			user.setUsername(username);
 			user.setStreet1(street);
 			user.setPoints(0L);
+			Todo_list tl = new Todo_list();
+			user.setTodo_list(tl);
+			userDAO.createUser(user);
 			
-			utx.begin();
-			em.persist(user);
-			utx.commit();
 			
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -133,43 +165,37 @@ public class UserController {
 		return true;
 	}
 	
+	/**
+	 * move back to startpage if user was created successfully
+	 * @return
+	 */
 	public String registerUser(){
 		if (createUser()){
 			clearData();
-			return "index?faces-redirect=true";
+			return navi.moveToIndex();
 		}
-		return "register?faces-redirect=true";
+		return null;
 	}
 	
-	public boolean checkUser(String username, String password){
-		try {
-			Query query = em.createNamedQuery("UserProfile.checkUserLogin");
-			query.setParameter("username", username);
-			query.setParameter("password", password);
-			if (!(query.getResultList().get(0).equals(new Long(0)))) return true;
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		return false;
-	}
-
+	/**
+	 * login user and set username, user_id and todo_list_id in SessionBean (userSession) if success
+	 * @return
+	 */
 	public String login(){
 		
-		if (checkUser(this.username, this.password)){
-			try {
-				Query query = em.createNamedQuery("UserProfile.findUserByName");
-				query.setParameter("username", username);
-				setUser_id((Integer) query.getResultList().get(0));
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
-			userSession.setUser_id(this.user_id);
+		if (userDAO.login(this.username, this.password)){
+			userSession.setUser_id(userDAO.findUserID(this.username));
 			userSession.setUsername(this.username);
-			return "home"; 
+			userSession.setTodo_list_id(userDAO.findTodo_list(username));
+			return navi.moveToHome();
 		}
-		return "index";
+		
+		return null;
 	}
 	
+	/**
+	 * clear all data from register user
+	 */
 	public void clearData(){
 		this.firstname = "";
 		this.lastname = "";
@@ -177,6 +203,9 @@ public class UserController {
 		this.street = "";
 	}
 	
+	/**
+	 * clear login data (also in SessionBean)
+	 */
 	public void clearLogin(){
 		this.username = "";
 		this.password = "";

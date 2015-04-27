@@ -33,15 +33,19 @@
 					rowClasses="taskTableOddRow, taskTableEvenRow">
 					<h:column>
 						<f:facet name="header">Name</f:facet>    				
-      					#{tasks.name}
+      					#{task.name}
    					</h:column>
 					<h:column>
 						<f:facet name="header">Points</f:facet>    				
-     					#{tasks.points}
+     					#{task.points}
    					</h:column>
 					<h:column>
 						<f:facet name="header">Settlement Date</f:facet>    				
-      					#{tasks.settlement_date}
+      					#{task.settlement_date}
+   					</h:column>
+   					<h:column>
+						<f:facet name="header">Category</f:facet>    				
+      					#{task.category}
    					</h:column>
 				</h:dataTable>
 			</h:form>

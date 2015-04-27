@@ -8,8 +8,16 @@ import javax.faces.bean.SessionScoped;
 public class UserSession {
 	
 	private Integer user_id;
-	
 	private String username;
+	private Integer todo_list_id;
+
+	public Integer getTodo_list_id() {
+		return todo_list_id;
+	}
+
+	public void setTodo_list_id(Integer todo_list_id) {
+		this.todo_list_id = todo_list_id;
+	}
 
 	public Integer getUser_id() {
 		return user_id;

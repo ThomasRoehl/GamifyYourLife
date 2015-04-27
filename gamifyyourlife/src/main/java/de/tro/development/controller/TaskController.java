@@ -1,47 +1,99 @@
 package de.tro.development.controller;
 
 import java.util.ArrayList;
-import java.util.HashSet;
+import java.util.Date;
 import java.util.List;
+import java.util.Set;
 
 import javax.annotation.Resource;
-import javax.faces.bean.ApplicationScoped;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
+import javax.faces.bean.RequestScoped;
 import javax.faces.bean.SessionScoped;
-import javax.inject.Inject;
+import javax.faces.bean.ViewScoped;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
+import javax.transaction.HeuristicMixedException;
+import javax.transaction.HeuristicRollbackException;
+import javax.transaction.NotSupportedException;
+import javax.transaction.RollbackException;
+import javax.transaction.SystemException;
 import javax.transaction.UserTransaction;
 
+import de.tro.development.dao.impl.TaskDAO;
+import de.tro.development.dao.impl.UserDAO;
+import de.tro.development.model.Category;
 import de.tro.development.model.Task;
 import de.tro.development.model.Todo_list;
 import de.tro.development.service.UserSession;
 
-@ManagedBean(name="taskController")
-@SessionScoped
+/**
+ * @author TRO
+ * Manage all Task requests
+ */
+@ManagedBean(name = "taskController")
+@RequestScoped
 public class TaskController {
 
 	@ManagedProperty(value = "#{userSession}")
 	private UserSession userSession;
 	
-	@PersistenceContext( unitName="gamifyyourlife")
-	protected  EntityManager em;
+	@ManagedProperty(value = "#{navigationController}")
+	private NavigationController navi;
 	
-	@Resource
-	private UserTransaction utx;
-	
+	@ManagedProperty(value = "#{taskDAO}")
+	private TaskDAO taskDAO;
+
+	private List<Task> tasks = new ArrayList<Task>();
+	private String taskName;
+	private String taskCategory;
+	private String taskSettlement_date;
+	private Long taskPoints;
 	private Long userID;
 	
+	// GETTER SETTER
+	
+	public Long getTaskPoints() {
+		return taskPoints;
+	}
+
+	public void setTaskPoints(Long taskPoints) {
+		this.taskPoints = taskPoints;
+	}
+
+	public String getTaskName() {
+		return taskName;
+	}
+
+	public void setTaskName(String name) {
+		this.taskName = name;
+	}
+
+	public String getTaskCategory() {
+		return taskCategory;
+	}
+
+	public void setTaskCategory(String category) {
+		this.taskCategory = category;
+	}
+
+	public String getTaskSettlement_date() {
+		return taskSettlement_date;
+	}
+
+	public void setTaskSettlement_date(String settlement_date) {
+		this.taskSettlement_date = settlement_date;
+	}
+
 	public Long getUserID() {
 		return userID;
 	}
-	
+
 	public void setUserID(Long userID) {
 		this.userID = userID;
 	}
-	
+
 	public UserSession getUserSession() {
 		return userSession;
 	}
@@ -49,19 +101,82 @@ public class TaskController {
 	public void setUserSession(UserSession userSession) {
 		this.userSession = userSession;
 	}
+	
+	public NavigationController getNavi() {
+		return navi;
+	}
 
+	public void setNavi(NavigationController navi) {
+		this.navi = navi;
+	}
+
+	public TaskDAO getTaskDAO() {
+		return taskDAO;
+	}
+
+	public void setTaskDAO(TaskDAO taskDAO) {
+		this.taskDAO = taskDAO;
+	}
+
+	// FUNCTIONS
+	
+	/**
+	 * update task list with DB data
+	 */
+	private void updateTasks(){
+		Set<Task> res = taskDAO.updateTask(userSession.getTodo_list_id());
+		if (res != null){
+			tasks.clear();
+			tasks.addAll(res);
+		}
+	}
+	
+	/**
+	 * update and return task list 
+	 * @return
+	 */
 	public List<Task> getTasks() {
-		List<Task> resultList = new ArrayList<Task>();
+		updateTasks();
+		System.out.println(tasks.isEmpty());
+		return tasks;
+	}
+
+	/**
+	 * create new Task and try to insert into users DB
+	 * @return
+	 */
+	public String createTask(){
+		Task t = new Task();
+		
 		try {
-			TypedQuery<Todo_list> query = em.createNamedQuery("Todo_list.findAllTasksByID", Todo_list.class);
-			query.setParameter("id", userSession.getUser_id());
-			if (!query.getResultList().isEmpty()){
-				resultList.addAll(query.getResultList().get(0).getTasks());
-				return resultList;
-			}
+			t.setCategory(new Category(taskCategory, taskCategory));
+			t.setName(taskName);
+			t.setPoints(taskPoints);
+			//t.setSettlement_date(new Date(taskSettlement_date));
 		} catch (Exception e) {
 			e.printStackTrace();
+			return null;
 		}
-		return resultList;
-	}	
+		
+		if (insertTask(t)) return navi.moveToHome();
+		
+		return null;
+
+	}
+	
+	/**
+	 * insert Task into DB
+	 * user SessionBean.todo_list_id to find target user
+	 * @param Task t to insert to current users list
+	 * @return true if successfully added to DB else false
+	 */
+	protected boolean insertTask(Task t){
+		try {
+			System.out.println(userSession.getTodo_list_id());
+			return taskDAO.createTask(t, userSession.getTodo_list_id());
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		}
+	}
 }

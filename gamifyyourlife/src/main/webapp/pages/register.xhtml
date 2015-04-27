@@ -6,7 +6,7 @@
 	xmlns:f="http://java.sun.com/jsf/core">
 <h:head>
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-	<h:outputStylesheet library="css" name="register-style.css" />
+	<h:outputStylesheet library="css" name="create-style.css" />
 </h:head>
 <h:body>
 	<h:form class="outerRegisterForm">
@@ -18,29 +18,31 @@
 			<br />
 			<h:inputText id="username" value="#{userController.username}"/>
 			<br />
+			<br />
 			<h:outputText value="Password" />
 			<br />
 			<h:inputText id="password" value="#{userController.password}"/>
+			<br />
 			<br />
 			<h:outputText value="Firstname" />
 			<br />
 			<h:inputText id="firstname" value="#{userController.firstname}"/>
 			<br />
+			<br />
 			<h:outputText value="Lastname" />
 			<br />
 			<h:inputText id="lastname" value="#{userController.lastname}"/>
+			<br />
 			<br />
 			<h:outputText value="E-Mail" />
 			<br />
 			<h:inputText id="mail" value="#{userController.mail}"/>
 			<br />
+			<br />
 			<h:outputText value="Street" />
 			<br />
 			<h:inputText id="street1" value="#{userController.street}"/>
 			<br />
-			<h:outputText value="Street" />
-			<br />
-			<h:inputText id="street2" value="#{userController.street}"/>
 			<br />
 			<div class="sendRegister">
 				<h:commandButton id="register" value="register" action="#{userController.registerUser}" />

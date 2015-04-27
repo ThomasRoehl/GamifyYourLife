@@ -104,8 +104,8 @@ public class Task implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Tasks [id=" + id + ", category=" + category + ", name=" + name
+		return "Tasks [id=" + id/* + ", category=" + category + ", name=" + name
 				+ ", description=" + description + ", points=" + points
-				+ ", settlement_date=" + settlement_date + "]";
+				+ ", settlement_date=" + settlement_date */+ "]";
 	}
 }
