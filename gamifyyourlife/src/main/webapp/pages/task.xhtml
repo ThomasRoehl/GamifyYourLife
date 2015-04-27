@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<h:outputStylesheet library="css" name="create-style.css" />
+</h:head>
+<h:body>
+	<h:form class="outerTaskForm">
+	<div class="backToLogin">
+				<h:commandButton id="back" value="Back" action="#{navigationController.moveToHome}" />
+			</div>
+		<div class="taskForm">
+		<h:outputText id="name" value="name"></h:outputText>
+		<br />
+		<h:inputText id="inp_name" value="#{taskController.taskName}"></h:inputText>
+		<br />
+		<br />
+		<h:outputText id="category" value="category"></h:outputText>
+		<br />
+		<h:inputText id="inp_category" value="#{taskController.taskCategory}"></h:inputText>
+		<br />
+		<br />
+		<h:outputText id="settlement" value="settlement Date"></h:outputText>
+		<br />
+		<h:inputText id="inp_settlement" ></h:inputText>
+		<br />
+		<br />
+		<h:outputText id="points" value="Points"></h:outputText>
+		<br />
+		<h:inputText id="inp_points" value="#{taskController.taskPoints}"></h:inputText>
+		<br />
+		<br />
+		<h:commandButton id="createTask" value="create" action="#{taskController.createTask}"></h:commandButton>
+		</div>
+	</h:form>
+</h:body>
+</html>
