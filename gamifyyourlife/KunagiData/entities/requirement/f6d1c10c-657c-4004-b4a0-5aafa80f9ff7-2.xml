@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><requirement>
   <id>f6d1c10c-657c-4004-b4a0-5aafa80f9ff7-2</id>
-  <lastModified>2015-04-21 11:44:35</lastModified>
+  <lastModified>2015-04-28 13:50:59</lastModified>
   <projectId>fc43cae0-0113-401c-9794-ae1dd9c1798c-1</projectId>
-  <sprintId>a72c4029-4462-4800-85f4-aef523a460e5</sprintId>
   <number>17</number>
   <qualitysIds/>
   <label>Nutzer Ein- und Ausloggen</label>
@@ -19,7 +18,7 @@ Akzeptanzkriterien:
 * Buttons zum Ein- und Ausloggen
 </description>
   <estimatedWork>2.0</estimatedWork>
-  <closed>false</closed>
+  <closed>true</closed>
   <deleted>false</deleted>
   <dirty>false</dirty>
   <workEstimationVotingActive>false</workEstimationVotingActive>

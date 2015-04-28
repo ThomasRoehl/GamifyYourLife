@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><requirement>
   <id>19bea3c0-0995-4c47-9ba9-3e13b67ce48d-1</id>
-  <lastModified>2015-04-21 12:14:02</lastModified>
+  <lastModified>2015-04-28 13:50:59</lastModified>
   <projectId>fc43cae0-0113-401c-9794-ae1dd9c1798c-1</projectId>
-  <sprintId>a72c4029-4462-4800-85f4-aef523a460e5</sprintId>
   <number>3</number>
   <qualitysIds/>
   <label>Aufgaben anzeigen</label>
@@ -16,7 +15,7 @@ Akzeptanzkriterien:
 * Auflistung aller Aufgaben mit Angaben zu Status und Faelligkeit
 </description>
   <estimatedWork>1.0</estimatedWork>
-  <closed>false</closed>
+  <closed>true</closed>
   <deleted>false</deleted>
   <dirty>false</dirty>
   <workEstimationVotingActive>false</workEstimationVotingActive>

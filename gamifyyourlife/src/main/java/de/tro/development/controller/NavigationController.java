@@ -31,5 +31,8 @@ public class NavigationController {
 	public String moveToIndex(){
 		return "index?faces-redirect=true";
 	}
-
+	
+	public String moveToNewDate(){
+		return "dates?faces-redirect=true";
+	}
 }

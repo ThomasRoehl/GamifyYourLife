@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><requirement>
   <id>cda54d00-ba64-4326-82bf-185e72f4a59c-2</id>
-  <lastModified>2015-04-21 11:27:21</lastModified>
+  <lastModified>2015-04-28 14:14:57</lastModified>
   <projectId>fc43cae0-0113-401c-9794-ae1dd9c1798c-1</projectId>
+  <sprintId>9ae6c957-b894-4c47-b734-439e98bc033c</sprintId>
   <number>2</number>
   <qualitysIds/>
   <label>Kalender  anzeigen</label>
@@ -13,7 +14,11 @@ Akzeptanzkriterien:
 
 * grafische anzeige aller Termine
 </description>
-  <estimatedWork>5.0</estimatedWork>
+  <testDescription>- Wochenkalender Ansicht (mo-so)
+- Anzeige aller Termine in der aktuellen Woche
+- Wechsel zwischen Wochen
+</testDescription>
+  <estimatedWork>8.0</estimatedWork>
   <closed>false</closed>
   <deleted>false</deleted>
   <dirty>false</dirty>

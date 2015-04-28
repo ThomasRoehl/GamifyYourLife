@@ -49,3 +49,26 @@
 	-o-border-radius: 0.5em;
 	-moz-border-radius: 0.5em;
 }
+
+.outerDatesForm{
+	margin: auto;
+    width: auto;
+    height: 1500px;
+	background-color:#86B4CC;
+}
+
+.datesForm{
+	position: absolute;
+	text-align: center;
+	top: 50%;
+	left: 50%;
+	width: 250px;
+	height: 500px;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	background: #FFF;
+	border-radius: 0.5em;
+	-webkit-border-radius: 0.5em;
+	-o-border-radius: 0.5em;
+	-moz-border-radius: 0.5em;
+}

@@ -1,24 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?><sprint>
   <id>a72c4029-4462-4800-85f4-aef523a460e5</id>
-  <lastModified>2015-04-21 11:29:13</lastModified>
+  <lastModified>2015-04-28 13:50:59</lastModified>
   <number>2</number>
   <projectId>fc43cae0-0113-401c-9794-ae1dd9c1798c-1</projectId>
   <label>Sprint 01</label>
   <goal>Aufbau einer initialen Anwendung
 </goal>
   <begin>2015-04-21</begin>
-  <end>2015-04-27</end>
+  <end>2015-04-28</end>
   <originallyEnd reference="../end"/>
+  <velocity>13.0</velocity>
+  <completedRequirementsData>#encoded-requirements 1
+sto14;5;Startseite anzeigen
+tsk3;1;0;Verbindung zur Webapp
+tsk1;1;0;JSF Seite erstellen
+tsk4;1;0;Test
+sto17;2;Nutzer Ein- und Ausloggen
+tsk6;1;0;Button mit Seitennavigation
+tsk5;1;0;Form zum Einloggen
+tsk8;1;0;Test
+sto16;3;Nutzer registrieren
+tsk13;1;0;Test DB
+tsk9;1;0;JSF Seite zum registrieren
+tsk10;1;0;Link auf Startseite
+tsk11;1;0;Angelegten Nutzer in DB
+tsk12;1;0;Test Seitennavigation
+sto5;2;Aufgabe erstellen
+tsk17;1;0;Test Seitennavigation
+tsk18;1;0;Test DB
+tsk14;1;0;JSF Seite zum Aufgabe erstellen
+tsk15;1;0;Link auf Profilseite
+tsk16;1;0;Eintrag Aufgabe in DB
+sto3;1;Aufgaben anzeigen
+tsk20;1;0;Inhalt aus DB laden
+tsk21;1;0;Test Seitennavigation
+tsk22;1;0;Test DB
+tsk19;1;0;Anzeige in Profilseite einbinden
+</completedRequirementsData>
+  <incompletedRequirementsData>#encoded-requirements 1
+sto18;0.5;Definition of Done
+tsk28;1;0;DoD erstellen
+</incompletedRequirementsData>
   <requirementsOrderIds>
     <string>28136aec-eb10-471a-b549-dd462e7e845a-2</string>
     <string>f6d1c10c-657c-4004-b4a0-5aafa80f9ff7-2</string>
     <string>f6d1c10c-657c-4004-b4a0-5aafa80f9ff7-1</string>
     <string>19bea3c0-0995-4c47-9ba9-3e13b67ce48d-3</string>
     <string>19bea3c0-0995-4c47-9ba9-3e13b67ce48d-1</string>
-    <string>19bea3c0-0995-4c47-9ba9-3e13b67ce48d-2</string>
     <string>8b7e6e38-5724-4d45-8e26-1003e5e0a8f2-1</string>
   </requirementsOrderIds>
-  <productOwnersIds/>
-  <scrumMastersIds/>
-  <teamMembersIds/>
+  <productOwnersIds>
+    <string>a3a6bfc9-f4f3-4283-b9d1-c61481b05f30</string>
+    <string>a01eede1-e7e9-41e9-8122-6f7c606bfd0a</string>
+  </productOwnersIds>
+  <scrumMastersIds>
+    <string>a3a6bfc9-f4f3-4283-b9d1-c61481b05f30</string>
+    <string>a01eede1-e7e9-41e9-8122-6f7c606bfd0a</string>
+  </scrumMastersIds>
+  <teamMembersIds>
+    <string>a3a6bfc9-f4f3-4283-b9d1-c61481b05f30</string>
+    <string>a01eede1-e7e9-41e9-8122-6f7c606bfd0a</string>
+  </teamMembersIds>
 </sprint>
