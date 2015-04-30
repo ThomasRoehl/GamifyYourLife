@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><change>
+  <id>619959b4-f87c-4810-acdb-4e08b038f36d</id>
+  <lastModified>2015-04-28 14:09:20</lastModified>
+  <parentId>19bea3c0-0995-4c47-9ba9-3e13b67ce48d-7</parentId>
+  <userId>a01eede1-e7e9-41e9-8122-6f7c606bfd0a</userId>
+  <dateAndTime>2015-04-28 14:09:20</dateAndTime>
+  <key>testDescription</key>
+  <newValue>- Eingabefeld fuer Username
+- Button zum sucher nach eingegebenen Username
+- Keine Anzeige der Punkte des Nutzers
+- 
+</newValue>
+</change>

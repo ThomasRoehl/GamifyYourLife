@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><requirement>
+  <id>f6d1c10c-657c-4004-b4a0-5aafa80f9ff7-1</id>
+  <lastModified>2015-04-21 11:46:32</lastModified>
+  <projectId>fc43cae0-0113-401c-9794-ae1dd9c1798c-1</projectId>
+  <sprintId>a72c4029-4462-4800-85f4-aef523a460e5</sprintId>
+  <number>16</number>
+  <qualitysIds/>
+  <label>Nutzer registrieren</label>
+  <description>
+* Als Nutzer moechte ich mich registrieren koennne
+
+Damit ich alle Funktionen des Programms verwenden kann und ein Account in der Datenbank fuer mich angelegt wird.
+
+Akzeptanzkriterien:
+
+* Fenster zum Registrieren eines Nutzers
+</description>
+  <estimatedWork>3.0</estimatedWork>
+  <closed>false</closed>
+  <deleted>false</deleted>
+  <dirty>false</dirty>
+  <workEstimationVotingActive>false</workEstimationVotingActive>
+  <workEstimationVotingShowoff>false</workEstimationVotingShowoff>
+  <tasksOrderIds>
+    <string>8b7e6e38-5724-4d45-8e26-1003e5e0a8f2-10</string>
+    <string>8b7e6e38-5724-4d45-8e26-1003e5e0a8f2-11</string>
+    <string>8b7e6e38-5724-4d45-8e26-1003e5e0a8f2-12</string>
+    <string>8b7e6e38-5724-4d45-8e26-1003e5e0a8f2-13</string>
+    <string>8b7e6e38-5724-4d45-8e26-1003e5e0a8f2-14</string>
+  </tasksOrderIds>
+  <themes/>
+</requirement>

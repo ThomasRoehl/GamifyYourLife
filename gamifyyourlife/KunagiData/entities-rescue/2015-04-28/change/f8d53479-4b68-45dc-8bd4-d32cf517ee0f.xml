@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><change>
+  <id>f8d53479-4b68-45dc-8bd4-d32cf517ee0f</id>
+  <lastModified>2015-04-28 14:00:04</lastModified>
+  <parentId>19bea3c0-0995-4c47-9ba9-3e13b67ce48d-2</parentId>
+  <userId>a01eede1-e7e9-41e9-8122-6f7c606bfd0a</userId>
+  <dateAndTime>2015-04-28 14:00:04</dateAndTime>
+  <key>testDescription</key>
+  <newValue>- Eingetragene Termine sind richtig in der DB
+- Startzeitpunkt muss vor dem Endzeitpunkt sein
+- Bei falscher Eingabe, bleibt der Nutzer auf der Seite (Werte bleiben
+</newValue>
+</change>

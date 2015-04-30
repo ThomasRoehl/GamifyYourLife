@@ -1,7 +1,7 @@
 package de.tro.development.controller;
 
+import javax.faces.bean.ApplicationScoped;
 import javax.faces.bean.ManagedBean;
-import javax.faces.bean.SessionScoped;
 
 /**
  * @author TRO
@@ -9,7 +9,7 @@ import javax.faces.bean.SessionScoped;
  * Move to different jsf pages
  */
 @ManagedBean(name = "navigationController")
-@SessionScoped
+@ApplicationScoped
 public class NavigationController {
 	
 	public String moveToHome(){

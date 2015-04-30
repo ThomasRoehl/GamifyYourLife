@@ -5,8 +5,6 @@ import java.util.Date;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 
-import org.apache.taglibs.standard.tag.el.sql.SetDataSourceTag;
-
 @ManagedBean(name="calendarController")
 @RequestScoped
 public class CalendarController {

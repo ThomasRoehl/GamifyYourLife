@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><requirement>
+  <id>cda54d00-ba64-4326-82bf-185e72f4a59c-2</id>
+  <lastModified>2015-04-28 14:02:50</lastModified>
+  <projectId>fc43cae0-0113-401c-9794-ae1dd9c1798c-1</projectId>
+  <number>2</number>
+  <qualitysIds/>
+  <label>Kalender  anzeigen</label>
+  <description>* Als Nutzer moechte ich meinen Kalender anzeigen
+
+Damit ich sehen kann zu welchen Zeiten ich Termine habe.
+
+Akzeptanzkriterien:
+
+* grafische anzeige aller Termine
+</description>
+  <testDescription>- Wochenkalender
+</testDescription>
+  <estimatedWork>5.0</estimatedWork>
+  <closed>false</closed>
+  <deleted>false</deleted>
+  <dirty>true</dirty>
+  <workEstimationVotingActive>false</workEstimationVotingActive>
+  <workEstimationVotingShowoff>false</workEstimationVotingShowoff>
+  <tasksOrderIds/>
+  <themes/>
+</requirement>

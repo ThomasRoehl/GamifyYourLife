@@ -1,8 +1,8 @@
 package de.tro.development.dao.impl;
 
 import javax.annotation.Resource;
+import javax.faces.bean.ApplicationScoped;
 import javax.faces.bean.ManagedBean;
-import javax.faces.bean.SessionScoped;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
@@ -13,7 +13,7 @@ import de.tro.development.model.Todo_list;
 import de.tro.development.model.UserProfile;
 
 @ManagedBean
-@SessionScoped
+@ApplicationScoped
 public class UserDAO implements UserDAOInterface{
 
 	@PersistenceContext( unitName="gamifyyourlife")

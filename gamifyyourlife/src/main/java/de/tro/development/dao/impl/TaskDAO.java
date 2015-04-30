@@ -1,11 +1,10 @@
 package de.tro.development.dao.impl;
 
-import java.util.List;
 import java.util.Set;
 
 import javax.annotation.Resource;
+import javax.faces.bean.ApplicationScoped;
 import javax.faces.bean.ManagedBean;
-import javax.faces.bean.SessionScoped;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
@@ -16,7 +15,7 @@ import de.tro.development.model.Task;
 import de.tro.development.model.Todo_list;
 
 @ManagedBean
-@SessionScoped
+@ApplicationScoped
 public class TaskDAO implements TaskDAOInterface {
 
 	@PersistenceContext(unitName = "gamifyyourlife")

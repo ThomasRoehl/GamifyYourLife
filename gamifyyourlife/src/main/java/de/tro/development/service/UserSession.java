@@ -1,12 +1,18 @@
 package de.tro.development.service;
 
+import java.io.Serializable;
+
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 
 @ManagedBean(name = "userSession")
 @SessionScoped
-public class UserSession {
+public class UserSession implements Serializable{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private Integer user_id;
 	private String username;
 	private Integer todo_list_id;

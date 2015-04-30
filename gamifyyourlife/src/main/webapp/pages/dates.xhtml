@@ -12,6 +12,10 @@
 </h:head>
 <h:body>
 	<h:form class="outerDatesForm">
+		<div class="backToLogin">
+			<h:commandButton id="back" value="Back"
+				action="#{navigationController.moveToHome}" />
+		</div>
 		<div class="datesForm">
 			<h:outputText id="name" value="Name"></h:outputText>
 			<br />

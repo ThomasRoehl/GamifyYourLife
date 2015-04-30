@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><requirement>
   <id>8b7e6e38-5724-4d45-8e26-1003e5e0a8f2-1</id>
-  <lastModified>2015-04-28 14:14:51</lastModified>
+  <lastModified>2015-04-30 14:18:39</lastModified>
   <projectId>fc43cae0-0113-401c-9794-ae1dd9c1798c-1</projectId>
   <sprintId>9ae6c957-b894-4c47-b734-439e98bc033c</sprintId>
   <number>18</number>
@@ -15,14 +15,13 @@ Damit ich sehen kann, ob meine Arbeit vollstaendig abgeschlossen ist.
   <testDescription>4-5 Allgemeine Punkte zur Erledigung einer Story
 </testDescription>
   <estimatedWork>0.5</estimatedWork>
-  <rejectDate>2015-04-28</rejectDate>
   <closed>false</closed>
   <deleted>false</deleted>
   <dirty>false</dirty>
   <workEstimationVotingActive>false</workEstimationVotingActive>
   <workEstimationVotingShowoff>false</workEstimationVotingShowoff>
   <tasksOrderIds>
-    <string>00650cb3-2e22-46e7-8bc5-eef1622549c2-1</string>
+    <string>28f5c3c7-7561-4dff-824c-12df9a4b2fe4-1</string>
   </tasksOrderIds>
   <themes/>
 </requirement>

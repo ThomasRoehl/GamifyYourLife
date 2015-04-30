@@ -1,31 +1,15 @@
 package de.tro.development.controller;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import java.util.Set;
 
-import javax.annotation.Resource;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.RequestScoped;
-import javax.faces.bean.SessionScoped;
-import javax.faces.bean.ViewScoped;
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-import javax.persistence.TypedQuery;
-import javax.transaction.HeuristicMixedException;
-import javax.transaction.HeuristicRollbackException;
-import javax.transaction.NotSupportedException;
-import javax.transaction.RollbackException;
-import javax.transaction.SystemException;
-import javax.transaction.UserTransaction;
-
 import de.tro.development.dao.impl.TaskDAO;
-import de.tro.development.dao.impl.UserDAO;
 import de.tro.development.model.Category;
 import de.tro.development.model.Task;
-import de.tro.development.model.Todo_list;
 import de.tro.development.service.UserSession;
 
 /**
