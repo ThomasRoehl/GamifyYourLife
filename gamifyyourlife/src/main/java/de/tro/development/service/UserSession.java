@@ -30,6 +30,7 @@ public class UserSession implements Serializable{
 	}
 
 	public void setUser_id(Integer user_id) {
+		System.out.println("id set");
 		this.user_id = user_id;
 	}
 
@@ -38,6 +39,7 @@ public class UserSession implements Serializable{
 	}
 
 	public void setUsername(String username) {
+		System.out.println("username set");
 		this.username = username;
 	}
 	

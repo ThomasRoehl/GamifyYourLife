@@ -18,16 +18,18 @@
 	</ui:define>
 
 	<ui:define name="content">
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
+		<h:form>
+			<p:growl id="messages" showDetail="true" />
+
+			<h:panelGrid columnClasses="value">
+				<p:schedule value="#{calendarController.lazyEventModel}" />
+			</h:panelGrid>
+		</h:form>
+		<style type="text/css">
+.value {
+	width: 1000px;
+}
+</style>
 	</ui:define>
 
 	<ui:define name="footer">

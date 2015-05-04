@@ -10,4 +10,8 @@ public abstract class DaoFactory {
 		return new TaskDAO();
 	}
 	
+	public static CalendarDAO getCalendarDAO(){
+		return new CalendarDAO();
+	}
+	
 }

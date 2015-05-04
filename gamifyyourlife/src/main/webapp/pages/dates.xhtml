@@ -25,27 +25,38 @@
 			<br />
 			<h:inputText id="inp_category" value="#{calendarController.category}"></h:inputText>
 			<br /> <br />
-			<h:panelGroup id="dates">
-				<h:outputText id="begin" value="Begin"></h:outputText>
+			<h:form id="input">
+				<h:panelGroup id="dates" rendered="#{!calendarController.dayEvent}">
+					<h:outputText id="begin" value="Begin"></h:outputText>
+					<br />
+					<p:calendar value="#{calendarController.dateBegin}"
+						pattern="#{calendarController.DATEPATTERN}" />
+					<br />
+					<br />
+					<h:outputText id="end" value="End"></h:outputText>
+					<br />
+					<p:calendar value="#{calendarController.dateEnd}"
+						pattern="#{calendarController.DATEPATTERN}" />
+				</h:panelGroup>
 				<br />
-				<p:calendar value="#{calendarController.dateBegin}"
-					pattern="#{calendarController.DATEPATTERN}" />
+				<br />
+				<h:outputText id="points" value="Points"></h:outputText>
+				<br />
+				<h:inputText id="inp_points" value="#{calendarController.points}"></h:inputText>
 				<br />
 				<br />
-				<h:outputText id="end" value="End"></h:outputText>
-				<br />
-				<p:calendar value="#{calendarController.dateEnd}"
-					pattern="#{calendarController.DATEPATTERN}" />
-			</h:panelGroup>
-			<br /> <br />
-			<h:outputText id="points" value="Points"></h:outputText>
-			<br />
-			<h:inputText id="inp_points" value="#{calendarController.points}"></h:inputText>
-			<br /> <br />
-			<h:outputText id="dayEvent" value="DayEvent"></h:outputText>
-			<h:selectBooleanCheckbox value="#{calendarController.dayEvent}">
-				<f:ajax event="click" render="dates" execute="dates" />
-			</h:selectBooleanCheckbox>
+				<h:outputText id="dayEvent" value="DayEvent"></h:outputText>
+				<h:selectBooleanCheckbox value="#{calendarController.dayEvent}">
+					<f:ajax event="click" render="@form" />
+				</h:selectBooleanCheckbox>
+				<h:panelGroup id="dateDayEvent"
+					rendered="#{calendarController.dayEvent}">
+					<br />
+					<h:outputText value="Date " />
+					<p:calendar value="#{calendarController.dateBegin}"
+						pattern="#{calendarController.DATEPATTERN}" />
+				</h:panelGroup>
+			</h:form>
 			<br /> <br />
 			<h:outputText id="description" value="Description"></h:outputText>
 			<br />

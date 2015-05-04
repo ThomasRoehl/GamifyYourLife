@@ -9,11 +9,14 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
-@NamedQuery(name = "Todo_list.findAllTasksByID", query = "SELECT t FROM Todo_list t WHERE t.id = :id")
+@NamedQueries({@NamedQuery(name = "Todo_list.findAllTasksByID", query = "SELECT t FROM Todo_list t WHERE t.id = :id"),
+@NamedQuery(name = "Todo_list.findAllDatesByID", query = "SELECT t FROM Todo_list t WHERE t.id = :id")})
+
 @Entity
 public class Todo_list implements Serializable{
 	
