@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?><task>
   <id>28f5c3c7-7561-4dff-824c-12df9a4b2fe4-6</id>
-  <lastModified>2015-04-30 14:21:12</lastModified>
+  <lastModified>2015-05-05 10:27:51</lastModified>
   <requirementId>19bea3c0-0995-4c47-9ba9-3e13b67ce48d-6</requirementId>
   <number>34</number>
   <label>Punkte lable in startseite</label>
-  <remainingWork>1</remainingWork>
-  <burnedWork>0</burnedWork>
+  <remainingWork>0</remainingWork>
+  <burnedWork>1</burnedWork>
+  <ownerId>a01eede1-e7e9-41e9-8122-6f7c606bfd0a</ownerId>
 </task>

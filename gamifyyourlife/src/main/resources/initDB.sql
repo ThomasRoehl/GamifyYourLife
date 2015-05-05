@@ -12,9 +12,10 @@ INSERT INTO HERO (id, name) VALUES (100, 'Superman')
 INSERT INTO HERO (id, name) VALUES (101, 'Batman')
 
 INSERT INTO TODO_LIST (id) VALUES (100)
+INSERT INTO TODO_LIST (id) VALUES (101)
 
 INSERT INTO TASK (id, name, points, category_fk, todo_list_fk) VALUES (100, 'Math Homework', 10, 100, 100)
 INSERT INTO TASK (id, name, points, category_fk, todo_list_fk) VALUES (101, 'English Homework', 5, 101, 100)
 
-INSERT INTO USERPROFILE (id, todo_list_fk, firstname, lastname, mail, street1, username, password, points) VALUES (100, 100, 'Thomas', 'Roehl', 'mail@googlemail.com', 'leipzigerstr. 300', 'tro', 'test', 0)
-INSERT INTO USERPROFILE (id, todo_list_fk, firstname, lastname, mail, street1, username, password, points) VALUES (101, 101, 'Max', 'Mustermann', 'mail@googlemail.com', 'leipzigerstr. 300', 'max', 'test', 0)
+INSERT INTO USERPROFILE (id, todo_list_fk, firstname, lastname, mail, street1, username, password, points) VALUES (100, 100, 'Thomas', 'Roehl', 'mail@googlemail.com', 'leipzigerstr. 300', 'tro', 'test', 3)
+INSERT INTO USERPROFILE (id, todo_list_fk, firstname, lastname, mail, street1, username, password, points) VALUES (101, 101, 'Max', 'Mustermann', 'mail@googlemail.com', 'leipzigerstr. 300', 'max', 'test', 12)

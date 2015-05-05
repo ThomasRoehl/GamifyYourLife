@@ -82,4 +82,20 @@ public class UserDAO implements UserDAOInterface{
 		return -1;
 	}
 
+	@Override
+	public long getUserPoints(int user_id) {
+		try {
+			Query query = em.createNamedQuery("UserProfile.findUserPoints");
+			query.setParameter("id", user_id);
+			
+			if (! query.getResultList().isEmpty()){
+				return (Long) query.getResultList().get(0);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return -1;
+	}
+
 }

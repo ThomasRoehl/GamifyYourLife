@@ -49,10 +49,11 @@
 				<h:selectBooleanCheckbox value="#{calendarController.dayEvent}">
 					<f:ajax event="click" render="@form" />
 				</h:selectBooleanCheckbox>
+				<br />
 				<h:panelGroup id="dateDayEvent"
 					rendered="#{calendarController.dayEvent}">
 					<br />
-					<h:outputText value="Date " />
+					<h:outputText value="Date  " />
 					<p:calendar value="#{calendarController.dateBegin}"
 						pattern="#{calendarController.DATEPATTERN}" />
 				</h:panelGroup>

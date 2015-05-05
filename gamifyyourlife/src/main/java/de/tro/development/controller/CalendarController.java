@@ -1,14 +1,13 @@
 package de.tro.development.controller;
 
 import java.io.Serializable;
-import java.util.Calendar;
 import java.util.Date;
 import java.util.Set;
 
 import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
-import javax.faces.bean.RequestScoped;
+import javax.faces.bean.ViewScoped;
 
 import org.primefaces.model.DefaultScheduleEvent;
 import org.primefaces.model.LazyScheduleModel;
@@ -20,7 +19,7 @@ import de.tro.development.model.UserDate;
 import de.tro.development.service.UserSession;
 
 @ManagedBean(name = "calendarController")
-@RequestScoped
+@ViewScoped
 public class CalendarController implements Serializable {
 
 	/**
@@ -32,8 +31,6 @@ public class CalendarController implements Serializable {
 	private Long points;
 	private Date dateBegin;
 	private Date dateEnd;
-	// private Date timeBegin;
-	// private Date timeEnd;
 	private String category;
 	private boolean dayEvent;
 	private String DATEPATTERN = "MM/dd/yyyy HH:mm";
@@ -46,6 +43,9 @@ public class CalendarController implements Serializable {
 	@ManagedProperty(value = "#{navigationController}")
 	private NavigationController navi;
 
+	/**
+	 * load UserDates from db into calendar
+	 */
 	@PostConstruct
 	public void init() {
 		setLazyEventModel(new LazyScheduleModel() {
@@ -55,18 +55,24 @@ public class CalendarController implements Serializable {
 			 */
 			private static final long serialVersionUID = 1L;
 
+			@SuppressWarnings("deprecation")
 			@Override
 			public void loadEvents(Date start, Date end) {
-				Set<UserDate> dates = calendarDAO.getUserDatesByID(userSession
-						.getTodo_list_id());
+				Set<UserDate> dates = getUserDates();
 				for (UserDate d : dates) {
-					if (!d.isDay_event())
-						addEvent(new DefaultScheduleEvent(d.getName(),
-								d.getBegin_time(), d.getEnd_time()));
-					else
-						addEvent(new DefaultScheduleEvent(d.getName(),
-								d.getBegin_time(), d.getBegin_time(),
-								d.isDay_event()));
+					System.out.println("++++++ " + d);
+					if (d.isDay_event()) {
+						Date day = d.getBegin_time();
+						// day.setDate(d.getBegin_time().getDate() + 1);
+						addEvent(new DefaultScheduleEvent(d.getName(), day,
+								day, d.isDay_event()));
+					}
+					Date day = d.getBegin_time();
+					day.setHours(d.getBegin_time().getHours() + 1);
+					Date endtime = d.getEnd_time();
+					endtime.setHours(d.getEnd_time().getHours() + 1);
+					addEvent(new DefaultScheduleEvent(d.getName(), day,
+							endtime, d.isDay_event()));
 				}
 			}
 		});
@@ -158,13 +164,16 @@ public class CalendarController implements Serializable {
 		return dayEvent;
 	}
 
+	/**
+	 * change pattern if dayevent is true
+	 * @param dayEvent
+	 */
 	public void setDayEvent(boolean dayEvent) {
 		if (dayEvent)
 			setDATEPATTERN("MM/dd/yyyy");
 		else
 			setDATEPATTERN("MM/dd/yyyy HH:mm");
 		this.dayEvent = dayEvent;
-		System.out.println("PATTERN = " + this.DATEPATTERN);
 	}
 
 	/*
@@ -184,19 +193,46 @@ public class CalendarController implements Serializable {
 
 	// FUNCTIONS
 
+	/**
+	 * db request for UserDates
+	 * @return
+	 */
+	protected Set<UserDate> getUserDates() {
+		return calendarDAO.getUserDatesByID(userSession.getTodo_list_id());
+	}
+
+	/**
+	 * create entry in db 
+	 * @param UserDate date
+	 * @return true if success else false
+	 */
+	protected boolean createDate(UserDate date) {
+		try {
+			return calendarDAO.createNewDate(date,
+					userSession.getTodo_list_id());
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		}
+	}
+
+	/**
+	 * init UserDate creating.
+	 * if success link to calendar page
+	 * @return calendar if success, else null
+	 */
 	public String showNewDate() {
-		System.out.println("------test " + this.toString());
-		System.out.println("Begin: " + dateBegin);
-		System.out.println("End: " + dateEnd);
 		UserDate date;
 		if (!dayEvent) {
-			date = new UserDate(name, description, new Category(
-					category, ""), points, dateBegin, dateEnd, dayEvent);
+			date = new UserDate(name, description, new Category(category, ""),
+					points, dateBegin, dateEnd, dayEvent);
 		} else {
-			date = new UserDate(name, description, new Category(
-					category, ""), points, dateBegin, dateBegin, dayEvent);
+			date = new UserDate(name, description, new Category(category, ""),
+					points, dateBegin, dateBegin, dayEvent);
 		}
-		if (calendarDAO.createNewDate(date, userSession.getUser_id())) {
+
+		if (createDate(date)) {
 			return navi.moveToCalendar();
 		} else {
 			return null;
