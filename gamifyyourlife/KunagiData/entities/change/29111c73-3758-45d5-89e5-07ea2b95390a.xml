@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><change>
+  <id>29111c73-3758-45d5-89e5-07ea2b95390a</id>
+  <lastModified>2015-05-05 13:50:05</lastModified>
+  <parentId>1e8fcd55-8ee3-4d4c-ab91-58c37eabb5b8-1</parentId>
+  <userId>a01eede1-e7e9-41e9-8122-6f7c606bfd0a</userId>
+  <dateAndTime>2015-05-05 13:50:05</dateAndTime>
+  <key>label</key>
+  <oldValue>Refactor Startseite Passwordbox</oldValue>
+  <newValue>Sichere Passworteingabe</newValue>
+</change>

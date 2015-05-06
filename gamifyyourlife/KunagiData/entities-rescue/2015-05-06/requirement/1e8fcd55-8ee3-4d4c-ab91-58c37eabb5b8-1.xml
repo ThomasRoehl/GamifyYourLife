@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><requirement>
+  <id>1e8fcd55-8ee3-4d4c-ab91-58c37eabb5b8-1</id>
+  <lastModified>2015-05-05 14:09:24</lastModified>
+  <projectId>fc43cae0-0113-401c-9794-ae1dd9c1798c-1</projectId>
+  <sprintId>8801fbf3-51cb-4c4a-be7e-b71e4e0ad2d9</sprintId>
+  <number>20</number>
+  <qualitysIds/>
+  <label>Sichere Passworteingabe</label>
+  <description>Als Nutzer moechte ich eine Passwordbox auf der Startseite
+
+Damit mein Password nicht gesehen wird beim eingeben.
+
+Akyeptanzkriterien:
+
+Passwordbox auf Startseite, die Eingabe verdeckt
+</description>
+  <estimatedWork>0.5</estimatedWork>
+  <closed>false</closed>
+  <deleted>false</deleted>
+  <dirty>false</dirty>
+  <workEstimationVotingActive>false</workEstimationVotingActive>
+  <workEstimationVotingShowoff>false</workEstimationVotingShowoff>
+  <tasksOrderIds/>
+  <themes/>
+</requirement>

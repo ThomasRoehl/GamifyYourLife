@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><requirement>
+  <id>1e8fcd55-8ee3-4d4c-ab91-58c37eabb5b8-3</id>
+  <lastModified>2015-05-05 10:42:39</lastModified>
+  <projectId>fc43cae0-0113-401c-9794-ae1dd9c1798c-1</projectId>
+  <number>22</number>
+  <qualitysIds/>
+  <label>Category</label>
+  <description>Als Entwickler moechte ich die Category in allen Faellen als Category Object verwenden
+
+Damit ich bessere wiederverwendbarkeit habe.
+
+Akzeptanzkrietrien:
+
+Alle Category Eintrae
+</description>
+  <closed>false</closed>
+  <deleted>false</deleted>
+  <dirty>true</dirty>
+  <workEstimationVotingActive>false</workEstimationVotingActive>
+  <workEstimationVotingShowoff>false</workEstimationVotingShowoff>
+  <tasksOrderIds/>
+  <themes/>
+</requirement>

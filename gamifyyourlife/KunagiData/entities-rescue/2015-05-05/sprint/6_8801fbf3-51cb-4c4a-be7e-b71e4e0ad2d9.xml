@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><sprint>
+  <id>8801fbf3-51cb-4c4a-be7e-b71e4e0ad2d9</id>
+  <lastModified>2015-05-05 14:09:22</lastModified>
+  <number>3</number>
+  <projectId>fc43cae0-0113-401c-9794-ae1dd9c1798c-1</projectId>
+  <label>Sprint 03</label>
+  <goal>Nutzerkontakte und Rewards hinzufuegen
+</goal>
+  <begin>2015-05-05</begin>
+  <end>2015-05-11</end>
+  <originallyEnd reference="../end"/>
+  <requirementsOrderIds>
+    <string>19bea3c0-0995-4c47-9ba9-3e13b67ce48d-2</string>
+  </requirementsOrderIds>
+  <productOwnersIds/>
+  <scrumMastersIds/>
+  <teamMembersIds/>
+</sprint>

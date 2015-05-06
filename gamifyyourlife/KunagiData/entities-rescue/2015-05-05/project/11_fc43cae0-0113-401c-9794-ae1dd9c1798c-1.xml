@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?><project>
+  <id>fc43cae0-0113-401c-9794-ae1dd9c1798c-1</id>
+  <lastModified>2015-05-05 13:03:10</lastModified>
+  <label>GamifyYourLife</label>
+  <participantsIds>
+    <string>a3a6bfc9-f4f3-4283-b9d1-c61481b05f30</string>
+    <string>a01eede1-e7e9-41e9-8122-6f7c606bfd0a</string>
+  </participantsIds>
+  <adminsIds>
+    <string>a3a6bfc9-f4f3-4283-b9d1-c61481b05f30</string>
+    <string>a01eede1-e7e9-41e9-8122-6f7c606bfd0a</string>
+  </adminsIds>
+  <productOwnersIds>
+    <string>a3a6bfc9-f4f3-4283-b9d1-c61481b05f30</string>
+    <string>a01eede1-e7e9-41e9-8122-6f7c606bfd0a</string>
+  </productOwnersIds>
+  <scrumMastersIds>
+    <string>a3a6bfc9-f4f3-4283-b9d1-c61481b05f30</string>
+    <string>a01eede1-e7e9-41e9-8122-6f7c606bfd0a</string>
+  </scrumMastersIds>
+  <teamMembersIds>
+    <string>a3a6bfc9-f4f3-4283-b9d1-c61481b05f30</string>
+    <string>a01eede1-e7e9-41e9-8122-6f7c606bfd0a</string>
+  </teamMembersIds>
+  <currentSprintId>9ae6c957-b894-4c47-b734-439e98bc033c</currentSprintId>
+  <nextSprintId>8801fbf3-51cb-4c4a-be7e-b71e4e0ad2d9</nextSprintId>
+  <velocity>13</velocity>
+  <requirementsOrderIds>
+    <string>1e8fcd55-8ee3-4d4c-ab91-58c37eabb5b8-2</string>
+    <string>19bea3c0-0995-4c47-9ba9-3e13b67ce48d-7</string>
+    <string>28136aec-eb10-471a-b549-dd462e7e845a-1</string>
+    <string>a8fe24b9-52fd-4dda-8c27-0567ba644a45-2</string>
+    <string>1e8fcd55-8ee3-4d4c-ab91-58c37eabb5b8-1</string>
+    <string>1e8fcd55-8ee3-4d4c-ab91-58c37eabb5b8-3</string>
+    <string>cda54d00-ba64-4326-82bf-185e72f4a59c-1</string>
+    <string>19bea3c0-0995-4c47-9ba9-3e13b67ce48d-5</string>
+    <string>19bea3c0-0995-4c47-9ba9-3e13b67ce48d-4</string>
+    <string>c374a2ab-4d81-4058-b946-cddf60be0b09-1</string>
+    <string>a8fe24b9-52fd-4dda-8c27-0567ba644a45-1</string>
+  </requirementsOrderIds>
+  <urgentIssuesOrderIds/>
+  <lastSprintNumber>3</lastSprintNumber>
+  <lastTaskNumber>34</lastTaskNumber>
+  <lastRequirementNumber>22</lastRequirementNumber>
+  <lastQualityNumber>0</lastQualityNumber>
+  <lastRiskNumber>0</lastRiskNumber>
+  <lastIssueNumber>0</lastIssueNumber>
+  <lastImpedimentNumber>0</lastImpedimentNumber>
+  <lastFileNumber>0</lastFileNumber>
+  <lastSubjectNumber>0</lastSubjectNumber>
+  <lastEventNumber>0</lastEventNumber>
+  <lastReleaseNumber>0</lastReleaseNumber>
+  <lastBlogEntryNumber>0</lastBlogEntryNumber>
+  <punishmentUnit>EUR</punishmentUnit>
+  <punishmentFactor>1</punishmentFactor>
+  <autoUpdateHomepage>false</autoUpdateHomepage>
+  <supportEmail>tro.development@gmail.com</supportEmail>
+  <issueReplyTemplate>Hello ${issuer.name},
+
+thank you very much for your feedback.
+
+Your issue is now known as ${issue.reference}. You can view it on our homepage: ${homepage.url}/${issue.reference}.html
+</issueReplyTemplate>
+  <subscriberNotificationTemplate>Hello,
+
+there is news on an entity you are subscribed to:
+
+    ${entity.reference} ${entity.label}
+    ${homepage.url}/${entity.reference}.html
+
+    ${change.message}
+
+---
+Unsubscribe from ${entity.reference}: ${unsubscribe.url}
+
+Unsubscribe from all entities: ${unsubscribeall.url}
+</subscriberNotificationTemplate>
+  <lastOpenedDateAndTime>2015-05-05 12:53:16</lastOpenedDateAndTime>
+  <freeDays>0</freeDays>
+  <autoCreateTasksFromQualities>false</autoCreateTasksFromQualities>
+</project>
