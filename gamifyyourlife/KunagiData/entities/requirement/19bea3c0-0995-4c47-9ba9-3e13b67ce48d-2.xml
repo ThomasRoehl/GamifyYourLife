@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><requirement>
   <id>19bea3c0-0995-4c47-9ba9-3e13b67ce48d-2</id>
-  <lastModified>2015-04-28 14:14:53</lastModified>
+  <lastModified>2015-05-06 15:16:55</lastModified>
   <projectId>fc43cae0-0113-401c-9794-ae1dd9c1798c-1</projectId>
-  <sprintId>9ae6c957-b894-4c47-b734-439e98bc033c</sprintId>
+  <sprintId>8801fbf3-51cb-4c4a-be7e-b71e4e0ad2d9</sprintId>
   <number>4</number>
   <qualitysIds/>
   <label>Termine erstellen</label>
@@ -30,11 +30,8 @@ Akzeptanzkriterien:
   <workEstimationVotingActive>false</workEstimationVotingActive>
   <workEstimationVotingShowoff>false</workEstimationVotingShowoff>
   <tasksOrderIds>
-    <string>8b7e6e38-5724-4d45-8e26-1003e5e0a8f2-24</string>
-    <string>8b7e6e38-5724-4d45-8e26-1003e5e0a8f2-25</string>
-    <string>8b7e6e38-5724-4d45-8e26-1003e5e0a8f2-26</string>
-    <string>8b7e6e38-5724-4d45-8e26-1003e5e0a8f2-27</string>
-    <string>8b7e6e38-5724-4d45-8e26-1003e5e0a8f2-28</string>
+    <string>ece688a9-69ab-410b-b0dd-7067d1422488-1</string>
+    <string>ece688a9-69ab-410b-b0dd-7067d1422488-2</string>
   </tasksOrderIds>
   <themes/>
 </requirement>

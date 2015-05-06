@@ -25,6 +25,15 @@ public class UserControllerTest {
 		uc.setUserSession(userSession);
 		uc.setNavi(navi);
 	}
+	
+	public void setUserData(String name, String pw){
+		uc.setFirstname("test");
+		uc.setLastname("test");
+		uc.setMail("maiL");
+		uc.setStreet("street");
+		uc.setPassword(pw);
+		uc.setUsername(name);
+	}
 
 	@Test
 	public void login() {
@@ -48,7 +57,7 @@ public class UserControllerTest {
 	
 	@Test
 	public void logout() {
-		assertEquals("index", uc.logout());
+		assertEquals(navi.moveToIndex(), uc.logout());
 		assertEquals("", uc.getPassword());
 		assertEquals("", uc.getUsername());
 	}
@@ -81,7 +90,7 @@ public class UserControllerTest {
 		uc.setStreet("street");
 		uc.setPassword("pas");
 		uc.setUsername("name");
-		when(userDao.createUser(new UserProfile())).thenReturn(true);
+		when(userDao.createUser(any(UserProfile.class))).thenReturn(true);
 		
 		assertEquals(uc.registerUser(), navi.moveToIndex());
 		assertEquals("", uc.getFirstname());
@@ -90,6 +99,14 @@ public class UserControllerTest {
 		assertEquals("", uc.getStreet());
 		assertEquals("name", uc.getUsername());
 		assertEquals("pas", uc.getPassword());
+	}
+	
+	@Test
+	public void createFail(){
+		setUserData("name", "pw");
+		when(userDao.findUserID("name")).thenReturn(1);
+		
+		assertFalse(uc.createUser());
 	}
 
 }

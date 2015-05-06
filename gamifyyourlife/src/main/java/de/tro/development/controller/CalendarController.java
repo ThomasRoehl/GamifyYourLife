@@ -66,13 +66,14 @@ public class CalendarController implements Serializable {
 						// day.setDate(d.getBegin_time().getDate() + 1);
 						addEvent(new DefaultScheduleEvent(d.getName(), day,
 								day, d.isDay_event()));
+					} else {
+						Date day = d.getBegin_time();
+						day.setHours(d.getBegin_time().getHours() + 1);
+						Date endtime = d.getEnd_time();
+						endtime.setHours(d.getEnd_time().getHours() + 1);
+						addEvent(new DefaultScheduleEvent(d.getName(), day,
+								endtime, d.isDay_event()));
 					}
-					Date day = d.getBegin_time();
-					day.setHours(d.getBegin_time().getHours() + 1);
-					Date endtime = d.getEnd_time();
-					endtime.setHours(d.getEnd_time().getHours() + 1);
-					addEvent(new DefaultScheduleEvent(d.getName(), day,
-							endtime, d.isDay_event()));
 				}
 			}
 		});
@@ -166,6 +167,7 @@ public class CalendarController implements Serializable {
 
 	/**
 	 * change pattern if dayevent is true
+	 * 
 	 * @param dayEvent
 	 */
 	public void setDayEvent(boolean dayEvent) {
@@ -195,6 +197,7 @@ public class CalendarController implements Serializable {
 
 	/**
 	 * db request for UserDates
+	 * 
 	 * @return
 	 */
 	protected Set<UserDate> getUserDates() {
@@ -202,8 +205,10 @@ public class CalendarController implements Serializable {
 	}
 
 	/**
-	 * create entry in db 
-	 * @param UserDate date
+	 * create entry in db
+	 * 
+	 * @param UserDate
+	 *            date
 	 * @return true if success else false
 	 */
 	protected boolean createDate(UserDate date) {
@@ -218,12 +223,16 @@ public class CalendarController implements Serializable {
 	}
 
 	/**
-	 * init UserDate creating.
-	 * if success link to calendar page
+	 * init UserDate creating. if success link to calendar page
+	 * 
 	 * @return calendar if success, else null
 	 */
 	public String showNewDate() {
 		UserDate date;
+		if (!dayEvent && dateEnd == null) return null;
+		if (dateBegin == null) return null;
+		if (!dayEvent && dateBegin.after(dateEnd))
+			return null;
 		if (!dayEvent) {
 			date = new UserDate(name, description, new Category(category, ""),
 					points, dateBegin, dateEnd, dayEvent);

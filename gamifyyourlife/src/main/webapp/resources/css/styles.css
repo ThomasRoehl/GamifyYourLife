@@ -29,7 +29,7 @@
 	background: url("#{resource['images/blue_less_full_50.png']}") no-repeat
 		center left;
 	background-color: #FFF;
-	text-transform: uppercase;
+	
 	font-weight: bold;
 	text-align: center;
 	width: 100%;
@@ -41,9 +41,11 @@
 .menu ul li {
 	list-style-type: none;
 	text-decoration: none;
+	color: #FFF;
 }
 
 .menu ul li a{
+	text-transform: uppercase;
 	color: #FFF;
 	width: 100px;
 	display: block;

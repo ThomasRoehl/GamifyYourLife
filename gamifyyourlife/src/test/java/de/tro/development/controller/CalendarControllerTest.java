@@ -3,9 +3,9 @@ package de.tro.development.controller;
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
+import static org.mockito.Matchers.*;
 
 import java.sql.Date;
-import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -13,7 +13,6 @@ import org.junit.Before;
 import org.junit.Test;
 
 import de.tro.development.dao.impl.CalendarDAO;
-import de.tro.development.dao.impl.TaskDAO;
 import de.tro.development.model.Category;
 import de.tro.development.model.UserDate;
 import de.tro.development.service.UserSession;
@@ -77,4 +76,19 @@ public class CalendarControllerTest {
 		assertEquals(s, cc.getUserDates());
 	}
 
+	@Test
+	public void wrongDates(){
+		cc.setDateBegin(new Date(System.currentTimeMillis()));
+		cc.setDateEnd(new Date(System.currentTimeMillis() - 100000));
+		assertEquals(null, cc.showNewDate());
+	}
+	
+	@Test
+	public void wrongDatesDayEvent(){
+		cc.setDateBegin(new Date(System.currentTimeMillis()));
+		assertEquals(null, cc.showNewDate());
+		cc.setDateEnd(new Date(System.currentTimeMillis() + 100000));
+		when(cDAO.createNewDate(any(UserDate.class), any(Integer.class))).thenReturn(true);
+		assertEquals(navi.moveToCalendar(), cc.showNewDate());
+	}
 }

@@ -153,16 +153,18 @@ public class UserController {
 			user.setUsername(username);
 			user.setStreet1(street);
 			user.setPoints(0L);
+			user.setHero_level(0);
 			Todo_list tl = new Todo_list();
+			System.out.println(user.getId());
+			System.out.println(tl.getId());
 			user.setTodo_list(tl);
-			userDAO.createUser(user);
+			return userDAO.createUser(user);
 			
 			
 		} catch (Exception e) {
 			e.printStackTrace();
 			return false;
 		}
-		return true;
 	}
 	
 	/**

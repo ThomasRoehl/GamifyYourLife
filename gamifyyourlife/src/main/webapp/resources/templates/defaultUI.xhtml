@@ -32,7 +32,7 @@
 				<li><h:commandLink id="calendarPage" action="#{navigationController.moveToCalendar}">calendar</h:commandLink></li>
 				<li><h:commandLink id="NewTaskPage" action="#{navigationController.moveToNewTask}">Task</h:commandLink></li>
 				<li><h:commandLink id="NewDatePage" action="#{navigationController.moveToNewDate}">Date</h:commandLink></li>
-				<li><h:outputText value="#{pointsController.points}"></h:outputText></li>
+				<li><h:outputText value="Points: #{pointsController.points}"></h:outputText></li>
 			</ul>
 			<ui:insert name="menu"></ui:insert>
 		</div>
