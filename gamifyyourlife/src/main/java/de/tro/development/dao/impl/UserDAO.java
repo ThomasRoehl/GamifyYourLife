@@ -1,11 +1,15 @@
 package de.tro.development.dao.impl;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.annotation.Resource;
 import javax.faces.bean.ApplicationScoped;
 import javax.faces.bean.ManagedBean;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
+import javax.persistence.TypedQuery;
 import javax.transaction.UserTransaction;
 
 import de.tro.development.dao.interf.UserDAOInterface;
@@ -32,8 +36,6 @@ public class UserDAO implements UserDAOInterface {
 				return true;
 		} catch (Exception e) {
 			e.printStackTrace();
-			if (em == null)
-				System.out.println("-------- em null");
 		}
 		return false;
 	}
@@ -104,6 +106,26 @@ public class UserDAO implements UserDAOInterface {
 		}
 
 		return -1;
+	}
+
+	@Override
+	public List<String> findUserProfileByName(String username) {
+		try {
+			TypedQuery<UserProfile> query = em.createNamedQuery(
+					"UserProfile.findUserProfileByName", UserProfile.class);
+			query.setParameter("username", username);
+			if (!query.getResultList().isEmpty()) {
+				List<String> res = new ArrayList<String>();
+				res.add(query.getResultList().get(0).getFirstname());
+				res.add(query.getResultList().get(0).getLastname());
+				return res;
+			}
+			else return null;
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
 	}
 
 }

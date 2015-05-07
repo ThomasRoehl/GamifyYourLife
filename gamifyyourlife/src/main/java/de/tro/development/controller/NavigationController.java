@@ -35,4 +35,8 @@ public class NavigationController {
 	public String moveToNewDate(){
 		return "dates?faces-redirect=true";
 	}
+	
+	public String moveToContacts(){
+		return "users?faces-redirect=true";
+	}
 }

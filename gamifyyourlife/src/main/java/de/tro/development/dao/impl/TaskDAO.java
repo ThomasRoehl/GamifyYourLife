@@ -32,7 +32,6 @@ public class TaskDAO implements TaskDAOInterface {
 					"Todo_list.findAllTasksByID", Todo_list.class);
 			query.setParameter("id", id);
 			if (!query.getResultList().isEmpty()) {
-				System.out.println("tl found");
 				Todo_list tl = query.getResultList().get(0);
 				tl.addTasks(t);
 				utx.begin();

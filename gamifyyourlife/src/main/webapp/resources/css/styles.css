@@ -47,8 +47,9 @@
 .menu ul li a{
 	text-transform: uppercase;
 	color: #FFF;
-	width: 100px;
+	//width: 100px;
 	display: block;
+	padding-right: 30px;
 	float: left;
 }
 

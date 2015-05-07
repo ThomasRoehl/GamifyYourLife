@@ -1,5 +1,7 @@
 package de.tro.development.controller;
 
+import java.util.List;
+
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.RequestScoped;
@@ -24,7 +26,9 @@ public class UserController {
 	private String lastname;
 	private String mail;
 	private String street;
-	
+	private boolean foundUser = false;
+	private String foundMessage = "";
+
 	@ManagedProperty(value = "#{userSession}")
 	private UserSession userSession;
 	
@@ -38,6 +42,14 @@ public class UserController {
 	private TaskController taskController;
 	
 	// GETTER SETTER
+	
+	public boolean isFoundUser() {
+		return foundUser;
+	}
+
+	public void setFoundUser(boolean foundUser) {
+		this.foundUser = foundUser;
+	}
 	
 	public String getUsername() {
 		return username;
@@ -126,6 +138,14 @@ public class UserController {
 	public void setUserDAO(UserDAO userDAO) {
 		this.userDAO = userDAO;
 	}
+	
+	public String getFoundMessage() {
+		return foundMessage;
+	}
+
+	public void setFoundMessage(String foundMessage) {
+		this.foundMessage = foundMessage;
+	}
 
 	// FUNCTIONS
 	
@@ -134,7 +154,7 @@ public class UserController {
 	 * @return target page
 	 */
 	public String logout(){
-		clearData();
+		clearData(1);
 		clearLogin();
 		return navi.moveToIndex();
 	}
@@ -155,8 +175,6 @@ public class UserController {
 			user.setPoints(0L);
 			user.setHero_level(0);
 			Todo_list tl = new Todo_list();
-			System.out.println(user.getId());
-			System.out.println(tl.getId());
 			user.setTodo_list(tl);
 			return userDAO.createUser(user);
 			
@@ -173,7 +191,7 @@ public class UserController {
 	 */
 	public String registerUser(){
 		if (createUser()){
-			clearData();
+			clearData(0);
 			return navi.moveToIndex();
 		}
 		return null;
@@ -189,6 +207,7 @@ public class UserController {
 			userSession.setUser_id(userDAO.findUserID(this.username));
 			userSession.setUsername(this.username);
 			userSession.setTodo_list_id(userDAO.findTodo_list(username));
+			clearData(1);
 			return navi.moveToHome();
 		}
 		
@@ -198,11 +217,15 @@ public class UserController {
 	/**
 	 * clear all data from register user
 	 */
-	public void clearData(){
+	public void clearData(int i){
 		this.firstname = "";
 		this.lastname = "";
 		this.mail = "";
 		this.street = "";
+		if (i == 1){
+			this.username = "";
+			this.password = "";
+		}
 	}
 	
 	/**
@@ -213,5 +236,34 @@ public class UserController {
 		this.password = "";
 		userSession.setUser_id(-1);
 		userSession.setUsername("");
+	}
+	
+	/**
+	 * look for user in db by username
+	 * if success set firstname and lastname of found user 
+	 */
+	public String findUser(){
+		List<String> l = userDAO.findUserProfileByName(username);
+		if (l == null){
+			foundMessage = "user not found";
+			this.foundUser = false;
+			clearData(1);
+		}
+		else{
+			foundMessage = "";
+			this.foundUser = true;
+			this.firstname = l.get(0);
+			this.lastname = l.get(1);
+		}
+		return null;
+	}
+	
+	/**
+	 * add user to contacts, if no entry exists
+	 * @return move to contacts page if success, else null
+	 */
+	public String addUser(){
+		clearData(1);
+		return navi.moveToContacts();
 	}
 }

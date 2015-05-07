@@ -121,7 +121,6 @@ public class TaskController {
 	 */
 	public List<Task> getTasks() {
 		updateTasks();
-		System.out.println(tasks.isEmpty());
 		return tasks;
 	}
 
@@ -156,7 +155,6 @@ public class TaskController {
 	 */
 	protected boolean insertTask(Task t){
 		try {
-			System.out.println(userSession.getTodo_list_id());
 			return taskDAO.createTask(t, userSession.getTodo_list_id());
 		} catch (Exception e) {
 			e.printStackTrace();

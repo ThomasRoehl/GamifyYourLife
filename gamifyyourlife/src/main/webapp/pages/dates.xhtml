@@ -17,6 +17,8 @@
 				action="#{navigationController.moveToHome}" />
 		</div>
 		<div class="datesForm">
+			<!-- <h:outputText class="error" value="#{calendarController.error}"></h:outputText> -->
+			<br />
 			<h:outputText id="name" value="Name"></h:outputText>
 			<br />
 			<h:inputText id="inp_name" value="#{calendarController.name}"></h:inputText>
@@ -67,7 +69,7 @@
 			</p:inputTextarea>
 			<br /> <br />
 			<h:commandButton id="createDate" value="create"
-				action="#{calendarController.showNewDate}"></h:commandButton>
+				action="#{calendarController.showNewDate}" update="error"></h:commandButton>
 		</div>
 	</h:form>
 </h:body>

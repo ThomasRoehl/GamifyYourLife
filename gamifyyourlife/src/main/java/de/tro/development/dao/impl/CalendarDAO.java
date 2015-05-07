@@ -31,7 +31,6 @@ public class CalendarDAO implements CalendarDAOInterface{
 					"Todo_list.findAllDatesByID", Todo_list.class);
 			query.setParameter("id", id);
 			if (!query.getResultList().isEmpty()) {
-				System.out.println("tl found");
 				Todo_list tl = query.getResultList().get(0);
 				tl.addDates(date);
 				utx.begin();

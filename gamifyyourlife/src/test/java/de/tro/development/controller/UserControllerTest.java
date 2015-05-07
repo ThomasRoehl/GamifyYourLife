@@ -71,7 +71,7 @@ public class UserControllerTest {
 		uc.setPassword("pas");
 		uc.setUsername("name");
 		
-		uc.clearData();
+		uc.clearData(1);
 		assertEquals("", uc.getFirstname());
 		assertEquals("", uc.getLastname());
 		assertEquals("", uc.getMail());

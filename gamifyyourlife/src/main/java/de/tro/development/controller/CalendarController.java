@@ -35,6 +35,7 @@ public class CalendarController implements Serializable {
 	private boolean dayEvent;
 	private String DATEPATTERN = "MM/dd/yyyy HH:mm";
 	private ScheduleModel lazyEventModel;
+	private String error = "";
 
 	@ManagedProperty(value = "#{calendarDAO}")
 	private CalendarDAO calendarDAO;
@@ -60,7 +61,6 @@ public class CalendarController implements Serializable {
 			public void loadEvents(Date start, Date end) {
 				Set<UserDate> dates = getUserDates();
 				for (UserDate d : dates) {
-					System.out.println("++++++ " + d);
 					if (d.isDay_event()) {
 						Date day = d.getBegin_time();
 						// day.setDate(d.getBegin_time().getDate() + 1);
@@ -80,6 +80,14 @@ public class CalendarController implements Serializable {
 	}
 
 	// GETTER SETTER
+	
+	public String getError() {
+		return error;
+	}
+
+	public void setError(String error) {
+		this.error = error;
+	}
 
 	public UserSession getUserSession() {
 		return userSession;
@@ -228,11 +236,21 @@ public class CalendarController implements Serializable {
 	 * @return calendar if success, else null
 	 */
 	public String showNewDate() {
+		error = "wrong input";
 		UserDate date;
-		if (!dayEvent && dateEnd == null) return null;
-		if (dateBegin == null) return null;
-		if (!dayEvent && dateBegin.after(dateEnd))
+		if (!dayEvent && dateEnd == null){
+			error = "please choose end date";
 			return null;
+		}
+		if (dateBegin == null){
+			error = "please choose begin date";
+			return null;
+		}
+		if (!dayEvent && dateBegin.after(dateEnd)){
+			error = "begin date can not be after end date";
+			return null;
+		}
+			
 		if (!dayEvent) {
 			date = new UserDate(name, description, new Category(category, ""),
 					points, dateBegin, dateEnd, dayEvent);
