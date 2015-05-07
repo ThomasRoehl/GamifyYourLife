@@ -20,11 +20,14 @@ import javax.persistence.OneToOne;
 
 @NamedQueries({
 		@NamedQuery(name = "UserProfile.findAllUser", query = "Select u FROM UserProfile u"),
+		@NamedQuery(name = "UserProfile.findUserByID", query = "Select u FROM UserProfile u WHERE u.id = :user_id"),
 		@NamedQuery(name = "UserProfile.findUserByName", query = "Select u.id FROM UserProfile u WHERE u.username = :username"),
+		@NamedQuery(name = "UserProfile.findUserLikeName", query = "Select u.id FROM UserProfile u WHERE u.username LIKE :username"),
+		@NamedQuery(name = "UserProfile.findUsernameByID", query = "Select u.username FROM UserProfile u WHERE u.id = :user_id"),
 		@NamedQuery(name = "UserProfile.findUserProfileByName", query = "Select u FROM UserProfile u WHERE u.username = :username"),
 		@NamedQuery(name = "UserProfile.findTodoListByName", query = "Select u.todo_list FROM UserProfile u WHERE u.username = :username"),
 		@NamedQuery(name = "UserProfile.checkUserLogin", query = "Select COUNT(u) FROM UserProfile u WHERE u.username = :username AND u.password = :password"),
-		@NamedQuery(name = "UserProfile.findUserPoints", query = "Select u.points FROM UserProfile u WHERE u.id = :id")})
+		@NamedQuery(name = "UserProfile.findUserPoints", query = "Select u.points FROM UserProfile u WHERE u.id = :id") })
 @Entity
 public class UserProfile implements Serializable {
 	/**
@@ -74,14 +77,13 @@ public class UserProfile implements Serializable {
 	private Todo_list todo_list;
 
 	@OneToMany
-	// TODO (cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	@JoinTable(name = "user_achievement", joinColumns = { @JoinColumn(name = "user_fk") }, inverseJoinColumns = { @JoinColumn(name = "achievement_fk") })
 	private Set<Achievement> user_achievement = new HashSet<Achievement>();
 
 	@ManyToOne(cascade = CascadeType.PERSIST)
 	@JoinColumn(name = "hero_fk")
 	private Hero hero;
-	
+
 	@Column(name = "hero_level")
 	private Integer hero_level;
 
@@ -91,6 +93,13 @@ public class UserProfile implements Serializable {
 
 	@Column(name = "points", nullable = false)
 	private Long points;
+	
+	@JoinTable(
+            name="contacts",
+            joinColumns=@JoinColumn(name="user_id"),
+            inverseJoinColumns=@JoinColumn(name="contact_id")
+    )
+    private Set<UserProfile> friends = new HashSet<UserProfile>();
 
 	public UserProfile() {
 		super();
@@ -117,6 +126,22 @@ public class UserProfile implements Serializable {
 		this.hero_level = 0;
 	}
 
+	public Set<UserProfile> getFriends() {
+		return friends;
+	}
+
+	public void addFriends(UserProfile contact) {
+		this.friends.add(contact);
+	}
+
+	public void setUser_achievement(Set<Achievement> user_achievement) {
+		this.user_achievement = user_achievement;
+	}
+
+	public void setMissteps(Set<Misstep> missteps) {
+		this.missteps = missteps;
+	}
+	
 	public String getPassword() {
 		return password;
 	}
@@ -257,6 +282,7 @@ public class UserProfile implements Serializable {
 				+ street1 + ", street2=" + street2 + ", username=" + username
 				+ ", todo_list=" + todo_list + ", user_achievement="
 				+ user_achievement + ", hero=" + hero + ", missteps="
-				+ missteps + ", points=" + points + "hero_level=" + hero_level + "]";
+				+ missteps + ", points=" + points + "hero_level=" + hero_level
+				+ "]";
 	}
 }

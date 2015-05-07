@@ -1,12 +1,14 @@
 package de.tro.development.controller;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
-import javax.faces.bean.RequestScoped;
+import javax.faces.bean.ViewScoped;
+
 import de.tro.development.dao.impl.TaskDAO;
 import de.tro.development.model.Category;
 import de.tro.development.model.Task;
@@ -17,8 +19,13 @@ import de.tro.development.service.UserSession;
  * Manage all Task requests
  */
 @ManagedBean(name = "taskController")
-@RequestScoped
-public class TaskController {
+@ViewScoped
+public class TaskController implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 
 	@ManagedProperty(value = "#{userSession}")
 	private UserSession userSession;

@@ -30,7 +30,7 @@ public class ContactsTest {
 		String username = "test";
 		String firstname = "firstname";
 		String lastname = "lastname";
-		when(uDAO.findUserProfileByName(username)).thenReturn(new ArrayList<String>(Arrays.asList(firstname, lastname)));
+		when(uDAO.findUserDetailsByName(username)).thenReturn(new ArrayList<String>(Arrays.asList(firstname, lastname)));
 		
 		uc.setUsername(username);
 		uc.findUser();
@@ -44,7 +44,7 @@ public class ContactsTest {
 		String username = "test";
 		String firstname = "firstname";
 		String lastname = "lastname";
-		when(uDAO.findUserProfileByName(username)).thenReturn(null);
+		when(uDAO.findUserDetailsByName(username)).thenReturn(null);
 		
 		uc.clearData(1);
 		uc.setUsername(username);

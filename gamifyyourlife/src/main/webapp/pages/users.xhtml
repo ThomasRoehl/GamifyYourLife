@@ -21,7 +21,9 @@
 		<h:outputStylesheet library="css" name="users.css" />
 		<div class="contacts">
 			<h:form>
-
+				<h:selectOneListbox value="#{userController.contacts}" size="15">
+					<f:selectItems value="#{userController.contacts}"/>
+				</h:selectOneListbox>
 			</h:form>
 		</div>
 		<div class="findUser">
@@ -43,7 +45,7 @@
 					<br />
 					<h:outputText value="Lastname: #{userController.lastname}"></h:outputText>
 					<br />
-					<h:commandButton id="add" value="Add User to Contacts" action="#{userController.addUser}" update="@form"></h:commandButton>
+					<h:commandButton id="add" value="Add User to Contacts" action="#{userController.addUser}"></h:commandButton>
 				</h:panelGroup>
 			</h:form>
 		</div>

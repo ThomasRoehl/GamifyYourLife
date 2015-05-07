@@ -1,10 +1,12 @@
 package de.tro.development.controller;
 
+import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
-import javax.faces.bean.RequestScoped;
+import javax.faces.bean.ViewScoped;
 
 import de.tro.development.dao.impl.UserDAO;
 import de.tro.development.model.Todo_list;
@@ -16,9 +18,13 @@ import de.tro.development.service.UserSession;
  * Manage all user requests
  */
 @ManagedBean(name ="userController")
-@RequestScoped
-public class UserController {
+@ViewScoped
+public class UserController implements Serializable{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private Integer user_id;
 	private String username;
 	private String password;
@@ -28,6 +34,7 @@ public class UserController {
 	private String street;
 	private boolean foundUser = false;
 	private String foundMessage = "";
+	List<String> contacts = new ArrayList<String>();
 
 	@ManagedProperty(value = "#{userSession}")
 	private UserSession userSession;
@@ -42,6 +49,15 @@ public class UserController {
 	private TaskController taskController;
 	
 	// GETTER SETTER
+	
+	public List<String> getContacts() {
+		updateContacts();
+		return contacts;
+	}
+
+	public void setContacts(List<String> contacts) {
+		this.contacts = contacts;
+	}
 	
 	public boolean isFoundUser() {
 		return foundUser;
@@ -243,7 +259,7 @@ public class UserController {
 	 * if success set firstname and lastname of found user 
 	 */
 	public String findUser(){
-		List<String> l = userDAO.findUserProfileByName(username);
+		List<String> l = userDAO.findUserDetailsByName(username);
 		if (l == null){
 			foundMessage = "user not found";
 			this.foundUser = false;
@@ -263,7 +279,23 @@ public class UserController {
 	 * @return move to contacts page if success, else null
 	 */
 	public String addUser(){
-		clearData(1);
-		return navi.moveToContacts();
+		System.out.println("addUser");
+		System.out.println(userSession.getUsername());
+		System.out.println(username);
+		System.out.println(userDAO);
+		//int contact_id = userDAO.findUserID(username);
+		//userDAO.addContact(userSession.getUser_id(), contact_id);
+		if (userDAO.addContact2(userSession.getUsername(), username)){
+			System.out.println("contact added");
+			updateContacts();
+			System.out.println(contacts);
+			clearData(1);
+			return navi.moveToContacts();
+		}
+		return null;
+	}
+	
+	public void updateContacts(){
+		contacts = userDAO.findContacts(userSession.getUsername());
 	}
 }
