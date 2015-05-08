@@ -118,6 +118,8 @@ public class UserDAO implements UserDAOInterface {
 				List<String> res = new ArrayList<String>();
 				res.add(query.getResultList().get(0).getFirstname());
 				res.add(query.getResultList().get(0).getLastname());
+				res.add(query.getResultList().get(0).getMail());
+				res.add(query.getResultList().get(0).getPoints().toString());
 				return res;
 			} else
 				return null;
@@ -134,10 +136,11 @@ public class UserDAO implements UserDAOInterface {
 			TypedQuery<UserProfile> query = em.createNamedQuery(
 					"UserProfile.findUserProfileByName", UserProfile.class);
 			query.setParameter("username", username);
-			if (!query.getResultList().isEmpty()){
-				Set<UserProfile> res = query.getResultList().get(0).getFriends();
+			if (!query.getResultList().isEmpty()) {
+				Set<UserProfile> res = query.getResultList().get(0)
+						.getFriends();
 				List<String> contacts = new ArrayList<String>();
-				for (UserProfile u: res){
+				for (UserProfile u : res) {
 					contacts.add(u.getUsername());
 				}
 				return contacts;
@@ -165,17 +168,7 @@ public class UserDAO implements UserDAOInterface {
 	}
 
 	@Override
-	public boolean addContact(int user_id, int contact_id) {
-		try {
-				
-			return true;
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		return false;
-	}
-
-	public boolean addContact2(String username, String contactname) {
+	public boolean addContact(String username, String contactname) {
 		try {
 			TypedQuery<UserProfile> query = em.createNamedQuery(
 					"UserProfile.findUserProfileByName", UserProfile.class);
@@ -184,7 +177,8 @@ public class UserDAO implements UserDAOInterface {
 					"UserProfile.findUserProfileByName", UserProfile.class);
 			query1.setParameter("username", contactname);
 			System.out.println("queries init done");
-			if (!query.getResultList().isEmpty() && !query1.getResultList().isEmpty()){
+			if (!query.getResultList().isEmpty()
+					&& !query1.getResultList().isEmpty()) {
 				UserProfile u = query.getResultList().get(0);
 				UserProfile c = query1.getResultList().get(0);
 				u.addFriends(c);
@@ -197,6 +191,45 @@ public class UserDAO implements UserDAOInterface {
 			e.printStackTrace();
 		}
 		return false;
+	}
+
+	@Override
+	public List<String> findUsersLikeName(String username) {
+		try {
+			List<String> res = new ArrayList<String>();
+			Query query = em.createNamedQuery("UserProfile.findUserLikeName");
+			query.setParameter("username", ("%" + username + "%"));
+			List<Integer> ids = new ArrayList<Integer>();
+			
+			if (!query.getResultList().isEmpty()) {
+				for (Object o: query.getResultList()){
+					ids.add((Integer)o);
+				}
+			}
+			if (!ids.isEmpty()){
+				for (Integer i: ids){
+					res.add(getUsernameByID(i));
+				}				
+			}
+			return res;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return null;
+		}
+	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<Object> findUserInformationByID(Integer id) {
+		try {
+			Query query = em.createNamedQuery("UserProfile.findUserinformationByID");
+			query.setParameter("user_id", id);
+			return query.getResultList();
+		} catch (Exception e) {
+			e.printStackTrace();
+			return null;
+		}
+		
 	}
 
 }

@@ -14,5 +14,7 @@ public interface UserDAOInterface {
 	public List<String> findUserDetailsByName(String username);
 	public List<String> findContacts(String username);
 	public String getUsernameByID(int user_id);
-	public boolean addContact(int user_id, int contact_id);
+	public boolean addContact(String username, String contactname);
+	public List<String> findUsersLikeName(String username);
+	public List<Object> findUserInformationByID(Integer id);
 }

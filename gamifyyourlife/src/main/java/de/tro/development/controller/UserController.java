@@ -2,10 +2,12 @@ package de.tro.development.controller;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
+import javax.faces.bean.SessionScoped;
 import javax.faces.bean.ViewScoped;
 
 import de.tro.development.dao.impl.UserDAO;
@@ -32,10 +34,17 @@ public class UserController implements Serializable{
 	private String lastname;
 	private String mail;
 	private String street;
+	private Long points;
 	private boolean foundUser = false;
+	private boolean inContacts = true;
 	private String foundMessage = "";
 	List<String> contacts = new ArrayList<String>();
-
+	List<String> foundUserList = new ArrayList<String>();
+	
+	public UserController(){
+		System.out.println("USER CONTROLLER BEAN CREATED");
+	}
+	
 	@ManagedProperty(value = "#{userSession}")
 	private UserSession userSession;
 	
@@ -49,6 +58,31 @@ public class UserController implements Serializable{
 	private TaskController taskController;
 	
 	// GETTER SETTER
+	
+	public List<String> getFoundUserList() {
+		return foundUserList;
+	}
+
+	public void setFoundUserList(List<String> foundUserList) {
+		this.foundUserList = foundUserList;
+	}
+
+	
+	public boolean isInContact() {
+		return inContacts;
+	}
+
+	public void setInContact(boolean isContact) {
+		this.inContacts = isContact;
+	}
+	
+	public Long getPoints() {
+		return points;
+	}
+
+	public void setPoints(Long points) {
+		this.points = points;
+	}
 	
 	public List<String> getContacts() {
 		updateContacts();
@@ -70,6 +104,11 @@ public class UserController implements Serializable{
 	public String getUsername() {
 		return username;
 	}
+	
+	public void setUsername(String username) {
+		System.out.println("username " + username);
+		this.username = username;
+	}
 
 	public TaskController getTaskController() {
 		return taskController;
@@ -77,10 +116,6 @@ public class UserController implements Serializable{
 
 	public void setTaskController(TaskController taskController) {
 		this.taskController = taskController;
-	}
-
-	public void setUsername(String username) {
-		this.username = username;
 	}
 
 	public String getPassword() {
@@ -258,11 +293,13 @@ public class UserController implements Serializable{
 	 * look for user in db by username
 	 * if success set firstname and lastname of found user 
 	 */
-	public String findUser(){
-		List<String> l = userDAO.findUserDetailsByName(username);
+	public void findUser(){
+		System.out.println("call " + username);
+		List<String> l = userDAO.findUserDetailsByName(this.username);
 		if (l == null){
 			foundMessage = "user not found";
 			this.foundUser = false;
+			this.inContacts = true;
 			clearData(1);
 		}
 		else{
@@ -270,7 +307,23 @@ public class UserController implements Serializable{
 			this.foundUser = true;
 			this.firstname = l.get(0);
 			this.lastname = l.get(1);
+			this.mail = l.get(2);
+			this.points = Long.parseLong(l.get(3));
+			if (contacts.contains(this.username)) inContacts = true;
+			else inContacts = false;
 		}
+		
+	}
+	
+	/**
+	 * show information of current user
+	 */
+	public void showUserProfile(){
+		findUser();
+	}
+	
+	public String findUserLike(){
+		this.foundUserList = userDAO.findUsersLikeName(this.username);
 		return null;
 	}
 	
@@ -283,9 +336,7 @@ public class UserController implements Serializable{
 		System.out.println(userSession.getUsername());
 		System.out.println(username);
 		System.out.println(userDAO);
-		//int contact_id = userDAO.findUserID(username);
-		//userDAO.addContact(userSession.getUser_id(), contact_id);
-		if (userDAO.addContact2(userSession.getUsername(), username)){
+		if (userDAO.addContact(userSession.getUsername(), username)){
 			System.out.println("contact added");
 			updateContacts();
 			System.out.println(contacts);
@@ -297,5 +348,6 @@ public class UserController implements Serializable{
 	
 	public void updateContacts(){
 		contacts = userDAO.findContacts(userSession.getUsername());
+		Collections.sort(contacts);
 	}
 }

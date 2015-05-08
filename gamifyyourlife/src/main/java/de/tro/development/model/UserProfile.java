@@ -23,6 +23,7 @@ import javax.persistence.OneToOne;
 		@NamedQuery(name = "UserProfile.findUserByID", query = "Select u FROM UserProfile u WHERE u.id = :user_id"),
 		@NamedQuery(name = "UserProfile.findUserByName", query = "Select u.id FROM UserProfile u WHERE u.username = :username"),
 		@NamedQuery(name = "UserProfile.findUserLikeName", query = "Select u.id FROM UserProfile u WHERE u.username LIKE :username"),
+		@NamedQuery(name = "UserProfile.findUserinformationByID", query = "Select u.username, u.firstname, u.lastname, u.mail, u.points FROM UserProfile u WHERE u.id = :user_id"),
 		@NamedQuery(name = "UserProfile.findUsernameByID", query = "Select u.username FROM UserProfile u WHERE u.id = :user_id"),
 		@NamedQuery(name = "UserProfile.findUserProfileByName", query = "Select u FROM UserProfile u WHERE u.username = :username"),
 		@NamedQuery(name = "UserProfile.findTodoListByName", query = "Select u.todo_list FROM UserProfile u WHERE u.username = :username"),
@@ -93,13 +94,9 @@ public class UserProfile implements Serializable {
 
 	@Column(name = "points", nullable = false)
 	private Long points;
-	
-	@JoinTable(
-            name="contacts",
-            joinColumns=@JoinColumn(name="user_id"),
-            inverseJoinColumns=@JoinColumn(name="contact_id")
-    )
-    private Set<UserProfile> friends = new HashSet<UserProfile>();
+
+	@JoinTable(name = "contacts", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "contact_id"))
+	private Set<UserProfile> friends = new HashSet<UserProfile>();
 
 	public UserProfile() {
 		super();
@@ -141,7 +138,7 @@ public class UserProfile implements Serializable {
 	public void setMissteps(Set<Misstep> missteps) {
 		this.missteps = missteps;
 	}
-	
+
 	public String getPassword() {
 		return password;
 	}

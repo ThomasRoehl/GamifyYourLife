@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?><task>
   <id>ece688a9-69ab-410b-b0dd-7067d1422488-13</id>
-  <lastModified>2015-05-06 15:21:37</lastModified>
+  <lastModified>2015-05-08 13:32:19</lastModified>
   <requirementId>a8fe24b9-52fd-4dda-8c27-0567ba644a45-2</requirementId>
   <number>47</number>
   <label>Tabelle in Nutzerseite einfuegen</label>
-  <remainingWork>1</remainingWork>
-  <burnedWork>0</burnedWork>
+  <remainingWork>0</remainingWork>
+  <burnedWork>1</burnedWork>
+  <ownerId>a01eede1-e7e9-41e9-8122-6f7c606bfd0a</ownerId>
 </task>

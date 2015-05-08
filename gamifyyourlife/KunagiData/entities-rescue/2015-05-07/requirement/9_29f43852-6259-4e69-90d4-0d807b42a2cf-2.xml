@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><requirement>
+  <id>29f43852-6259-4e69-90d4-0d807b42a2cf-2</id>
+  <lastModified>2015-05-07 15:10:09</lastModified>
+  <projectId>fc43cae0-0113-401c-9794-ae1dd9c1798c-1</projectId>
+  <number>24</number>
+  <qualitysIds/>
+  <label>Nachrichten</label>
+  <description>Als Nutzer moechte ich Nachrichten an andere Nutzer senden koennen
+
+damit ich mit anderen Nutzern in Kontakt treten kann.
+
+</description>
+  <closed>false</closed>
+  <deleted>false</deleted>
+  <dirty>true</dirty>
+  <workEstimationVotingActive>false</workEstimationVotingActive>
+  <workEstimationVotingShowoff>false</workEstimationVotingShowoff>
+  <tasksOrderIds/>
+  <themes/>
+</requirement>
