@@ -37,6 +37,6 @@ public class NavigationController {
 	}
 	
 	public String moveToContacts(){
-		return "users?faces-redirect=true";
+		return "contacts?faces-redirect=true";
 	}
 }

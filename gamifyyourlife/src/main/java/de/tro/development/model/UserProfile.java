@@ -22,7 +22,7 @@ import javax.persistence.OneToOne;
 		@NamedQuery(name = "UserProfile.findAllUser", query = "Select u FROM UserProfile u"),
 		@NamedQuery(name = "UserProfile.findUserByID", query = "Select u FROM UserProfile u WHERE u.id = :user_id"),
 		@NamedQuery(name = "UserProfile.findUserByName", query = "Select u.id FROM UserProfile u WHERE u.username = :username"),
-		@NamedQuery(name = "UserProfile.findUserLikeName", query = "Select u.id FROM UserProfile u WHERE u.username LIKE :username"),
+		@NamedQuery(name = "UserProfile.findUserLikeName", query = "Select u.id FROM UserProfile u WHERE UPPER(u.username) LIKE :username"),
 		@NamedQuery(name = "UserProfile.findUserinformationByID", query = "Select u.username, u.firstname, u.lastname, u.mail, u.points FROM UserProfile u WHERE u.id = :user_id"),
 		@NamedQuery(name = "UserProfile.findUsernameByID", query = "Select u.username FROM UserProfile u WHERE u.id = :user_id"),
 		@NamedQuery(name = "UserProfile.findUserProfileByName", query = "Select u FROM UserProfile u WHERE u.username = :username"),

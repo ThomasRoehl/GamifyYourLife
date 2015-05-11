@@ -1000,3 +1000,25 @@ Fr, 08. Mai 2015, 11:37 -> Fri May 08 11:37:41 CEST 2015
 Fr, 08. Mai 2015, 11:38 -> Fri May 08 11:38:12 CEST 2015 
     WARN BurndownChart        GraphicsEnvironment is not headless                                                                 | app:scrum > session:TROHome
 
+--------------------------------------------------------------------------------
+Mo, 11. Mai 2015, 16:50 -> Mon May 11 16:50:59 CEST 2015 
+    FATAL [/]                  Error loading WebappClassLoader
+  delegate: false
+  repositories:
+    /WEB-INF/classes/
+----------> Parent Classloader:
+sun.misc.Launcher$AppClassLoader@25154f
+ org.apache.jasper.servlet.JspServlet | app:scrum
+
+--------------------------------------------------------------------------------
+Mo, 11. Mai 2015, 16:50 -> Mon May 11 16:50:59 CEST 2015 
+    FATAL [/]                  Servlet / threw load() exception                                                                    | app:scrum
+
+--------------------------------------------------------------------------------
+Mo, 11. Mai 2015, 16:50 -> Mon May 11 16:50:59 CEST 2015 
+    FATAL Registry             Null component localEngine:type=JspMonitor,name=jsp,WebModule=//localhost/,J2EEApplication=none,J2EEServer=none | app:scrum
+
+--------------------------------------------------------------------------------
+Mo, 11. Mai 2015, 16:51 -> Mon May 11 16:51:40 CEST 2015 
+    WARN BurndownChart        GraphicsEnvironment is not headless                                                                 | app:scrum > session:TROHome
+

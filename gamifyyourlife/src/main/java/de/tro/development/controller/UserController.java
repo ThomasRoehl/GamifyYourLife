@@ -35,6 +35,7 @@ public class UserController implements Serializable{
 	private String mail;
 	private String street;
 	private Long points;
+	private String searchUsername;
 	private boolean foundUser = false;
 	private boolean inContacts = true;
 	private String foundMessage = "";
@@ -58,6 +59,15 @@ public class UserController implements Serializable{
 	private TaskController taskController;
 	
 	// GETTER SETTER
+	
+	public String getSearchUsername() {
+		return searchUsername;
+	}
+
+	public void setSearchUsername(String searchUsername) {
+		System.out.println("searchUsername: " + searchUsername);
+		this.searchUsername = searchUsername;
+	}
 	
 	public List<String> getFoundUserList() {
 		return foundUserList;
@@ -294,7 +304,7 @@ public class UserController implements Serializable{
 	 * if success set firstname and lastname of found user 
 	 */
 	public void findUser(){
-		System.out.println("call " + username);
+		System.out.println("[findUser] call " + username);
 		List<String> l = userDAO.findUserDetailsByName(this.username);
 		if (l == null){
 			foundMessage = "user not found";
@@ -319,11 +329,17 @@ public class UserController implements Serializable{
 	 * show information of current user
 	 */
 	public void showUserProfile(){
+		System.out.println("[showUserProfile]");
 		findUser();
 	}
 	
+	/**
+	 * look for user with similar username
+	 * @return
+	 */
 	public String findUserLike(){
-		this.foundUserList = userDAO.findUsersLikeName(this.username);
+		System.out.println("[findUserLike] " + this.searchUsername);
+		this.foundUserList = userDAO.findUsersLikeName(this.searchUsername);
 		return null;
 	}
 	
@@ -331,22 +347,24 @@ public class UserController implements Serializable{
 	 * add user to contacts, if no entry exists
 	 * @return move to contacts page if success, else null
 	 */
-	public String addUser(){
-		System.out.println("addUser");
-		System.out.println(userSession.getUsername());
-		System.out.println(username);
-		System.out.println(userDAO);
-		if (userDAO.addContact(userSession.getUsername(), username)){
-			System.out.println("contact added");
-			updateContacts();
-			System.out.println(contacts);
-			clearData(1);
-			return navi.moveToContacts();
+	public void addUser(){
+		System.out.println("[addUser]");
+		if (!this.contacts.contains(this.username) && !(this.username.equals(userSession.getUsername()))){
+			if (userDAO.addContact(userSession.getUsername(), username)){
+				updateContacts();
+				clearData(1);
+			}
 		}
-		return null;
+		else{
+			System.out.println("can not add User");
+		}
 	}
 	
+	/**
+	 * update contacts with db
+	 */
 	public void updateContacts(){
+		System.out.println("[updateContacts]");
 		contacts = userDAO.findContacts(userSession.getUsername());
 		Collections.sort(contacts);
 	}

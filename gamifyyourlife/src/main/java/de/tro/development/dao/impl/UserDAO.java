@@ -198,7 +198,7 @@ public class UserDAO implements UserDAOInterface {
 		try {
 			List<String> res = new ArrayList<String>();
 			Query query = em.createNamedQuery("UserProfile.findUserLikeName");
-			query.setParameter("username", ("%" + username + "%"));
+			query.setParameter("username", ("%" + username.toUpperCase() + "%"));
 			List<Integer> ids = new ArrayList<Integer>();
 			
 			if (!query.getResultList().isEmpty()) {
