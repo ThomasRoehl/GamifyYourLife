@@ -63,7 +63,7 @@ public class CalendarController implements Serializable {
 				for (UserDate d : dates) {
 					if (d.isDay_event()) {
 						Date day = d.getBegin_time();
-						// day.setDate(d.getBegin_time().getDate() + 1);
+						day.setDate(d.getBegin_time().getDate() + 1);
 						addEvent(new DefaultScheduleEvent(d.getName(), day,
 								day, d.isDay_event()));
 					} else {

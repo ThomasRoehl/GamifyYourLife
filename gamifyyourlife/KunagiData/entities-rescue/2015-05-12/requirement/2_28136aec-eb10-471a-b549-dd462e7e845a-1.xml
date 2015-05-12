@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><requirement>
+  <id>28136aec-eb10-471a-b549-dd462e7e845a-1</id>
+  <lastModified>2015-05-12 13:26:23</lastModified>
+  <projectId>fc43cae0-0113-401c-9794-ae1dd9c1798c-1</projectId>
+  <sprintId>8801fbf3-51cb-4c4a-be7e-b71e4e0ad2d9</sprintId>
+  <number>13</number>
+  <qualitysIds/>
+  <label>Nutzer als Kontakt hinzufuegen</label>
+  <description>
+* Als Nutzer moechte ich einen anderen Nutzer zu meinen Kontakten hinzufuegen
+
+Damit ich mit diesem Nutzer in kontakt bleiben kann.
+Dies gibt mir die Moeglichkeit spaeter Aufgaben oder Termine mit ihm zu tauschen, oder eine Aufgabe fuer ihn zu erstellen.
+Außerdem kann ich vergleichen, wie viel er im gegenzug zu mir schon geleistet hat.
+
+Akzeptanzkrietrien:
+
+* Die Moeglichkeit einen Nutzer per Knopfdurck zu seinen Kontakten hinzuzufuegen
+</description>
+  <estimatedWork>1.0</estimatedWork>
+  <closed>true</closed>
+  <deleted>false</deleted>
+  <dirty>false</dirty>
+  <workEstimationVotingActive>false</workEstimationVotingActive>
+  <workEstimationVotingShowoff>false</workEstimationVotingShowoff>
+  <tasksOrderIds>
+    <string>ece688a9-69ab-410b-b0dd-7067d1422488-10</string>
+    <string>ece688a9-69ab-410b-b0dd-7067d1422488-11</string>
+    <string>ece688a9-69ab-410b-b0dd-7067d1422488-12</string>
+  </tasksOrderIds>
+  <themes/>
+</requirement>

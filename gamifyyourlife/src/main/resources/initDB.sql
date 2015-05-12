@@ -60,7 +60,4 @@ INSERT INTO USERPROFILE (id, todo_list_fk, firstname, lastname, mail, street1, u
 INSERT INTO USERPROFILE (id, todo_list_fk, firstname, lastname, mail, street1, username, password, points, country_fk, city_fk, hero_fk, hero_level) VALUES (120, 120, 'Thi', 'Trail', 'mail@googlemail.com', 'leipzigerstr. 300', 'Thi', 'test', 21, 101, 101, 101, 8)
 INSERT INTO USERPROFILE (id, todo_list_fk, firstname, lastname, mail, street1, username, password, points, country_fk, city_fk, hero_fk, hero_level) VALUES (121, 121, 'Verena', 'Donlan', 'mail@googlemail.com', 'leipzigerstr. 300', 'Verena', 'test', 22, 101, 101, 101, 8)
 
-INSERT INTO CONTACTS (user_id, contact_id) VALUES (100, 102)
-INSERT INTO CONTACTS (user_id, contact_id) VALUES (100, 103)
-INSERT INTO CONTACTS (user_id, contact_id) VALUES (100, 104)
-INSERT INTO CONTACTS (user_id, contact_id) VALUES (100, 105)
+

@@ -39,4 +39,8 @@ public class NavigationController {
 	public String moveToContacts(){
 		return "contacts?faces-redirect=true";
 	}
+	
+	public String moveToRewards(){
+		return "rewards?faces-redirect=true";
+	}
 }
