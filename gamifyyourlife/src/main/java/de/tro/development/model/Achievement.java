@@ -7,6 +7,13 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
+
+@NamedQueries({
+	@NamedQuery(name = "Achievement.getAllAchievements", query = "SELECT a FROM Achievement a"),
+	@NamedQuery(name = "Achievement.getAchievementsFromIDList", query = "SELECT a FROM Achievement a WHERE a.id IN :idList"),
+	@NamedQuery(name = "Achievement.getAchievementsNotFromIDList", query = "SELECT a FROM Achievement a WHERE a.id NOT IN :idList")})
 
 @Entity
 public class Achievement implements Serializable {

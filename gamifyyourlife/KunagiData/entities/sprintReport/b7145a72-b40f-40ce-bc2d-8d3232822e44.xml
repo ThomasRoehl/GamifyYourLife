@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><sprintReport>
+  <id>b7145a72-b40f-40ce-bc2d-8d3232822e44</id>
+  <lastModified>2015-05-12 13:35:40</lastModified>
+  <sprintId>8801fbf3-51cb-4c4a-be7e-b71e4e0ad2d9</sprintId>
+  <completedRequirementsIds>
+    <string>19bea3c0-0995-4c47-9ba9-3e13b67ce48d-2</string>
+    <string>1e8fcd55-8ee3-4d4c-ab91-58c37eabb5b8-2</string>
+    <string>1e8fcd55-8ee3-4d4c-ab91-58c37eabb5b8-1</string>
+    <string>19bea3c0-0995-4c47-9ba9-3e13b67ce48d-7</string>
+    <string>28136aec-eb10-471a-b549-dd462e7e845a-1</string>
+    <string>a8fe24b9-52fd-4dda-8c27-0567ba644a45-2</string>
+  </completedRequirementsIds>
+  <rejectedRequirementsIds/>
+  <requirementsOrderIds>
+    <string>19bea3c0-0995-4c47-9ba9-3e13b67ce48d-2</string>
+    <string>1e8fcd55-8ee3-4d4c-ab91-58c37eabb5b8-2</string>
+    <string>1e8fcd55-8ee3-4d4c-ab91-58c37eabb5b8-1</string>
+    <string>19bea3c0-0995-4c47-9ba9-3e13b67ce48d-7</string>
+    <string>28136aec-eb10-471a-b549-dd462e7e845a-1</string>
+    <string>a8fe24b9-52fd-4dda-8c27-0567ba644a45-2</string>
+  </requirementsOrderIds>
+  <closedTasksIds>
+    <string>ece688a9-69ab-410b-b0dd-7067d1422488-1</string>
+    <string>ece688a9-69ab-410b-b0dd-7067d1422488-9</string>
+    <string>ece688a9-69ab-410b-b0dd-7067d1422488-8</string>
+    <string>ece688a9-69ab-410b-b0dd-7067d1422488-7</string>
+    <string>ece688a9-69ab-410b-b0dd-7067d1422488-6</string>
+    <string>ece688a9-69ab-410b-b0dd-7067d1422488-5</string>
+    <string>ece688a9-69ab-410b-b0dd-7067d1422488-4</string>
+    <string>ece688a9-69ab-410b-b0dd-7067d1422488-3</string>
+    <string>ece688a9-69ab-410b-b0dd-7067d1422488-2</string>
+    <string>ece688a9-69ab-410b-b0dd-7067d1422488-10</string>
+    <string>ece688a9-69ab-410b-b0dd-7067d1422488-12</string>
+    <string>ece688a9-69ab-410b-b0dd-7067d1422488-11</string>
+    <string>ece688a9-69ab-410b-b0dd-7067d1422488-14</string>
+    <string>ece688a9-69ab-410b-b0dd-7067d1422488-13</string>
+    <string>ece688a9-69ab-410b-b0dd-7067d1422488-15</string>
+  </closedTasksIds>
+  <openTasksIds/>
+  <burnedWork>15</burnedWork>
+</sprintReport>

@@ -60,4 +60,8 @@ INSERT INTO USERPROFILE (id, todo_list_fk, firstname, lastname, mail, street1, u
 INSERT INTO USERPROFILE (id, todo_list_fk, firstname, lastname, mail, street1, username, password, points, country_fk, city_fk, hero_fk, hero_level) VALUES (120, 120, 'Thi', 'Trail', 'mail@googlemail.com', 'leipzigerstr. 300', 'Thi', 'test', 21, 101, 101, 101, 8)
 INSERT INTO USERPROFILE (id, todo_list_fk, firstname, lastname, mail, street1, username, password, points, country_fk, city_fk, hero_fk, hero_level) VALUES (121, 121, 'Verena', 'Donlan', 'mail@googlemail.com', 'leipzigerstr. 300', 'Verena', 'test', 22, 101, 101, 101, 8)
 
-
+INSERT INTO ACHIEVEMENT (id, name, description, points_needed) VALUES (10, 'New Hero', 'create a new Hero', 5)
+INSERT INTO ACHIEVEMENT (id, name, description, points_needed) VALUES (20, 'Beginner', 'start your new life', 10)
+INSERT INTO ACHIEVEMENT (id, name, description, points_needed) VALUES (30, 'Young padawan', 'much to learn you still have', 20)
+INSERT INTO ACHIEVEMENT (id, name, description, points_needed) VALUES (40, 'I want to be better', 'there is nothing you cant do', 30)
+INSERT INTO ACHIEVEMENT (id, name, description, points_needed) VALUES (50, 'Fast learner', 'so fast ...', 40)

@@ -8,6 +8,7 @@ import javax.faces.bean.ManagedBean;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
+import javax.transaction.SystemException;
 import javax.transaction.UserTransaction;
 
 import de.tro.development.dao.interf.CalendarDAOInterface;
@@ -41,6 +42,13 @@ public class CalendarDAO implements CalendarDAOInterface{
 			
 		} catch (Exception e) {
 			e.printStackTrace();
+			try {
+				utx.rollback();
+			} catch (IllegalStateException | SecurityException
+					| SystemException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
 		}
 		
 		return false;

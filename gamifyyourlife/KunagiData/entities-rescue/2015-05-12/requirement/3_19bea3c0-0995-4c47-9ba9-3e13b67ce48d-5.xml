@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><requirement>
+  <id>19bea3c0-0995-4c47-9ba9-3e13b67ce48d-5</id>
+  <lastModified>2015-05-12 15:15</lastModified>
+  <projectId>fc43cae0-0113-401c-9794-ae1dd9c1798c-1</projectId>
+  <sprintId>1d20cfb7-702f-4e99-a1e5-8a5ebeb8c278</sprintId>
+  <number>7</number>
+  <qualitysIds/>
+  <label>Rewards erstellen</label>
+  <description>
+
+* Als Nutzer moechte ich mir einen Reward erstellen koennen
+
+* Diesen Reward moechte ich dann mit einem Achievement verknuepfen koennen
+
+Damit ich sehen kann wie viel ich Leisten muss um meine naechste Belohnung zu bekommen. Dies soll mich motivieren, indem ich auf ein Ziel (Belohnung) hinarbeite.
+
+Akzeptanzkriterien:
+
+* Ein Fenster zum Erstellen eines Rewards
+
+* Eine Anzeige aller nicht erlangten Achievements
+
+* Die Moeglichkeit den Reward mit einem Achievement zu verknuepfen
+</description>
+  <estimatedWork>3.0</estimatedWork>
+  <closed>false</closed>
+  <deleted>false</deleted>
+  <dirty>false</dirty>
+  <workEstimationVotingActive>false</workEstimationVotingActive>
+  <workEstimationVotingShowoff>false</workEstimationVotingShowoff>
+  <tasksOrderIds>
+    <string>35bbb30d-e55f-490e-b66c-277be819bf75-1</string>
+  </tasksOrderIds>
+  <themes/>
+</requirement>

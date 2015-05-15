@@ -20,11 +20,28 @@
 	<ui:define name="content">
 		<h:outputStylesheet library="css" name="rewards.css" />
 		<h:form class="rewardsForm">
-			<div class="showRewards">
-				<h:outputText value="test1"></h:outputText>
-			</div>
+			<div class="showRewards"></div>
 			<div class="createRewards">
-				<h:outputText value="test2"></h:outputText>
+				<h:outputText value="Name:" />
+				<br />
+				<h:inputText />
+				<br /> <br />
+				<h:outputText value="Description: " />
+				<br />
+				<p:inputTextarea value="">
+					<p:ajax event="keyup" />
+				</p:inputTextarea>
+				<br /><br />
+				<h:outputText value="Achievement:"/>
+				<br />
+				<h:selectOneMenu value="rewardsController.pickedAchievement">
+					<f:selectItems value="#{rewardsController.achievements}" />
+				</h:selectOneMenu>
+				<br />
+				<br />
+				<h:commandButton value="create Reward">
+				
+				</h:commandButton>
 			</div>
 		</h:form>
 	</ui:define>
