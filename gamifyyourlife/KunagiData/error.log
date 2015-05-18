@@ -1060,3 +1060,33 @@ Di, 12. Mai 2015, 16:13 -> Tue May 12 16:13:02 CEST 2015
 Di, 12. Mai 2015, 16:13 -> Tue May 12 16:13:15 CEST 2015 
     WARN BurndownChart        GraphicsEnvironment is not headless                                                                 | app:scrum > session:TROHome
 
+--------------------------------------------------------------------------------
+Mo, 18. Mai 2015, 15:18 -> Mon May 18 15:18:20 CEST 2015 
+    FATAL [/]                  Error loading WebappClassLoader
+  delegate: false
+  repositories:
+    /WEB-INF/classes/
+----------> Parent Classloader:
+sun.misc.Launcher$AppClassLoader@25154f
+ org.apache.jasper.servlet.JspServlet | app:scrum
+
+--------------------------------------------------------------------------------
+Mo, 18. Mai 2015, 15:18 -> Mon May 18 15:18:20 CEST 2015 
+    FATAL [/]                  Servlet / threw load() exception                                                                    | app:scrum
+
+--------------------------------------------------------------------------------
+Mo, 18. Mai 2015, 15:18 -> Mon May 18 15:18:20 CEST 2015 
+    FATAL Registry             Null component localEngine:type=JspMonitor,name=jsp,WebModule=//localhost/,J2EEApplication=none,J2EEServer=none | app:scrum
+
+--------------------------------------------------------------------------------
+Mo, 18. Mai 2015, 16:00 -> Mon May 18 16:00:34 CEST 2015 
+    WARN BurndownChart        GraphicsEnvironment is not headless                                                                 | app:scrum > session:TROHome
+
+--------------------------------------------------------------------------------
+Mo, 18. Mai 2015, 16:00 -> Mon May 18 16:00:42 CEST 2015 
+    WARN BurndownChart        GraphicsEnvironment is not headless                                                                 | app:scrum > session:TROHome
+
+--------------------------------------------------------------------------------
+Mo, 18. Mai 2015, 16:01 -> Mon May 18 16:01:13 CEST 2015 
+    WARN BurndownChart        GraphicsEnvironment is not headless                                                                 | app:scrum > session:TROHome
+

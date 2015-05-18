@@ -11,6 +11,7 @@ import javax.faces.bean.ViewScoped;
 
 import de.tro.development.dao.impl.RewardDAO;
 import de.tro.development.model.Achievement;
+import de.tro.development.model.Reward;
 import de.tro.development.service.UserSession;
 
 
@@ -24,8 +25,9 @@ public class RewardsController implements Serializable {
 	private static final long serialVersionUID = 1L;
 	private String name;
 	private String description;
-	private String pickedAchievement;
+	private Achievement pickedAchievement;
 	private List<Achievement> achievements = new ArrayList<Achievement>();
+	private List<Reward> rewards = new ArrayList<Reward>();
 	
 	@ManagedProperty(value = "#{userSession}")
 	private UserSession userSession;
@@ -37,6 +39,14 @@ public class RewardsController implements Serializable {
 	@PostConstruct
 	public void init(){
 		achievements = rewardDAO.getAchievements(userSession.getUser_id());
+	}
+	
+	public List<Reward> getRewards() {
+		return rewards;
+	}
+
+	public void setRewards(List<Reward> rewards) {
+		this.rewards = rewards;
 	}
 	
 	public RewardDAO getRewardDAO() {
@@ -59,10 +69,10 @@ public class RewardsController implements Serializable {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public String getPickedAchievement() {
+	public Achievement getPickedAchievement() {
 		return pickedAchievement;
 	}
-	public void setPickedAchievement(String pickedAchievement) {
+	public void setPickedAchievement(Achievement pickedAchievement) {
 		this.pickedAchievement = pickedAchievement;
 	}
 	public List<Achievement> getAchievements() {
@@ -82,5 +92,15 @@ public class RewardsController implements Serializable {
 	}
 	public void setNavi(NavigationController navi) {
 		this.navi = navi;
+	}
+	
+	public String createReward(){
+		Reward r = new Reward();
+		r.setName(name);
+		r.setDescription(description);
+		r.setAchievement(pickedAchievement);
+		r.setUserID(userSession.getUser_id());
+		System.out.println(r);
+		return null;
 	}
 }

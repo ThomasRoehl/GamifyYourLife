@@ -65,3 +65,8 @@ INSERT INTO ACHIEVEMENT (id, name, description, points_needed) VALUES (20, 'Begi
 INSERT INTO ACHIEVEMENT (id, name, description, points_needed) VALUES (30, 'Young padawan', 'much to learn you still have', 20)
 INSERT INTO ACHIEVEMENT (id, name, description, points_needed) VALUES (40, 'I want to be better', 'there is nothing you cant do', 30)
 INSERT INTO ACHIEVEMENT (id, name, description, points_needed) VALUES (50, 'Fast learner', 'so fast ...', 40)
+
+INSERT INTO USER_ACHIEVEMENT (user_fk, achievement_fk) VALUES (100, 10)
+INSERT INTO USER_ACHIEVEMENT (user_fk, achievement_fk) VALUES (100, 20)
+INSERT INTO USER_ACHIEVEMENT (user_fk, achievement_fk) VALUES (100, 30)
+INSERT INTO USER_ACHIEVEMENT (user_fk, achievement_fk) VALUES (100, 40)

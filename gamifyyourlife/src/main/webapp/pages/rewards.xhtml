@@ -34,12 +34,12 @@
 				<br /><br />
 				<h:outputText value="Achievement:"/>
 				<br />
-				<h:selectOneMenu value="rewardsController.pickedAchievement">
+				<h:selectOneMenu value="rewardsController.pickedAchievement.name">
 					<f:selectItems value="#{rewardsController.achievements}" />
 				</h:selectOneMenu>
 				<br />
 				<br />
-				<h:commandButton value="create Reward">
+				<h:commandButton value="create Reward" action="rewardsController.createReward">
 				
 				</h:commandButton>
 			</div>

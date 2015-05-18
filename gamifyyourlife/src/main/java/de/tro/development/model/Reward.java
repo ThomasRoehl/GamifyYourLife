@@ -1,6 +1,7 @@
 package de.tro.development.model;
 
 import java.io.Serializable;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -9,6 +10,12 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
+
+@NamedQueries({
+	@NamedQuery(name = "Reward.checkUserRewardExists", query = "SELECT COUNT(r) FROM Reward r WHERE r.achievement = :achievement AND r.userID = :user_id")
+})
 
 @Entity
 public class Reward implements Serializable{
@@ -31,6 +38,9 @@ public class Reward implements Serializable{
 	@ManyToOne(cascade = CascadeType.PERSIST)
 	@JoinColumn(name = "achievement_fk", nullable = false)
 	private Achievement achievement;
+	
+	@Column(name = "userID", nullable = false)
+	private Integer userID;
 
 	public Reward() {
 		super();
@@ -70,10 +80,18 @@ public class Reward implements Serializable{
 	public int getId() {
 		return id;
 	}
+	
+	public Integer getUserID() {
+		return userID;
+	}
+
+	public void setUserID(Integer userID) {
+		this.userID = userID;
+	}
 
 	@Override
 	public String toString() {
 		return "Rewards [id=" + id + ", name=" + name + ", description="
-				+ description + ", achievement=" + achievement + "]";
+				+ description + ", achievement=" + achievement + ", user_id " + userID + "]";
 	}
 }

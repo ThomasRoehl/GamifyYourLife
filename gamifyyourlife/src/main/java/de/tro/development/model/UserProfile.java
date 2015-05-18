@@ -28,7 +28,8 @@ import javax.persistence.OneToOne;
 		@NamedQuery(name = "UserProfile.findUserProfileByName", query = "Select u FROM UserProfile u WHERE u.username = :username"),
 		@NamedQuery(name = "UserProfile.findTodoListByName", query = "Select u.todo_list FROM UserProfile u WHERE u.username = :username"),
 		@NamedQuery(name = "UserProfile.checkUserLogin", query = "Select COUNT(u) FROM UserProfile u WHERE u.username = :username AND u.password = :password"),
-		@NamedQuery(name = "UserProfile.findUserPoints", query = "Select u.points FROM UserProfile u WHERE u.id = :id") })
+		@NamedQuery(name = "UserProfile.findUserPoints", query = "Select u.points FROM UserProfile u WHERE u.id = :id"), 
+		@NamedQuery(name = "UserProfile.getAchievements", query = "Select ua.id FROM UserProfile u INNER JOIN u.user_achievement ua WHERE u.id = :id")})
 @Entity
 public class UserProfile implements Serializable {
 	/**
