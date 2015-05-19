@@ -15,6 +15,7 @@ import javax.transaction.SystemException;
 import javax.transaction.UserTransaction;
 
 import de.tro.development.dao.interf.UserDAOInterface;
+import de.tro.development.model.Hero;
 import de.tro.development.model.Todo_list;
 import de.tro.development.model.UserProfile;
 
@@ -48,7 +49,7 @@ public class UserDAO implements UserDAOInterface {
 			int id = findUserID(user.getUsername());
 			if (id == -1) {
 				utx.begin();
-				em.persist(user);
+				em.merge(user);
 				utx.commit();
 			} else {
 				return false;
@@ -128,6 +129,7 @@ public class UserDAO implements UserDAOInterface {
 				res.add(query.getResultList().get(0).getLastname());
 				res.add(query.getResultList().get(0).getMail());
 				res.add(query.getResultList().get(0).getPoints().toString());
+				res.add(query.getResultList().get(0).getHero().getName());
 				return res;
 			} else
 				return null;
@@ -245,6 +247,49 @@ public class UserDAO implements UserDAOInterface {
 			return null;
 		}
 		
+	}
+	
+	@Override
+	public List<String> getAllHeroes(){
+		try {
+			TypedQuery<Hero> query = em.createNamedQuery("Hero.getAllHeroes", Hero.class);
+			List<String> res = new ArrayList<String>();
+			for (Hero h: query.getResultList()){
+				res.add(h.getName());
+			}
+			return res;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	@Override
+	public Hero getHeroByName(String name){
+		try {
+			TypedQuery<Hero> query = em.createNamedQuery("Hero.getHeroByName", Hero.class);
+			query.setParameter("name", name);
+			if (!query.getResultList().isEmpty()){
+				return query.getResultList().get(0);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+
+	@Override
+	public String getHeroNameByUserID(Integer user_id) {
+		try {
+			TypedQuery<Hero> query = em.createNamedQuery("UserProfile.getHero", Hero.class);
+			query.setParameter("id", user_id);
+			if (!query.getResultList().isEmpty()){
+				return query.getResultList().get(0).getName();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
 	}
 
 }

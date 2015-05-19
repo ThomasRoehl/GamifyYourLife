@@ -2,6 +2,7 @@ package de.tro.development.dao.interf;
 
 import java.util.List;
 
+import de.tro.development.model.Hero;
 import de.tro.development.model.UserProfile;
 
 public interface UserDAOInterface {
@@ -17,4 +18,7 @@ public interface UserDAOInterface {
 	public boolean addContact(String username, String contactname);
 	public List<String> findUsersLikeName(String username);
 	public List<Object> findUserInformationByID(Integer id);
+	public List<String> getAllHeroes();
+	public Hero getHeroByName(String name);
+	public String getHeroNameByUserID(Integer user_id);
 }

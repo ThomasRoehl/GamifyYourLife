@@ -14,7 +14,8 @@ import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 
 @NamedQueries({
-	@NamedQuery(name = "Reward.checkUserRewardExists", query = "SELECT COUNT(r) FROM Reward r WHERE r.achievement = :achievement AND r.userID = :user_id")
+	@NamedQuery(name = "Reward.checkUserRewardExists", query = "SELECT COUNT(r) FROM Reward r WHERE r.achievement = :achievement AND r.userID = :user_id"),
+	@NamedQuery(name = "Reward.getRewardsByUserID", query = "SELECT r FROM Reward r WHERE r.userID = :user_id")
 })
 
 @Entity

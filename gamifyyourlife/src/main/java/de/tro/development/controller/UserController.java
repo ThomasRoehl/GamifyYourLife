@@ -11,6 +11,7 @@ import javax.faces.bean.SessionScoped;
 import javax.faces.bean.ViewScoped;
 
 import de.tro.development.dao.impl.UserDAO;
+import de.tro.development.model.Hero;
 import de.tro.development.model.Todo_list;
 import de.tro.development.model.UserProfile;
 import de.tro.development.service.UserSession;
@@ -32,6 +33,7 @@ public class UserController implements Serializable{
 	private String password;
 	private String firstname;
 	private String lastname;
+	private String pickedHero = "empty";
 	private String mail;
 	private String street;
 	private Long points;
@@ -39,8 +41,10 @@ public class UserController implements Serializable{
 	private boolean foundUser = false;
 	private boolean inContacts = true;
 	private String foundMessage = "";
+	private String heroBackground = "background: green";
 	List<String> contacts = new ArrayList<String>();
 	List<String> foundUserList = new ArrayList<String>();
+	List<String> heroes = new ArrayList<String>();
 	
 	public UserController(){
 		System.out.println("USER CONTROLLER BEAN CREATED");
@@ -59,6 +63,42 @@ public class UserController implements Serializable{
 	private TaskController taskController;
 	
 	// GETTER SETTER
+	
+	public String getHeroBackground() {
+		System.out.println(pickedHero);
+		if (pickedHero.equals("Superman")){
+			heroBackground = "background-image: url(../resources/images/superman3.png)";
+		}
+		else if (pickedHero.equals("Batman")){
+			heroBackground = "background-image: url(../resources/images/batman3.jpg)";
+		}
+		else{
+			heroBackground = "background: yellow";
+		}
+		System.out.println("----------------------------" + heroBackground);
+		return heroBackground;
+	}
+
+	public void setHeroBackground(String heroBackground) {
+		this.heroBackground = heroBackground;
+	}
+	
+	public String getPickedHero() {
+		return pickedHero;
+	}
+
+	public void setPickedHero(String pickedHero) {
+		this.pickedHero = pickedHero;
+	}
+	
+	public List<String> getHeroes() {
+		heroes = userDAO.getAllHeroes();
+		return heroes;
+	}
+
+	public void setHeroes(List<String> heroes) {
+		this.heroes = heroes;
+	}
 	
 	public String getSearchUsername() {
 		return searchUsername;
@@ -237,6 +277,7 @@ public class UserController implements Serializable{
 			user.setHero_level(0);
 			Todo_list tl = new Todo_list();
 			user.setTodo_list(tl);
+			user.setHero(userDAO.getHeroByName(pickedHero));
 			return userDAO.createUser(user);
 			
 			
@@ -268,6 +309,7 @@ public class UserController implements Serializable{
 			userSession.setUser_id(userDAO.findUserID(this.username));
 			userSession.setUsername(this.username);
 			userSession.setTodo_list_id(userDAO.findTodo_list(username));
+			userSession.setHeroName(userDAO.getHeroNameByUserID(userSession.getUser_id()));
 			clearData(1);
 			return navi.moveToHome();
 		}
@@ -318,6 +360,7 @@ public class UserController implements Serializable{
 			this.firstname = l.get(0);
 			this.lastname = l.get(1);
 			this.mail = l.get(2);
+			this.pickedHero = l.get(4);
 			this.points = Long.parseLong(l.get(3));
 			if (contacts.contains(this.username)) inContacts = true;
 			else inContacts = false;

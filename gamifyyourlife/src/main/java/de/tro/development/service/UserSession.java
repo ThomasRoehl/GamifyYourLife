@@ -16,6 +16,15 @@ public class UserSession implements Serializable{
 	private Integer user_id;
 	private String username;
 	private Integer todo_list_id;
+	private String heroName;
+
+	public String getHeroName() {
+		return heroName;
+	}
+
+	public void setHeroName(String heroName) {
+		this.heroName = heroName;
+	}
 
 	public Integer getTodo_list_id() {
 		return todo_list_id;

@@ -13,7 +13,9 @@ import javax.persistence.NamedQuery;
 @NamedQueries({
 	@NamedQuery(name = "Achievement.getAllAchievements", query = "SELECT a FROM Achievement a"),
 	@NamedQuery(name = "Achievement.getAchievementsFromIDList", query = "SELECT a FROM Achievement a WHERE a.id IN :idList"),
-	@NamedQuery(name = "Achievement.getAchievementsNotFromIDList", query = "SELECT a FROM Achievement a WHERE a.id NOT IN :idList")})
+	@NamedQuery(name = "Achievement.getAchievementsNotFromIDList", query = "SELECT a FROM Achievement a WHERE a.id NOT IN :idList"),
+	@NamedQuery(name = "Achievement.getAchievementByName", query = "SELECT a FROM Achievement a WHERE a.name = :name")
+	})
 
 @Entity
 public class Achievement implements Serializable {
@@ -28,7 +30,7 @@ public class Achievement implements Serializable {
 	@Column(name = "id", updatable = false, nullable = false)
 	private int id;
 
-	@Column(name = "name", nullable = false)
+	@Column(name = "name", nullable = false, unique = true)
 	private String name;
 
 	@Column(name = "description")

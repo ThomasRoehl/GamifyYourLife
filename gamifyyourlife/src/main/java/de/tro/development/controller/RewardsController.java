@@ -8,6 +8,7 @@ import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.ViewScoped;
+import javax.faces.event.ActionEvent;
 
 import de.tro.development.dao.impl.RewardDAO;
 import de.tro.development.model.Achievement;
@@ -15,7 +16,7 @@ import de.tro.development.model.Reward;
 import de.tro.development.service.UserSession;
 
 
-@ManagedBean
+@ManagedBean(name="rewardsController")
 @ViewScoped
 public class RewardsController implements Serializable {
 	
@@ -26,6 +27,8 @@ public class RewardsController implements Serializable {
 	private String name;
 	private String description;
 	private Achievement pickedAchievement;
+	private String pickedName;
+	private List<String> achievements_name = new ArrayList<String>();
 	private List<Achievement> achievements = new ArrayList<Achievement>();
 	private List<Reward> rewards = new ArrayList<Reward>();
 	
@@ -36,12 +39,36 @@ public class RewardsController implements Serializable {
 	@ManagedProperty(value = "#{rewardDAO}")
 	private RewardDAO rewardDAO;
 
+	/**
+	 * load achievements from db
+	 */
 	@PostConstruct
 	public void init(){
 		achievements = rewardDAO.getAchievements(userSession.getUser_id());
+		for (Achievement a: achievements){
+			achievements_name.add(a.getName());
+		}
+	}
+	
+	public List<String> getAchievements_name() {
+		return achievements_name;
+	}
+
+	public void setAchievements_name(List<String> achievements_name) {
+		this.achievements_name = achievements_name;
+	}
+	
+	public String getPickedName() {
+		return pickedName;
+	}
+
+	public void setPickedName(String pickedName) {
+		this.pickedName = pickedName;
 	}
 	
 	public List<Reward> getRewards() {
+		rewards = rewardDAO.getRewards(userSession.getUser_id());
+
 		return rewards;
 	}
 
@@ -94,13 +121,17 @@ public class RewardsController implements Serializable {
 		this.navi = navi;
 	}
 	
+	/**
+	 * create Reward an register in DB
+	 * @return
+	 */
 	public String createReward(){
 		Reward r = new Reward();
 		r.setName(name);
 		r.setDescription(description);
-		r.setAchievement(pickedAchievement);
+		r.setAchievement(rewardDAO.getAchievementByName(pickedName));
 		r.setUserID(userSession.getUser_id());
-		System.out.println(r);
+		System.out.println(rewardDAO.createReward(r));
 		return null;
 	}
 }

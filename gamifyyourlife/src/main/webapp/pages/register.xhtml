@@ -44,6 +44,13 @@
 			<h:inputText id="street1" value="#{userController.street}"/>
 			<br />
 			<br />
+			<h:outputText value="Hero" />
+			<br />
+			<h:selectOneMenu value="#{userController.pickedHero}">
+					<f:selectItems value="#{userController.heroes}" />
+				</h:selectOneMenu>
+			<br />
+			<br />
 			<div class="sendRegister">
 				<h:commandButton id="register" value="register" action="#{userController.registerUser}" />
 			</div>

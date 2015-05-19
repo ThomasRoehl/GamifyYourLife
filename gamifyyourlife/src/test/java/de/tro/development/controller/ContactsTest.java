@@ -36,7 +36,8 @@ public class ContactsTest {
 		String lastname = "Mustermann";
 		String mail  = "max@mail.com";
 		String points = "1";
-		when(uDAO.findUserDetailsByName(username)).thenReturn(new ArrayList<String>(Arrays.asList(firstname, lastname, mail, points)));
+		String hero = "superman";
+		when(uDAO.findUserDetailsByName(username)).thenReturn(new ArrayList<String>(Arrays.asList(firstname, lastname, mail, points, hero)));
 		
 		uc.setUsername(username);
 		uc.findUser();

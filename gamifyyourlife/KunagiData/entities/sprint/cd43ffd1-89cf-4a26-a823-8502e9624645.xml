@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?><sprint>
   <id>cd43ffd1-89cf-4a26-a823-8502e9624645</id>
-  <lastModified>2015-05-12 13:35:40</lastModified>
+  <lastModified>2015-05-19 09:52:34</lastModified>
   <number>5</number>
   <projectId>fc43cae0-0113-401c-9794-ae1dd9c1798c-1</projectId>
   <label>Next Sprint</label>
-  <begin>2015-05-18</begin>
-  <end>2015-05-24</end>
+  <begin>2015-05-19</begin>
+  <end>2015-05-25</end>
   <originallyEnd reference="../end"/>
   <requirementsOrderIds/>
   <productOwnersIds/>

@@ -33,16 +33,18 @@ public class RewardDAO implements RewardDAOInterface {
 			Query query = em.createNamedQuery("UserProfile.getAchievements");
 			query.setParameter("id", user_id);
 			List<Integer> user_achievements = query.getResultList();
-			if (!user_achievements.isEmpty()) {
+			if (user_achievements.isEmpty()) {
 				TypedQuery<Achievement> t1query = em.createNamedQuery(
 						"Achievement.getAllAchievements", Achievement.class);
 				return t1query.getResultList();
 			}
-			TypedQuery<Achievement> t2query = em.createNamedQuery(
-					"Achievement.getAchievementsNotFromIDList", Achievement.class);
-			t2query.setParameter("idList", user_achievements);
-			return t2query.getResultList();
-
+			else{
+				TypedQuery<Achievement> t2query = em.createNamedQuery(
+						"Achievement.getAchievementsNotFromIDList",
+						Achievement.class);
+				t2query.setParameter("idList", user_achievements);
+				return t2query.getResultList();
+			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -52,10 +54,19 @@ public class RewardDAO implements RewardDAOInterface {
 	@Override
 	public boolean createReward(Reward reward) {
 		try {
-			utx.begin();
-			em.persist(reward);
-			utx.commit();
-			return true;
+			Query query = em.createNamedQuery("Reward.checkUserRewardExists",
+					Reward.class);
+			query.setParameter("achievement", reward.getAchievement());
+			query.setParameter("user_id", reward.getUserID());
+			if ((Long) query.getResultList().get(0) == 0) {
+				utx.begin();
+				em.merge(reward);
+				utx.commit();
+				return true;
+			} else {
+				System.out.println(query.getResultList().get(0));
+			}
+			return false;
 		} catch (Exception e) {
 			e.printStackTrace();
 			try {
@@ -69,8 +80,28 @@ public class RewardDAO implements RewardDAOInterface {
 	}
 
 	@Override
-	public List<Reward> getRewards(int todo_list_id) {
-		// TODO Auto-generated method stub
+	public List<Reward> getRewards(int user_id) {
+		try {
+			TypedQuery<Reward> query = em.createNamedQuery(
+					"Reward.getRewardsByUserID", Reward.class);
+			query.setParameter("user_id", user_id);
+			return query.getResultList();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+
+	@Override
+	public Achievement getAchievementByName(String name) {
+		try {
+			TypedQuery<Achievement> tquery = em.createNamedQuery(
+					"Achievement.getAchievementByName", Achievement.class);
+			tquery.setParameter("name", name);
+			return tquery.getResultList().get(0);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		return null;
 	}
 

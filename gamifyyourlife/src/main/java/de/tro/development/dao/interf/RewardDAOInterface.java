@@ -9,6 +9,7 @@ public interface RewardDAOInterface {
 	
 	public List<Achievement> getAchievements(int user_id);
 	public boolean createReward(Reward reward);
-	public List<Reward> getRewards(int todo_list_id);
+	public List<Reward> getRewards(int user_id);
+	public Achievement getAchievementByName(String name);
 
 }

@@ -19,28 +19,55 @@
 
 	<ui:define name="content">
 		<h:outputStylesheet library="css" name="rewards.css" />
+
 		<h:form class="rewardsForm">
-			<div class="showRewards"></div>
+
+			<div class="showRewards">
+				<div class="rewardTableDiv">
+					<h:dataTable value="#{rewardsController.rewards}" var="r"
+						styleClass="rewards-table" headerClass="rewards-table-header"
+						rowClasses="rewards-table-odd-row,rewards-table-even-row">
+
+						<h:column>
+							<!-- column header -->
+							<f:facet name="header">Name</f:facet>
+							<!-- row record -->
+    				#{r.name}
+    			</h:column>
+
+						<h:column>
+							<f:facet name="header">Description</f:facet>
+    				#{r.description}
+    			</h:column>
+
+						<h:column>
+							<f:facet name="header">Achievement</f:facet>
+    				#{r.achievement.name}
+    			</h:column>
+
+					</h:dataTable>
+				</div>
+			</div>
 			<div class="createRewards">
 				<h:outputText value="Name:" />
 				<br />
-				<h:inputText />
+				<h:inputText value="#{rewardsController.name}" />
 				<br /> <br />
 				<h:outputText value="Description: " />
 				<br />
-				<p:inputTextarea value="">
+				<p:inputTextarea value="#{rewardsController.description}">
 					<p:ajax event="keyup" />
 				</p:inputTextarea>
-				<br /><br />
-				<h:outputText value="Achievement:"/>
+				<br /> <br />
+				<h:outputText value="Achievement:" />
 				<br />
-				<h:selectOneMenu value="rewardsController.pickedAchievement.name">
-					<f:selectItems value="#{rewardsController.achievements}" />
+				<h:selectOneMenu value="#{rewardsController.pickedName}">
+					<f:selectItems value="#{rewardsController.achievements_name}" />
 				</h:selectOneMenu>
-				<br />
-				<br />
-				<h:commandButton value="create Reward" action="rewardsController.createReward">
-				
+				<br /> <br />
+
+				<h:commandButton value="create Reward"
+					action="#{rewardsController.createReward}">
 				</h:commandButton>
 			</div>
 		</h:form>

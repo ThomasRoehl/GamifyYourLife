@@ -7,6 +7,13 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
+
+@NamedQueries({
+	@NamedQuery(name = "Hero.getAllHeroes", query = "SELECT h FROM Hero h"),
+	@NamedQuery(name = "Hero.getHeroByName", query = "SELECT h FROM Hero h WHERE h.name = :name")
+	})
 
 @Entity
 public class Hero implements Serializable{

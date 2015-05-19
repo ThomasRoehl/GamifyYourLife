@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?><sprint>
   <id>1d20cfb7-702f-4e99-a1e5-8a5ebeb8c278</id>
-  <lastModified>2015-05-12 13:42:13</lastModified>
+  <lastModified>2015-05-19 09:52:34</lastModified>
   <number>4</number>
   <projectId>fc43cae0-0113-401c-9794-ae1dd9c1798c-1</projectId>
   <label>Sprint 04</label>
   <goal>Achievements und Rewards
 </goal>
   <begin>2015-05-12</begin>
-  <end>2015-05-18</end>
-  <originallyEnd reference="../end"/>
+  <end>2015-05-19</end>
+  <originallyEnd>2015-05-18</originallyEnd>
   <requirementsOrderIds>
     <string>19bea3c0-0995-4c47-9ba9-3e13b67ce48d-5</string>
     <string>19bea3c0-0995-4c47-9ba9-3e13b67ce48d-4</string>

@@ -1,19 +1,44 @@
 @CHARSET "ISO-8859-1";
 
-.rewardsForm{
+.rewardsForm {
 	
 }
 
-.showRewards{
+.showRewards {
 	width: 50%;
 	height: 700px;
-	background-color: red;
 	float: left;
 }
 
-.createRewards{
+.createRewards {
 	width: 50%;
 	height: 700px;
-	background-color: blue;
 	float: right;
+}
+
+.rewardTableDiv {
+	text-align: center;
+}
+
+.rewards-table {
+	border-collapse: collapse;
+}
+
+.rewards-table-header {
+	text-align: center;
+	background: none repeat scroll 0 0 #E5E5E5;
+	border-bottom: 1px solid #BBBBBB;
+	padding: 16px;
+}
+
+.rewards-table-odd-row {
+	text-align: center;
+	background: none repeat scroll 0 0 #FFFFFFF;
+	border-top: 1px solid #BBBBBB;
+}
+
+.rewards-table-even-row {
+	text-align: center;
+	background: none repeat scroll 0 0 #F9F9F9;
+	border-top: 1px solid #BBBBBB;
 }

@@ -37,7 +37,8 @@
 					<h:panelGroup id="userPanel">
 						<br />
 						<br />
-						<div class="heroImage"></div>
+						<div class="heroImage" style="#{userController.heroBackground}">
+						</div>
 						<br />
 						<br />
 						<h:outputText value="Username: #{userController.username}"></h:outputText>
@@ -50,7 +51,8 @@
 						<br />
 						<h:outputText value="Points: #{userController.points}"></h:outputText>
 						<br />
-						<h:commandLink value="Add User to Contacts" action="#{userController.addUser}"></h:commandLink>
+						<h:commandLink value="Add User to Contacts"
+							action="#{userController.addUser}"></h:commandLink>
 					</h:panelGroup>
 				</div>
 			</div>
@@ -83,75 +85,6 @@
 			</div>
 		</h:form>
 	</ui:define>
-
-	<!-- <ui:define name="content">
-		<h:outputStylesheet library="css" name="contacts.css" />
-		<h:form class="contactForm">
-
-			<div class="contactLeft">
-
-				<div class="contactList">
-					<h:panelGroup id="contactPanel">
-						<h:selectOneListbox value="#{userController.username}" size="15">
-							<f:selectItems value="#{userController.contacts}" />
-							<f:ajax event="click"
-								listener="#{userController.showUserProfile}" />
-						</h:selectOneListbox>
-					</h:panelGroup>
-				</div>
-
-				<div class="userProfile">
-					<h:panelGroup id="userPanel">
-						<br />
-						<br />
-						<div class="heroImage"></div>
-						<br />
-						<br />
-						<h:outputText value="Username: #{userController.username}"></h:outputText>
-						<br />
-						<h:outputText value="Firstname: #{userController.firstname}"></h:outputText>
-						<br />
-						<h:outputText value="Lastname: #{userController.lastname}"></h:outputText>
-						<br />
-						<h:outputText value="Mail: #{userController.mail}"></h:outputText>
-						<br />
-						<h:outputText value="Points: #{userController.points}"></h:outputText>
-						<br />
-						<h:link id="addUserButton" value="Add User to Contacts">
-							<f:ajax event="action" listener="#{userController.addUser}" />
-						</h:link>
-					</h:panelGroup>
-				</div>
-			</div>
-			<div class="userSearch">
-				<h:panelGroup id="searchPanel">
-					<br />
-					<h:outputText value="Username"></h:outputText>
-					<br />
-					<h:inputText id="username" immediate="true"
-						value="#{userController.username}"></h:inputText>
-					<br />
-					<br />
-					<h:link id="findUserButton" value="Find User">
-						<f:ajax event="action" listener="#{userController.findUserLike}" />
-					</h:link>
-					<br />
-					<br />
-					<h:outputText style="color:red"
-						value="#{userController.foundMessage}"></h:outputText>
-					<br />
-					<br />
-					<h:panelGroup id="searchResultList">
-						<h:selectOneListbox value="#{userController.username}" size="15">
-							<f:selectItems value="#{userController.foundUserList}" />
-							<f:ajax event="click"
-								listener="#{userController.showUserProfile}" />
-						</h:selectOneListbox>
-					</h:panelGroup>
-				</h:panelGroup>
-			</div>
-		</h:form>
-	</ui:define> -->
 
 	<ui:define name="footer">
 	</ui:define>
