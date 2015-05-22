@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><requirement>
   <id>a8fe24b9-52fd-4dda-8c27-0567ba644a45-1</id>
-  <lastModified>2015-04-15 11:52:10</lastModified>
+  <lastModified>2015-05-22 12:30:43</lastModified>
   <projectId>fc43cae0-0113-401c-9794-ae1dd9c1798c-1</projectId>
+  <sprintId>cd43ffd1-89cf-4a26-a823-8502e9624645</sprintId>
   <number>10</number>
   <qualitysIds/>
   <label>Aufgaben verschicken</label>
@@ -20,6 +21,13 @@ Benoetigt wird dafuer:
   <dirty>false</dirty>
   <workEstimationVotingActive>false</workEstimationVotingActive>
   <workEstimationVotingShowoff>false</workEstimationVotingShowoff>
-  <tasksOrderIds/>
+  <tasksOrderIds>
+    <string>338940cc-b548-4424-b36c-de82981ccd49-8</string>
+    <string>338940cc-b548-4424-b36c-de82981ccd49-9</string>
+    <string>338940cc-b548-4424-b36c-de82981ccd49-10</string>
+    <string>338940cc-b548-4424-b36c-de82981ccd49-11</string>
+    <string>338940cc-b548-4424-b36c-de82981ccd49-12</string>
+    <string>338940cc-b548-4424-b36c-de82981ccd49-13</string>
+  </tasksOrderIds>
   <themes/>
 </requirement>

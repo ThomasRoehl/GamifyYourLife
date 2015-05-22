@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><change>
+  <id>5ae31fd1-57dc-4a3c-823c-d0ae9a5fc996</id>
+  <lastModified>2015-05-22 12:12:33</lastModified>
+  <parentId>338940cc-b548-4424-b36c-de82981ccd49-5</parentId>
+  <userId>a01eede1-e7e9-41e9-8122-6f7c606bfd0a</userId>
+  <dateAndTime>2015-05-22 12:12:33</dateAndTime>
+  <key>description</key>
+  <newValue>Als Nutzer moechte ich meinen Account loeschen koennen,
+
+damit ich nicht mehr registriert bin als Nutzer.
+
+Akzeptanzkriterien:
+
+- Moeglichkeit seinen Nutzer zu loeschen.
+- Nutzer aus DB loeschen
+- Alle 
+</newValue>
+</change>

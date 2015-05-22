@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><requirement>
   <id>1e8fcd55-8ee3-4d4c-ab91-58c37eabb5b8-3</id>
-  <lastModified>2015-05-05 13:02:46</lastModified>
+  <lastModified>2015-05-22 12:31:21</lastModified>
   <projectId>fc43cae0-0113-401c-9794-ae1dd9c1798c-1</projectId>
+  <sprintId>cd43ffd1-89cf-4a26-a823-8502e9624645</sprintId>
   <number>22</number>
   <qualitysIds/>
   <label>Category</label>
@@ -19,6 +20,10 @@ Alle Category Eintraege als String durch Category Objekte ersetzen.
   <dirty>false</dirty>
   <workEstimationVotingActive>false</workEstimationVotingActive>
   <workEstimationVotingShowoff>false</workEstimationVotingShowoff>
-  <tasksOrderIds/>
+  <tasksOrderIds>
+    <string>338940cc-b548-4424-b36c-de82981ccd49-14</string>
+    <string>338940cc-b548-4424-b36c-de82981ccd49-15</string>
+    <string>338940cc-b548-4424-b36c-de82981ccd49-16</string>
+  </tasksOrderIds>
   <themes/>
 </requirement>

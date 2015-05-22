@@ -1,5 +1,7 @@
 package de.tro.development.dao.impl;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 
 import javax.annotation.Resource;
@@ -12,6 +14,7 @@ import javax.transaction.SystemException;
 import javax.transaction.UserTransaction;
 
 import de.tro.development.dao.interf.TaskDAOInterface;
+import de.tro.development.model.Category;
 import de.tro.development.model.Task;
 import de.tro.development.model.Todo_list;
 

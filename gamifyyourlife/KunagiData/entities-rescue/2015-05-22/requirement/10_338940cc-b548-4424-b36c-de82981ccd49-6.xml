@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><requirement>
+  <id>338940cc-b548-4424-b36c-de82981ccd49-6</id>
+  <lastModified>2015-05-22 12:15:18</lastModified>
+  <projectId>fc43cae0-0113-401c-9794-ae1dd9c1798c-1</projectId>
+  <number>30</number>
+  <qualitysIds/>
+  <label>Reward einloesen</label>
+  <description>Als Nutzer moechte ich einen Reward einloesen koennen,
+
+damit ich meinen Fortschritt sehen kann.
+
+Akzeptanzkriterien:
+
+
+</description>
+  <closed>false</closed>
+  <deleted>false</deleted>
+  <dirty>true</dirty>
+  <workEstimationVotingActive>false</workEstimationVotingActive>
+  <workEstimationVotingShowoff>false</workEstimationVotingShowoff>
+  <tasksOrderIds/>
+  <themes/>
+</requirement>

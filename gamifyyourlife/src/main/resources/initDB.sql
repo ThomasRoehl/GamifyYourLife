@@ -34,6 +34,8 @@ INSERT INTO TODO_LIST (id) VALUES (119)
 INSERT INTO TODO_LIST (id) VALUES (120)
 INSERT INTO TODO_LIST (id) VALUES (121)
 
+INSERT INTO TODO_LIST (id) VALUES (999)
+
 INSERT INTO TASK (id, name, points, category_fk, todo_list_fk) VALUES (100, 'Math Homework', 10, 100, 100)
 INSERT INTO TASK (id, name, points, category_fk, todo_list_fk) VALUES (101, 'English Homework', 5, 101, 100)
 
@@ -60,6 +62,8 @@ INSERT INTO USERPROFILE (id, todo_list_fk, firstname, lastname, mail, street1, u
 INSERT INTO USERPROFILE (id, todo_list_fk, firstname, lastname, mail, street1, username, password, points, country_fk, city_fk, hero_fk, hero_level) VALUES (120, 120, 'Thi', 'Trail', 'mail@googlemail.com', 'leipzigerstr. 300', 'Thi', 'test', 21, 101, 101, 101, 8)
 INSERT INTO USERPROFILE (id, todo_list_fk, firstname, lastname, mail, street1, username, password, points, country_fk, city_fk, hero_fk, hero_level) VALUES (121, 121, 'Verena', 'Donlan', 'mail@googlemail.com', 'leipzigerstr. 300', 'Verena', 'test', 22, 101, 101, 101, 8)
 
+INSERT INTO USERPROFILE (id, todo_list_fk, firstname, lastname, mail, street1, username, password, points, country_fk, city_fk, hero_fk, hero_level) VALUES (999, 999, 'System', 'System', 'System', 'System', 'System', 'System', 999, 101, 101, 101, 0)
+
 INSERT INTO ACHIEVEMENT (id, name, description, points_needed) VALUES (10, 'New Hero', 'create a new Hero', 5)
 INSERT INTO ACHIEVEMENT (id, name, description, points_needed) VALUES (20, 'Beginner', 'start your new life', 10)
 INSERT INTO ACHIEVEMENT (id, name, description, points_needed) VALUES (30, 'Young padawan', 'much to learn you still have', 20)
@@ -70,3 +74,6 @@ INSERT INTO USER_ACHIEVEMENT (user_fk, achievement_fk) VALUES (100, 10)
 INSERT INTO USER_ACHIEVEMENT (user_fk, achievement_fk) VALUES (100, 20)
 INSERT INTO USER_ACHIEVEMENT (user_fk, achievement_fk) VALUES (100, 30)
 INSERT INTO USER_ACHIEVEMENT (user_fk, achievement_fk) VALUES (100, 40)
+
+INSERT INTO MESSAGE (id, msg, regard, sender_fk, addressee_fk, system) VALUES (100, 'testmsg', 'testregard', 101, 100, 0)
+INSERT INTO MESSAGE (id, msg, regard, sender_fk, addressee_fk, system) VALUES (101, 'Systemmsg', 'Systemmsg', 999, 100, 1)

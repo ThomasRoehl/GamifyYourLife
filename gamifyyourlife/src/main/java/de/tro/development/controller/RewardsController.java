@@ -50,6 +50,8 @@ public class RewardsController implements Serializable {
 		}
 	}
 	
+	// GETTER AND SETTER
+	
 	public List<String> getAchievements_name() {
 		return achievements_name;
 	}

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><change>
+  <id>fa59ac5c-fc3d-4d85-a335-e26de1df7318</id>
+  <lastModified>2015-05-22 12:14:03</lastModified>
+  <parentId>338940cc-b548-4424-b36c-de82981ccd49-5</parentId>
+  <userId>a01eede1-e7e9-41e9-8122-6f7c606bfd0a</userId>
+  <dateAndTime>2015-05-22 12:14:03</dateAndTime>
+  <key>description</key>
+  <newValue>Als Nutzer moechte ich meinen Account loeschen koennen,
+
+damit ich nicht mehr registriert bin als Nutzer.
+
+Akzeptanzkriterien:
+
+- Moeglichkeit seinen Nutzer zu loeschen.
+- Nutzer aus DB loeschen
+- TodoList des Nutzers loeschen
+- Achievements und Rewards des Nutzers loeschen
+- 
+- Eintraege in der Kontakt-Zwischentabelle in DB loeschen
+- Keine anderen Nutzer loeschen
+</newValue>
+</change>

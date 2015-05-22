@@ -43,4 +43,8 @@ public class NavigationController {
 	public String moveToRewards(){
 		return "rewards?faces-redirect=true";
 	}
+	
+	public String moveToMessage(){
+		return "message?faces-redirect=true";
+	}
 }

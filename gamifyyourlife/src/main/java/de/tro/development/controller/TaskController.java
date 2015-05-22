@@ -10,6 +10,7 @@ import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.SessionScoped;
 import javax.faces.bean.ViewScoped;
 
+import de.tro.development.dao.impl.CategoryDAO;
 import de.tro.development.dao.impl.TaskDAO;
 import de.tro.development.model.Category;
 import de.tro.development.model.Task;
@@ -36,6 +37,9 @@ public class TaskController implements Serializable{
 	
 	@ManagedProperty(value = "#{taskDAO}")
 	private TaskDAO taskDAO;
+	
+	@ManagedProperty(value = "#{categoryDAO}")
+	private CategoryDAO categoryDAO;
 
 	private List<Task> tasks = new ArrayList<Task>();
 	private String taskName;
@@ -43,9 +47,27 @@ public class TaskController implements Serializable{
 	private String taskSettlement_date;
 	private Long taskPoints;
 	private Long userID;
+	private List<String> categories = new ArrayList<String>();
 	
 	// GETTER SETTER
 	
+	public CategoryDAO getCategoryDAO() {
+		return categoryDAO;
+	}
+
+	public void setCategoryDAO(CategoryDAO categoryDAO) {
+		this.categoryDAO = categoryDAO;
+	}
+	
+	public List<String> getCategories() {
+		categories = categoryDAO.getCategories();
+		return categories;
+	}
+
+	public void setCategories(List<String> categories) {
+		this.categories = categories;
+	}
+
 	public Long getTaskPoints() {
 		return taskPoints;
 	}
@@ -140,7 +162,7 @@ public class TaskController implements Serializable{
 		Task t = new Task();
 		
 		try {
-			t.setCategory(new Category(taskCategory, taskCategory));
+			t.setCategory(categoryDAO.getCategoryByName(taskCategory));
 			t.setName(taskName);
 			t.setPoints(taskPoints);
 			//t.setSettlement_date(new Date(taskSettlement_date));

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><change>
+  <id>ec61da93-9c0e-42e0-a473-6b63a01e77fd</id>
+  <lastModified>2015-05-22 12:56:48</lastModified>
+  <parentId>338940cc-b548-4424-b36c-de82981ccd49-1</parentId>
+  <userId>a01eede1-e7e9-41e9-8122-6f7c606bfd0a</userId>
+  <dateAndTime>2015-05-22 12:56:48</dateAndTime>
+  <key>description</key>
+  <newValue>Also Nutzer moechte ich eine Aufgabe abgeben koennen,
+
+damit ich fuer diese Aufgabe Punkte bekomme und meinen Fortschritt sehen kann, oder die Aufgabe entfernt wird, weil ich sie nicht mehr benoetige
+
+Akzeptanzkriterien:
+
+- Moeglichkeit die Aufgabe als beendet zu markieren.
+- Aufgabe aus DB entfernen.
+- Punkte hochrechnen
+</newValue>
+</change>

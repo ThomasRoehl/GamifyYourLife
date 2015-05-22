@@ -10,31 +10,31 @@
 </h:head>
 <h:body>
 	<h:form class="outerTaskForm">
-	<div class="backToLogin">
-				<h:commandButton id="back" value="Back" action="#{navigationController.moveToHome}" />
-			</div>
+		<div class="backToLogin">
+			<h:commandButton id="back" value="Back"
+				action="#{navigationController.moveToHome}" />
+		</div>
 		<div class="taskForm">
-		<h:outputText id="name" value="name"></h:outputText>
-		<br />
-		<h:inputText id="inp_name" value="#{taskController.taskName}"></h:inputText>
-		<br />
-		<br />
-		<h:outputText id="category" value="category"></h:outputText>
-		<br />
-		<h:inputText id="inp_category" value="#{taskController.taskCategory}"></h:inputText>
-		<br />
-		<br />
-		<h:outputText id="settlement" value="settlement Date"></h:outputText>
-		<br />
-		<h:inputText id="inp_settlement" ></h:inputText>
-		<br />
-		<br />
-		<h:outputText id="points" value="Points"></h:outputText>
-		<br />
-		<h:inputText id="inp_points" value="#{taskController.taskPoints}"></h:inputText>
-		<br />
-		<br />
-		<h:commandButton id="createTask" value="create" action="#{taskController.createTask}"></h:commandButton>
+			<h:outputText id="name" value="name"></h:outputText>
+			<br />
+			<h:inputText id="inp_name" value="#{taskController.taskName}"></h:inputText>
+			<br /> <br />
+			<h:outputText id="category" value="category"></h:outputText>
+			<br />
+			<h:selectOneMenu value="#{taskController.taskCategory}">
+				<f:selectItems value="#{taskController.categories}" />
+			</h:selectOneMenu>
+			<br /> <br />
+			<h:outputText id="settlement" value="settlement Date"></h:outputText>
+			<br />
+			<h:inputText id="inp_settlement"></h:inputText>
+			<br /> <br />
+			<h:outputText id="points" value="Points"></h:outputText>
+			<br />
+			<h:inputText id="inp_points" value="#{taskController.taskPoints}"></h:inputText>
+			<br /> <br />
+			<h:commandButton id="createTask" value="create"
+				action="#{taskController.createTask}"></h:commandButton>
 		</div>
 	</h:form>
 </h:body>

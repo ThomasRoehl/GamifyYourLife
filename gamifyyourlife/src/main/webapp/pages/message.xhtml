@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	template="../resources/templates/defaultUI.xhtml">
+
+	<ui:define name="topbar">
+	</ui:define>
+
+	<ui:define name="header">
+	</ui:define>
+
+	<ui:define name="menu">
+	</ui:define>
+
+	<ui:define name="content">
+		<h:outputStylesheet library="css" name="message.css" />
+		<h:form class="messageForm">
+			<div class="messageList">
+				<p:dataTable value="#{messageController.messages}" var="message"
+					styleClass="messageTable" headerClass="messageTableHeader"
+					rowClasses="messageTableOddRow, messageTableEvenRow">
+					<p:column>
+						<f:facet name="header">Regard</f:facet>    				
+      					#{message.regard}
+   					</p:column>
+					<p:column>
+						<f:facet name="header">Sender</f:facet>    				
+     					#{message.sender.username}
+   					</p:column>
+					<p:column>
+						<f:facet name="header">Date</f:facet>    				
+      					#{message.time}
+   					</p:column>
+					<p:column>
+						<f:facet name="show"></f:facet>
+						<h:commandButton value="show"
+							actionListener="#{messageController.showMsg(message)}" />
+					</p:column>
+				</p:dataTable>
+			</div>
+
+			<div class="messageShow">
+				<div class="messageOld">
+					<br />
+					<h:outputText class="sender"
+						value="Sender: #{messageController.currentMsg.sender.username}" />
+					<br />
+					<br />
+					<h:outputText class="sender"
+						value="Regard: #{messageController.currentMsg.regard}" />
+					<br />
+					<br />
+					<br />
+					<h:outputText class="sender"
+						value="Message: #{messageController.currentMsg.msg}" />
+					<br />
+
+				</div>
+				<div class="messageNew">
+					<h:outputText value="Addressee: "></h:outputText>
+					<br />
+					<h:selectOneMenu value="#{messageController.newUser}">
+						<f:selectItems value="#{userController.contacts}" />
+					</h:selectOneMenu>
+					<br />
+					<br />
+					<h:outputText value="Regard: "></h:outputText>
+					<br />
+					<h:inputText value="#{messageController.newRegard}"></h:inputText>
+					<br />
+					<br />
+					<h:outputText value="Message: "></h:outputText>
+					<br />
+					<h:inputTextarea value="#{messageController.newMsg}" cols="20" rows="10"></h:inputTextarea>
+					<br />
+					<br />
+					<h:commandButton value="send"
+							actionListener="#{messageController.send}" />
+				</div>
+
+			</div>
+		</h:form>
+	</ui:define>
+
+	<ui:define name="footer">
+	</ui:define>
+
+</ui:composition>

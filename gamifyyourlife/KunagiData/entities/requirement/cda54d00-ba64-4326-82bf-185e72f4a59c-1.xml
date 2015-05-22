@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><requirement>
   <id>cda54d00-ba64-4326-82bf-185e72f4a59c-1</id>
-  <lastModified>2015-05-12 15:19:22</lastModified>
+  <lastModified>2015-05-19 13:20:20</lastModified>
   <projectId>fc43cae0-0113-401c-9794-ae1dd9c1798c-1</projectId>
-  <sprintId>1d20cfb7-702f-4e99-a1e5-8a5ebeb8c278</sprintId>
   <number>1</number>
   <qualitysIds/>
   <label>Helden erstellen</label>
@@ -17,7 +16,7 @@ Akzeptanzkriterien:
 * Anzeige des Helden auf der Startseite
 </description>
   <estimatedWork>2.0</estimatedWork>
-  <closed>false</closed>
+  <closed>true</closed>
   <deleted>false</deleted>
   <dirty>false</dirty>
   <workEstimationVotingActive>false</workEstimationVotingActive>

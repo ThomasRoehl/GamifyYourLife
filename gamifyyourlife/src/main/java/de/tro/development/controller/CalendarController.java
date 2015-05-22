@@ -1,7 +1,9 @@
 package de.tro.development.controller;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.Set;
 
 import javax.annotation.PostConstruct;
@@ -14,6 +16,7 @@ import org.primefaces.model.LazyScheduleModel;
 import org.primefaces.model.ScheduleModel;
 
 import de.tro.development.dao.impl.CalendarDAO;
+import de.tro.development.dao.impl.CategoryDAO;
 import de.tro.development.model.Category;
 import de.tro.development.model.UserDate;
 import de.tro.development.service.UserSession;
@@ -36,6 +39,7 @@ public class CalendarController implements Serializable {
 	private String DATEPATTERN = "MM/dd/yyyy HH:mm";
 	private ScheduleModel lazyEventModel;
 	private String error = "";
+	private List<String> categories = new ArrayList<String>();
 
 	@ManagedProperty(value = "#{calendarDAO}")
 	private CalendarDAO calendarDAO;
@@ -43,6 +47,8 @@ public class CalendarController implements Serializable {
 	private UserSession userSession;
 	@ManagedProperty(value = "#{navigationController}")
 	private NavigationController navi;
+	@ManagedProperty(value = "#{categoryDAO}")
+	private CategoryDAO categoryDAO;
 
 	/**
 	 * load UserDates from db into calendar
@@ -80,6 +86,23 @@ public class CalendarController implements Serializable {
 	}
 
 	// GETTER SETTER
+	
+	public List<String> getCategories() {
+		categories = categoryDAO.getCategories();
+		return categories;
+	}
+
+	public void setCategories(List<String> categories) {
+		this.categories = categories;
+	}
+
+	public CategoryDAO getCategoryDAO() {
+		return categoryDAO;
+	}
+
+	public void setCategoryDAO(CategoryDAO categoryDAO) {
+		this.categoryDAO = categoryDAO;
+	}
 	
 	public String getError() {
 		return error;
@@ -252,7 +275,7 @@ public class CalendarController implements Serializable {
 		}
 			
 		if (!dayEvent) {
-			date = new UserDate(name, description, new Category(category, ""),
+			date = new UserDate(name, description, categoryDAO.getCategoryByName(category),
 					points, dateBegin, dateEnd, dayEvent);
 		} else {
 			date = new UserDate(name, description, new Category(category, ""),

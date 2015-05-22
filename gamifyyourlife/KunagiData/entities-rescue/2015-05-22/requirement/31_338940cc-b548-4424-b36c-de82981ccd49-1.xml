@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><requirement>
+  <id>338940cc-b548-4424-b36c-de82981ccd49-1</id>
+  <lastModified>2015-05-22 12:56:58</lastModified>
+  <projectId>fc43cae0-0113-401c-9794-ae1dd9c1798c-1</projectId>
+  <number>25</number>
+  <qualitysIds/>
+  <label>Aufgabe abgeben</label>
+  <description>Also Nutzer moechte ich eine Aufgabe abgeben koennen,
+
+damit ich fuer diese Aufgabe Punkte bekomme und meinen Fortschritt sehen kann, oder die Aufgabe entfernt wird, weil ich sie nicht mehr benoetige
+
+Akzeptanzkriterien:
+
+- Moeglichkeit die Aufgabe als beendet zu markieren.
+- Aufgabe aus DB entfernen.
+- Punkte hochrechnen falls A
+</description>
+  <estimatedWork>3.0</estimatedWork>
+  <closed>false</closed>
+  <deleted>false</deleted>
+  <dirty>true</dirty>
+  <workEstimationVotingActive>false</workEstimationVotingActive>
+  <workEstimationVotingShowoff>false</workEstimationVotingShowoff>
+  <tasksOrderIds/>
+  <themes/>
+</requirement>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><requirement>
+  <id>338940cc-b548-4424-b36c-de82981ccd49-5</id>
+  <lastModified>2015-05-22 12:14:25</lastModified>
+  <projectId>fc43cae0-0113-401c-9794-ae1dd9c1798c-1</projectId>
+  <number>29</number>
+  <qualitysIds/>
+  <label>Nutzer loeschen</label>
+  <description>Als Nutzer moechte ich meinen Account loeschen koennen,
+
+damit ich nicht mehr registriert bin als Nutzer.
+
+Akzeptanzkriterien:
+
+- Moeglichkeit seinen Nutzer zu loeschen.
+- Nutzer aus DB loeschen
+- TodoList des Nutzers loeschen
+- Rewards des Nutzers loeschen
+- NutzerAchievement liste loeschen
+- Keine Achievements loeschen
+- Eintraege in der Kontakt-Zwischentabelle in DB loeschen
+- Keine anderen Nutzer loeschen
+</description>
+  <closed>false</closed>
+  <deleted>false</deleted>
+  <dirty>true</dirty>
+  <workEstimationVotingActive>false</workEstimationVotingActive>
+  <workEstimationVotingShowoff>false</workEstimationVotingShowoff>
+  <tasksOrderIds/>
+  <themes/>
+</requirement>

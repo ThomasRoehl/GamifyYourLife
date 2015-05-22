@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><requirement>
+  <id>338940cc-b548-4424-b36c-de82981ccd49-6</id>
+  <lastModified>2015-05-22 12:57:58</lastModified>
+  <projectId>fc43cae0-0113-401c-9794-ae1dd9c1798c-1</projectId>
+  <number>30</number>
+  <qualitysIds/>
+  <label>Reward abgeben</label>
+  <description>Als Nutzer moechte ich einen Reward einloesen koennen,
+
+damit ich mein
+
+Akzeptanzkriterien:
+
+- Moeglichkeit Reward einzuloesen.
+- Reward aus DB entfernen.
+- Hero Level um 1 erhoehen
+</description>
+  <estimatedWork>3.0</estimatedWork>
+  <closed>false</closed>
+  <deleted>false</deleted>
+  <dirty>true</dirty>
+  <workEstimationVotingActive>false</workEstimationVotingActive>
+  <workEstimationVotingShowoff>false</workEstimationVotingShowoff>
+  <tasksOrderIds/>
+  <themes/>
+</requirement>

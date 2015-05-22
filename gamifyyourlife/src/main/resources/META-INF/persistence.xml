@@ -9,12 +9,13 @@
 		<class>de.tro.development.model.Category</class>
 		<class>de.tro.development.model.City</class>
 		<class>de.tro.development.model.Country</class>
-		<class>de.tro.development.model.UserDate</class>
 		<class>de.tro.development.model.Hero</class>
+		<class>de.tro.development.model.Message</class>
 		<class>de.tro.development.model.Misstep</class>
 		<class>de.tro.development.model.Reward</class>
 		<class>de.tro.development.model.Task</class>
 		<class>de.tro.development.model.Todo_list</class>
+		<class>de.tro.development.model.UserDate</class>
 		<class>de.tro.development.model.UserProfile</class>
 		<properties>
 			<property name="javax.persistence.schema-generation.database.action"

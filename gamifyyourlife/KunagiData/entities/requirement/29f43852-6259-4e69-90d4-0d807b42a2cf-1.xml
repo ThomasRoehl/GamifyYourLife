@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><requirement>
   <id>29f43852-6259-4e69-90d4-0d807b42a2cf-1</id>
-  <lastModified>2015-05-07 11:39:49</lastModified>
+  <lastModified>2015-05-22 12:21:34</lastModified>
   <projectId>fc43cae0-0113-401c-9794-ae1dd9c1798c-1</projectId>
   <number>23</number>
   <qualitysIds/>
@@ -15,9 +15,10 @@ rote Fehlermeldung auf der entsprechenden Seite
 Fehlermeldung beinhaltet beschreibung des Problems
 Bei fehlerhaften Eingabe bleibt der Nutzer auf der aktuellen Seite (keine Weiterleitung)
 </description>
+  <estimatedWork>3.0</estimatedWork>
   <closed>false</closed>
   <deleted>false</deleted>
-  <dirty>true</dirty>
+  <dirty>false</dirty>
   <workEstimationVotingActive>false</workEstimationVotingActive>
   <workEstimationVotingShowoff>false</workEstimationVotingShowoff>
   <tasksOrderIds/>

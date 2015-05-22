@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><requirement>
   <id>19bea3c0-0995-4c47-9ba9-3e13b67ce48d-4</id>
-  <lastModified>2015-05-12 15:16:23</lastModified>
+  <lastModified>2015-05-19 13:20:20</lastModified>
   <projectId>fc43cae0-0113-401c-9794-ae1dd9c1798c-1</projectId>
-  <sprintId>1d20cfb7-702f-4e99-a1e5-8a5ebeb8c278</sprintId>
   <number>6</number>
   <qualitysIds/>
   <label>Rewards anzeigen</label>
@@ -17,7 +16,7 @@ Akzeptanzkriterien:
 * Eine Auflistung aller Rewards des Nutzers
 </description>
   <estimatedWork>1.0</estimatedWork>
-  <closed>false</closed>
+  <closed>true</closed>
   <deleted>false</deleted>
   <dirty>false</dirty>
   <workEstimationVotingActive>false</workEstimationVotingActive>

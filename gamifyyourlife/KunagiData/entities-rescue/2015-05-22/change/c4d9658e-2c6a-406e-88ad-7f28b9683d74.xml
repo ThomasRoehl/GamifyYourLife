@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><change>
+  <id>c4d9658e-2c6a-406e-88ad-7f28b9683d74</id>
+  <lastModified>2015-05-22 12:58:38</lastModified>
+  <parentId>338940cc-b548-4424-b36c-de82981ccd49-6</parentId>
+  <userId>a01eede1-e7e9-41e9-8122-6f7c606bfd0a</userId>
+  <dateAndTime>2015-05-22 12:58:38</dateAndTime>
+  <key>description</key>
+  <oldValue>Als Nutzer moechte ich einen Reward einloesen koennen,
+
+damit ich meinen Fortschritt sehen kann.
+
+Akzeptanzkriterien:
+
+- Moeglichkeit Reward einzuloesen.
+- Reward aus DB entfernen.
+- Hero Level um 1 erhoehen
+</oldValue>
+  <newValue>Als Nutzer moechte ich einen Reward einloesen koennen,
+
+damit ich mein Level fuer diesen Reward erhoehen kann, oder den Reward entfernen kann um ihn mit einem anderen zu ersetzen.
+
+Akzeptanzkriterien:
+
+- Moeglichkeit Reward einzuloesen.
+- Reward aus DB entfernen.
+- Hero Level um 1 erhoehen fa
+</newValue>
+</change>

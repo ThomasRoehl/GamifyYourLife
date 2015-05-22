@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><sprint>
   <id>1d20cfb7-702f-4e99-a1e5-8a5ebeb8c278</id>
-  <lastModified>2015-05-19 09:52:34</lastModified>
+  <lastModified>2015-05-19 13:20:20</lastModified>
   <number>4</number>
   <projectId>fc43cae0-0113-401c-9794-ae1dd9c1798c-1</projectId>
   <label>Sprint 04</label>
@@ -8,14 +8,43 @@
 </goal>
   <begin>2015-05-12</begin>
   <end>2015-05-19</end>
-  <originallyEnd>2015-05-18</originallyEnd>
+  <originallyEnd reference="../end"/>
+  <velocity>6.0</velocity>
+  <completedRequirementsData>#encoded-requirements 1
+sto7;3;Rewards erstellen
+tsk52;1;0;Rewards mit Achievements verknuepfen
+tsk53;1;0;UnitTest
+tsk50;1;0;JSF Seite erstellen
+tsk51;1;0;Achievements in DB laden
+sto6;1;Rewards anzeigen
+tsk54;1;0;Rewards liste erstellen
+tsk55;1;0;UserTest
+sto1;2;Helden erstellen
+tsk58;1;0;Dumies in DB laden
+tsk60;1;0;UserTest
+tsk59;1;0;Verbindung in User Register
+</completedRequirementsData>
+  <incompletedRequirementsData>#encoded-requirements 1
+sto12;3;Achievements verbinden
+tsk56;0;1;Points mit Achievements verbinden
+tsk57;0;1;UserTest
+</incompletedRequirementsData>
   <requirementsOrderIds>
     <string>19bea3c0-0995-4c47-9ba9-3e13b67ce48d-5</string>
     <string>19bea3c0-0995-4c47-9ba9-3e13b67ce48d-4</string>
     <string>c374a2ab-4d81-4058-b946-cddf60be0b09-1</string>
     <string>cda54d00-ba64-4326-82bf-185e72f4a59c-1</string>
   </requirementsOrderIds>
-  <productOwnersIds/>
-  <scrumMastersIds/>
-  <teamMembersIds/>
+  <productOwnersIds>
+    <string>a3a6bfc9-f4f3-4283-b9d1-c61481b05f30</string>
+    <string>a01eede1-e7e9-41e9-8122-6f7c606bfd0a</string>
+  </productOwnersIds>
+  <scrumMastersIds>
+    <string>a3a6bfc9-f4f3-4283-b9d1-c61481b05f30</string>
+    <string>a01eede1-e7e9-41e9-8122-6f7c606bfd0a</string>
+  </scrumMastersIds>
+  <teamMembersIds>
+    <string>a3a6bfc9-f4f3-4283-b9d1-c61481b05f30</string>
+    <string>a01eede1-e7e9-41e9-8122-6f7c606bfd0a</string>
+  </teamMembersIds>
 </sprint>

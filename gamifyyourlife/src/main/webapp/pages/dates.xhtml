@@ -25,7 +25,9 @@
 			<br /> <br />
 			<h:outputText id="category" value="Category"></h:outputText>
 			<br />
-			<h:inputText id="inp_category" value="#{calendarController.category}"></h:inputText>
+			<h:selectOneMenu value="#{calendarController.category}">
+				<f:selectItems value="#{calendarController.categories}" />
+			</h:selectOneMenu>
 			<br /> <br />
 			<h:form id="input">
 				<h:panelGroup id="dates" rendered="#{!calendarController.dayEvent}">
