@@ -46,6 +46,17 @@ public class Message {
 	
 	@Column(name = "system", updatable = false, nullable = false)
 	private boolean system;
+	
+	@Column(name = "SendObject")
+	private String sendObject;
+
+	public String getSendObject() {
+		return sendObject;
+	}
+
+	public void setSendObject(String sendObject) {
+		this.sendObject = sendObject;
+	}
 
 	public String getMsg() {
 		return msg;

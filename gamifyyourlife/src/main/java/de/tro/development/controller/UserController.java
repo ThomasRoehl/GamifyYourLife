@@ -46,10 +46,6 @@ public class UserController implements Serializable{
 	List<String> foundUserList = new ArrayList<String>();
 	List<String> heroes = new ArrayList<String>();
 	
-	public UserController(){
-		System.out.println("USER CONTROLLER BEAN CREATED");
-	}
-	
 	@ManagedProperty(value = "#{userSession}")
 	private UserSession userSession;
 	
@@ -65,7 +61,6 @@ public class UserController implements Serializable{
 	// GETTER SETTER
 	
 	public String getHeroBackground() {
-		System.out.println(pickedHero);
 		if (pickedHero.equals("Superman")){
 			heroBackground = "background-image: url(../resources/images/superman3.png)";
 		}
@@ -75,7 +70,6 @@ public class UserController implements Serializable{
 		else{
 			heroBackground = "background: yellow";
 		}
-		System.out.println("----------------------------" + heroBackground);
 		return heroBackground;
 	}
 
@@ -105,7 +99,6 @@ public class UserController implements Serializable{
 	}
 
 	public void setSearchUsername(String searchUsername) {
-		System.out.println("searchUsername: " + searchUsername);
 		this.searchUsername = searchUsername;
 	}
 	
@@ -156,7 +149,6 @@ public class UserController implements Serializable{
 	}
 	
 	public void setUsername(String username) {
-		System.out.println("username " + username);
 		this.username = username;
 	}
 
@@ -346,7 +338,6 @@ public class UserController implements Serializable{
 	 * if success set firstname and lastname of found user 
 	 */
 	public void findUser(){
-		System.out.println("[findUser] call " + username);
 		List<String> l = userDAO.findUserDetailsByName(this.username);
 		if (l == null){
 			foundMessage = "user not found";
@@ -372,7 +363,6 @@ public class UserController implements Serializable{
 	 * show information of current user
 	 */
 	public void showUserProfile(){
-		System.out.println("[showUserProfile]");
 		findUser();
 	}
 	
@@ -381,7 +371,6 @@ public class UserController implements Serializable{
 	 * @return
 	 */
 	public String findUserLike(){
-		System.out.println("[findUserLike] " + this.searchUsername);
 		this.foundUserList = userDAO.findUsersLikeName(this.searchUsername);
 		return null;
 	}
@@ -391,7 +380,6 @@ public class UserController implements Serializable{
 	 * @return move to contacts page if success, else null
 	 */
 	public void addUser(){
-		System.out.println("[addUser]");
 		if (!this.contacts.contains(this.username) && !(this.username.equals(userSession.getUsername()))){
 			if (userDAO.addContact(userSession.getUsername(), username)){
 				updateContacts();
@@ -407,7 +395,6 @@ public class UserController implements Serializable{
 	 * update contacts with db
 	 */
 	public void updateContacts(){
-		System.out.println("[updateContacts]");
 		contacts = userDAO.findContacts(userSession.getUsername());
 		Collections.sort(contacts);
 	}

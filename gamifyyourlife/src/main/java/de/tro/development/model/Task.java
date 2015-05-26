@@ -11,9 +11,15 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-	
+
+@NamedQueries({
+	@NamedQuery(name = "Task.getTaskByName", query = "SELECT t FROM Task t WHERE t.name = :name") 
+	})
+
 @Entity
 public class Task implements Serializable {
 
@@ -104,8 +110,8 @@ public class Task implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Tasks [id=" + id/* + ", category=" + category + ", name=" + name
+		return name/*"Tasks [id=" + id + ", category=" + category + ", name=" + name
 				+ ", description=" + description + ", points=" + points
-				+ ", settlement_date=" + settlement_date */+ "]";
+				+ ", settlement_date=" + settlement_date + "]"*/;
 	}
 }

@@ -72,5 +72,46 @@ public class TaskDAO implements TaskDAOInterface {
 		}
 		return null;
 	}
+	
+	public boolean changeTaskOwnerTo(String sender, int recieverID, String taskname){
+		try {
+			TypedQuery<Todo_list> query1 = em.createNamedQuery(
+					"UserProfile.findTodoListByName", Todo_list.class);
+			query1.setParameter("username", sender);
+			TypedQuery<Todo_list> query2 = em.createNamedQuery(
+					"Todo_list.findAllTasksByID", Todo_list.class);
+			query2.setParameter("id", recieverID);
+			Todo_list tl = query2.getResultList().get(0);
+			Todo_list tl1 = query1.getResultList().get(0);
+			Task s;
+			for (Task t: tl1.getTasks()){
+				if (t.getName().equals(taskname)){
+					s = t;
+					tl1.getTasks().remove(t);
+					tl.addTasks(s);
+					utx.begin();
+					em.merge(tl);
+					em.merge(tl1);
+					utx.commit();
+					return true;
+				}
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return false;
+	}
 
+	
+	public Task getTaskByName(String name){
+		try {
+			TypedQuery<Task> query = em.createNamedQuery(
+					"Task.getTaskByName", Task.class);
+			query.setParameter("name", name);
+			return query.getResultList().get(0);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
 }

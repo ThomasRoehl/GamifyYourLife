@@ -16,12 +16,12 @@ import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
-@NamedQueries({@NamedQuery(name = "Todo_list.findAllTasksByID", query = "SELECT t FROM Todo_list t WHERE t.id = :id"),
-@NamedQuery(name = "Todo_list.findAllDatesByID", query = "SELECT t FROM Todo_list t WHERE t.id = :id")})
-
+@NamedQueries({
+		@NamedQuery(name = "Todo_list.findAllTasksByID", query = "SELECT t FROM Todo_list t WHERE t.id = :id"),
+		@NamedQuery(name = "Todo_list.findAllDatesByID", query = "SELECT t FROM Todo_list t WHERE t.id = :id") })
 @Entity
-public class Todo_list implements Serializable{
-	
+public class Todo_list implements Serializable {
+
 	/**
 	 * 
 	 */
@@ -31,20 +31,20 @@ public class Todo_list implements Serializable{
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "id", updatable = false, nullable = false)
 	private int id;
-	
+
 	@OneToMany(cascade = CascadeType.PERSIST)
 	@JoinColumn(name = "todo_list_fk")
 	private Set<Task> tasks = new HashSet<Task>();
-	
+
 	@OneToMany(cascade = CascadeType.PERSIST)
 	@JoinColumn(name = "date_fk")
 	private Set<UserDate> dates = new HashSet<UserDate>();
-	
+
 	@OneToMany(cascade = CascadeType.PERSIST)
 	@JoinColumn(name = "rewards_fk")
 	private Set<Reward> rewards = new HashSet<Reward>();
-	
-	@OneToOne(optional=false, mappedBy="todo_list")
+
+	@OneToOne(optional = false, mappedBy = "todo_list")
 	private UserProfile user;
 
 	public int getId() {
@@ -58,24 +58,24 @@ public class Todo_list implements Serializable{
 	public Set<Task> getTasks() {
 		return tasks;
 	}
-	
-	public void addTasks(Task tasks){
+
+	public void addTasks(Task tasks) {
 		this.tasks.add(tasks);
 	}
 
 	public Set<UserDate> getDates() {
 		return dates;
 	}
-	
-	public void addDates(UserDate dates){
+
+	public void addDates(UserDate dates) {
 		this.dates.add(dates);
 	}
 
 	public Set<Reward> getRewards() {
 		return rewards;
 	}
-	
-	public void addRewards(Reward rewards){
+
+	public void addRewards(Reward rewards) {
 		this.rewards.add(rewards);
 	}
 

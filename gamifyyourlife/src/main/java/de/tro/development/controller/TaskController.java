@@ -32,6 +32,9 @@ public class TaskController implements Serializable{
 	@ManagedProperty(value = "#{userSession}")
 	private UserSession userSession;
 	
+	@ManagedProperty(value = "#{messageController}")
+	private MessageController messageController;
+
 	@ManagedProperty(value = "#{navigationController}")
 	private NavigationController navi;
 	
@@ -48,8 +51,34 @@ public class TaskController implements Serializable{
 	private Long taskPoints;
 	private Long userID;
 	private List<String> categories = new ArrayList<String>();
+	private String sendTask;
+	private String sendUser;
 	
 	// GETTER SETTER
+	
+	public MessageController getMessageController() {
+		return messageController;
+	}
+
+	public void setMessageController(MessageController messageController) {
+		this.messageController = messageController;
+	}
+	
+	public String getSendTask() {
+		return sendTask;
+	}
+
+	public void setSendTask(String sendTask) {
+		this.sendTask = sendTask;
+	}
+
+	public String getSendUser() {
+		return sendUser;
+	}
+
+	public void setSendUser(String sendUser) {
+		this.sendUser = sendUser;
+	}
 	
 	public CategoryDAO getCategoryDAO() {
 		return categoryDAO;
@@ -190,5 +219,12 @@ public class TaskController implements Serializable{
 			e.printStackTrace();
 			return false;
 		}
+	}
+	
+	public void sendTaskToUser(){
+		messageController.setNewMsg(userSession.getUsername() + messageController.TASKSYSTEMMESSAGE + this.sendTask);
+		messageController.setNewRegard("new Task");
+		messageController.setNewUser(this.sendUser);
+		messageController.sendSystem("Task_"+this.sendTask);
 	}
 }

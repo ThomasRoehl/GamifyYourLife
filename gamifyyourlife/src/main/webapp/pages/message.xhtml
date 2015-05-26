@@ -49,17 +49,30 @@
 					<br />
 					<h:outputText class="sender"
 						value="Sender: #{messageController.currentMsg.sender.username}" />
-					<br />
-					<br />
+					<br /> <br />
 					<h:outputText class="sender"
 						value="Regard: #{messageController.currentMsg.regard}" />
-					<br />
-					<br />
-					<br />
+					<br /> <br /> <br />
 					<h:outputText class="sender"
 						value="Message: #{messageController.currentMsg.msg}" />
-					<br />
+					<br /> <br />
 
+					<p:commandButton value="ShowTask" type="button"
+						onclick="PF('dlg2').show();" />
+					<p:dialog header="New Task" widgetVar="dlg2" modal="true"
+						height="100">
+						<h:outputText value="#{messageController.taskName}" />
+						<br />
+						<h:outputText value="#{messageController.taskDescription}" />
+						<br />
+						<h:outputText value="#{messageController.taskPoints}" />
+						<br />
+						<h:commandLink value="accept"
+							action="#{messageController.acceptTask}"></h:commandLink>
+						<br />
+						<h:commandLink value="reject"
+							action="#{messageController.rejectTask}"></h:commandLink>
+					</p:dialog>
 				</div>
 				<div class="messageNew">
 					<h:outputText value="Addressee: "></h:outputText>
@@ -67,20 +80,18 @@
 					<h:selectOneMenu value="#{messageController.newUser}">
 						<f:selectItems value="#{userController.contacts}" />
 					</h:selectOneMenu>
-					<br />
-					<br />
+					<br /> <br />
 					<h:outputText value="Regard: "></h:outputText>
 					<br />
 					<h:inputText value="#{messageController.newRegard}"></h:inputText>
-					<br />
-					<br />
+					<br /> <br />
 					<h:outputText value="Message: "></h:outputText>
 					<br />
-					<h:inputTextarea value="#{messageController.newMsg}" cols="20" rows="10"></h:inputTextarea>
-					<br />
-					<br />
+					<h:inputTextarea value="#{messageController.newMsg}" cols="20"
+						rows="10"></h:inputTextarea>
+					<br /> <br />
 					<h:commandButton value="send"
-							actionListener="#{messageController.send}" />
+						actionListener="#{messageController.send}" />
 				</div>
 
 			</div>

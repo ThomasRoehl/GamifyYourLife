@@ -43,12 +43,32 @@
 						<f:facet name="header">Settlement Date</f:facet>    				
       					#{task.settlement_date}
    					</h:column>
-   					<h:column>
+					<h:column>
 						<f:facet name="header">Category</f:facet>    				
       					#{task.category}
    					</h:column>
 				</h:dataTable>
-				<h:commandButton value="new Task" action="#{navigationController.moveToNewTask}"></h:commandButton>
+				<h:commandButton value="new Task"
+					action="#{navigationController.moveToNewTask}"></h:commandButton>
+				<p:commandButton value="ShowTask" type="button"
+					onclick="PF('dlg2').show();" />
+				<p:dialog header="New Task" widgetVar="dlg2" modal="true"
+					height="100">
+					<h:outputText value="Task"></h:outputText>
+					<br />
+					<h:selectOneMenu value="#{taskController.sendTask}">
+						<f:selectItems value="#{taskController.tasks}" />
+					</h:selectOneMenu>
+					<br />
+					<h:outputText value="User"></h:outputText>
+					<br />
+					<h:selectOneMenu value="#{taskController.sendUser}">
+							<f:selectItems value="#{userController.contacts}" />
+						</h:selectOneMenu>
+					<br />
+					<h:commandLink value="send"
+						action="#{taskController.sendTaskToUser}"></h:commandLink>
+				</p:dialog>
 			</h:form>
 		</div>
 	</ui:define>
