@@ -26,7 +26,7 @@ import de.tro.development.service.UserSession;
 public class CalendarController implements Serializable {
 
 	/**
-	 * vars
+	 * vars s
 	 */
 	private static final long serialVersionUID = 1L;
 	private String name;
